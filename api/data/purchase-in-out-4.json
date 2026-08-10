@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "買出入(実績)",
+    "brandLabel": "ブランド"
+  },
+  "size": 4,
+  "summary": {
+    "previousPercent": 34.6,
+    "currentPercent": 35.4,
+    "outflowPercent": -4.1,
+    "retainedPercent": 30.5,
+    "inflowPercent": 4.8
+  },
+  "rows": [
+    {
+      "label": "ブランド1",
+      "outflow": 0.39,
+      "inflow": 0.33
+    },
+    {
+      "label": "ブランド2",
+      "outflow": 0.52,
+      "inflow": 0.41
+    },
+    {
+      "label": "ブランド3",
+      "outflow": 0.28,
+      "inflow": 0.55
+    },
+    {
+      "label": "ブランド4",
+      "outflow": 0.61,
+      "inflow": 0.22
+    }
+  ]
+}

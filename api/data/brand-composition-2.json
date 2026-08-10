@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "人数構成比",
+    "yTitle": "人数構成比 (%)",
+    "series": {
+      "repeat": "継続リピート",
+      "switchIn": "トライアル(スイッチイン)",
+      "entry": "トライアル(カテゴリエントリ)"
+    }
+  },
+  "size": 2,
+  "rows": [
+    {
+      "brand": "ブランド1",
+      "period": "'03/4-",
+      "repeat": 53,
+      "switchIn": 24,
+      "entry": 23
+    },
+    {
+      "brand": "ブランド1",
+      "period": "'04/4-",
+      "repeat": 55,
+      "switchIn": 25,
+      "entry": 20
+    },
+    {
+      "brand": "ブランド1",
+      "period": "'05/4-",
+      "repeat": 57,
+      "switchIn": 26,
+      "entry": 17
+    },
+    {
+      "brand": "ブランド1",
+      "period": "'06/4-",
+      "repeat": 59,
+      "switchIn": 27,
+      "entry": 14
+    },
+    {
+      "brand": "ブランド1",
+      "period": "'07/4-",
+      "repeat": 61,
+      "switchIn": 28,
+      "entry": 11
+    },
+    {
+      "brand": "ブランド2",
+      "period": "'03/4-",
+      "repeat": 56,
+      "switchIn": 26,
+      "entry": 18
+    },
+    {
+      "brand": "ブランド2",
+      "period": "'04/4-",
+      "repeat": 58,
+      "switchIn": 27,
+      "entry": 15
+    },
+    {
+      "brand": "ブランド2",
+      "period": "'05/4-",
+      "repeat": 60,
+      "switchIn": 28,
+      "entry": 12
+    },
+    {
+      "brand": "ブランド2",
+      "period": "'06/4-",
+      "repeat": 62,
+      "switchIn": 29,
+      "entry": 9
+    },
+    {
+      "brand": "ブランド2",
+      "period": "'07/4-",
+      "repeat": 48,
+      "switchIn": 20,
+      "entry": 32
+    }
+  ]
+}

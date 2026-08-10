@@ -1,0 +1,317 @@
+{
+  "meta": {
+    "title": "ボリューム付数表",
+    "pastPeriodLabel": "過去購入 ('09/1 - '09/12)",
+    "currentPeriodLabel": "現在購入 ('10/1 - '10/12)",
+    "note": "*数値：％（行）（人数ベース）",
+    "unit": "row_percent"
+  },
+  "size": 7,
+  "columns": [
+    {
+      "id": "brand-1",
+      "label": "ブランド1"
+    },
+    {
+      "id": "brand-2",
+      "label": "ブランド2"
+    },
+    {
+      "id": "brand-3",
+      "label": "ブランド3"
+    },
+    {
+      "id": "brand-4",
+      "label": "ブランド4"
+    },
+    {
+      "id": "brand-5",
+      "label": "ブランド5"
+    },
+    {
+      "id": "brand-6",
+      "label": "ブランド6"
+    },
+    {
+      "id": "brand-7",
+      "label": "ブランド7"
+    }
+  ],
+  "rows": [
+    {
+      "id": "brand-1",
+      "label": "ブランド1"
+    },
+    {
+      "id": "brand-2",
+      "label": "ブランド2"
+    },
+    {
+      "id": "brand-3",
+      "label": "ブランド3"
+    },
+    {
+      "id": "brand-4",
+      "label": "ブランド4"
+    },
+    {
+      "id": "brand-5",
+      "label": "ブランド5"
+    },
+    {
+      "id": "brand-6",
+      "label": "ブランド6"
+    },
+    {
+      "id": "brand-7",
+      "label": "ブランド7"
+    }
+  ],
+  "cells": [
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-1",
+      "value": 40
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-2",
+      "value": 10
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-3",
+      "value": 10
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-4",
+      "value": 10
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-5",
+      "value": 10
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-6",
+      "value": 10
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-7",
+      "value": 10
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-1",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-2",
+      "value": 42.5
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-3",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-4",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-5",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-6",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-7",
+      "value": 9.5
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-1",
+      "value": 9.2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-2",
+      "value": 9.2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-3",
+      "value": 45
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-4",
+      "value": 9.2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-5",
+      "value": 9.2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-6",
+      "value": 9.2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-7",
+      "value": 9
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-1",
+      "value": 8.8
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-2",
+      "value": 8.8
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-3",
+      "value": 8.8
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-4",
+      "value": 47.5
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-5",
+      "value": 8.8
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-6",
+      "value": 8.8
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-7",
+      "value": 8.5
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-1",
+      "value": 8.3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-2",
+      "value": 8.3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-3",
+      "value": 8.3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-4",
+      "value": 8.3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-5",
+      "value": 50
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-6",
+      "value": 8.3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-7",
+      "value": 8.5
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-1",
+      "value": 10
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-2",
+      "value": 10
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-3",
+      "value": 10
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-4",
+      "value": 10
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-5",
+      "value": 10
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-6",
+      "value": 40
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-7",
+      "value": 10
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-1",
+      "value": 9.5
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-2",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-3",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-4",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-5",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-6",
+      "value": 9.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-7",
+      "value": 42.5
+    }
+  ]
+}

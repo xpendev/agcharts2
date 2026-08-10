@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "topTitle": "ブランド1 購入者の割合",
+    "bottomTitle": "脱落者の割合",
+    "yUnit": "(%)",
+    "series": {
+      "base": "継続",
+      "mid": "トライアル",
+      "top": "その他"
+    }
+  },
+  "size": 1,
+  "stacked": [
+    {
+      "period": "'05/4-",
+      "base": 22,
+      "mid": 11,
+      "top": 7
+    }
+  ],
+  "dropout": [
+    {
+      "period": "'05/4-",
+      "value": -7
+    }
+  ]
+}

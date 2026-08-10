@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "title": "ブランドA"
+  },
+  "size": 3,
+  "rows": [
+    {
+      "label": "ブランドB",
+      "value": 80
+    },
+    {
+      "label": "ブランドD",
+      "value": 60
+    },
+    {
+      "label": "ブランドH",
+      "value": -15
+    }
+  ]
+}

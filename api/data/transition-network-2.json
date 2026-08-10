@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "other",
+      "label": "その他",
+      "before": 150712,
+      "after": 153077,
+      "external": 1313
+    },
+    {
+      "id": "other-unselected",
+      "label": "その他(選択以外)",
+      "before": 109536,
+      "after": 105379,
+      "external": -3044
+    }
+  ],
+  "edges": [
+    {
+      "from": "other",
+      "to": "other-unselected",
+      "value": 1152
+    }
+  ]
+}

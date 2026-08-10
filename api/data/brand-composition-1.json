@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "title": "人数構成比",
+    "yTitle": "人数構成比 (%)",
+    "series": {
+      "repeat": "継続リピート",
+      "switchIn": "トライアル(スイッチイン)",
+      "entry": "トライアル(カテゴリエントリ)"
+    }
+  },
+  "size": 1,
+  "rows": [
+    {
+      "brand": "ブランド1",
+      "period": "'03/4-",
+      "repeat": 52,
+      "switchIn": 23,
+      "entry": 25
+    },
+    {
+      "brand": "ブランド1",
+      "period": "'04/4-",
+      "repeat": 54,
+      "switchIn": 24,
+      "entry": 22
+    },
+    {
+      "brand": "ブランド1",
+      "period": "'05/4-",
+      "repeat": 56,
+      "switchIn": 25,
+      "entry": 19
+    },
+    {
+      "brand": "ブランド1",
+      "period": "'06/4-",
+      "repeat": 58,
+      "switchIn": 26,
+      "entry": 16
+    },
+    {
+      "brand": "ブランド1",
+      "period": "'07/4-",
+      "repeat": 60,
+      "switchIn": 27,
+      "entry": 13
+    }
+  ]
+}

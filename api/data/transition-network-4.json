@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {
+      "id": "other",
+      "label": "その他",
+      "before": 150712,
+      "after": 153077,
+      "external": 1313
+    },
+    {
+      "id": "other-unselected",
+      "label": "その他(選択以外)",
+      "before": 109536,
+      "after": 105379,
+      "external": -3044
+    },
+    {
+      "id": "cat-a",
+      "label": "カテゴリA",
+      "before": 568,
+      "after": 660,
+      "external": -9
+    },
+    {
+      "id": "cat-b",
+      "label": "カテゴリB",
+      "before": 734,
+      "after": 523,
+      "external": -187
+    }
+  ],
+  "edges": [
+    {
+      "from": "other",
+      "to": "other-unselected",
+      "value": 1151
+    },
+    {
+      "from": "other",
+      "to": "cat-a",
+      "value": 420
+    },
+    {
+      "from": "other",
+      "to": "cat-b",
+      "value": 280
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-a",
+      "value": 128
+    },
+    {
+      "from": "cat-b",
+      "to": "other-unselected",
+      "value": 131
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-a",
+      "value": 162
+    }
+  ]
+}

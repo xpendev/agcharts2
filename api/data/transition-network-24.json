@@ -1,0 +1,1554 @@
+{
+  "nodes": [
+    {
+      "id": "other",
+      "label": "その他",
+      "before": 150712,
+      "after": 153077,
+      "external": 1313
+    },
+    {
+      "id": "other-unselected",
+      "label": "その他(選択以外)",
+      "before": 109536,
+      "after": 105379,
+      "external": -3044
+    },
+    {
+      "id": "cat-a",
+      "label": "カテゴリA",
+      "before": 568,
+      "after": 660,
+      "external": -9
+    },
+    {
+      "id": "cat-b",
+      "label": "カテゴリB",
+      "before": 734,
+      "after": 523,
+      "external": -187
+    },
+    {
+      "id": "cat-c",
+      "label": "カテゴリC",
+      "before": 30,
+      "after": 26,
+      "external": 11
+    },
+    {
+      "id": "cat-d",
+      "label": "カテゴリD",
+      "before": 1,
+      "after": 0,
+      "external": 0
+    },
+    {
+      "id": "cat-e",
+      "label": "カテゴリE",
+      "before": 420,
+      "after": 510,
+      "external": 40
+    },
+    {
+      "id": "cat-f",
+      "label": "カテゴリF",
+      "before": 880,
+      "after": 760,
+      "external": -55
+    },
+    {
+      "id": "cat-9",
+      "label": "カテゴリ9",
+      "before": 253,
+      "after": 261,
+      "external": 37
+    },
+    {
+      "id": "cat-10",
+      "label": "カテゴリ10",
+      "before": 270,
+      "after": 280,
+      "external": -40
+    },
+    {
+      "id": "cat-11",
+      "label": "カテゴリ11",
+      "before": 287,
+      "after": 299,
+      "external": -43
+    },
+    {
+      "id": "cat-12",
+      "label": "カテゴリ12",
+      "before": 304,
+      "after": 318,
+      "external": 46
+    },
+    {
+      "id": "cat-13",
+      "label": "カテゴリ13",
+      "before": 321,
+      "after": 337,
+      "external": -49
+    },
+    {
+      "id": "cat-14",
+      "label": "カテゴリ14",
+      "before": 338,
+      "after": 356,
+      "external": -52
+    },
+    {
+      "id": "cat-15",
+      "label": "カテゴリ15",
+      "before": 355,
+      "after": 375,
+      "external": 55
+    },
+    {
+      "id": "cat-16",
+      "label": "カテゴリ16",
+      "before": 372,
+      "after": 394,
+      "external": -58
+    },
+    {
+      "id": "cat-17",
+      "label": "カテゴリ17",
+      "before": 389,
+      "after": 413,
+      "external": -61
+    },
+    {
+      "id": "cat-18",
+      "label": "カテゴリ18",
+      "before": 406,
+      "after": 432,
+      "external": 64
+    },
+    {
+      "id": "cat-19",
+      "label": "カテゴリ19",
+      "before": 423,
+      "after": 451,
+      "external": -67
+    },
+    {
+      "id": "cat-20",
+      "label": "カテゴリ20",
+      "before": 440,
+      "after": 470,
+      "external": -70
+    },
+    {
+      "id": "cat-21",
+      "label": "カテゴリ21",
+      "before": 457,
+      "after": 489,
+      "external": 73
+    },
+    {
+      "id": "cat-22",
+      "label": "カテゴリ22",
+      "before": 474,
+      "after": 508,
+      "external": -76
+    },
+    {
+      "id": "cat-23",
+      "label": "カテゴリ23",
+      "before": 491,
+      "after": 527,
+      "external": -79
+    },
+    {
+      "id": "cat-24",
+      "label": "カテゴリ24",
+      "before": 508,
+      "after": 546,
+      "external": 82
+    }
+  ],
+  "edges": [
+    {
+      "from": "other",
+      "to": "other-unselected",
+      "value": 1151
+    },
+    {
+      "from": "other",
+      "to": "cat-a",
+      "value": 420
+    },
+    {
+      "from": "other",
+      "to": "cat-b",
+      "value": 280
+    },
+    {
+      "from": "other",
+      "to": "cat-c",
+      "value": 173
+    },
+    {
+      "from": "other",
+      "to": "cat-d",
+      "value": 204
+    },
+    {
+      "from": "other",
+      "to": "cat-e",
+      "value": 320
+    },
+    {
+      "from": "other",
+      "to": "cat-f",
+      "value": 266
+    },
+    {
+      "from": "other",
+      "to": "cat-9",
+      "value": 297
+    },
+    {
+      "from": "cat-10",
+      "to": "other",
+      "value": 202
+    },
+    {
+      "from": "cat-11",
+      "to": "other",
+      "value": 219
+    },
+    {
+      "from": "cat-12",
+      "to": "other",
+      "value": 236
+    },
+    {
+      "from": "cat-13",
+      "to": "other",
+      "value": 253
+    },
+    {
+      "from": "cat-14",
+      "to": "other",
+      "value": 270
+    },
+    {
+      "from": "cat-15",
+      "to": "other",
+      "value": 287
+    },
+    {
+      "from": "other",
+      "to": "cat-16",
+      "value": 214
+    },
+    {
+      "from": "other",
+      "to": "cat-17",
+      "value": 245
+    },
+    {
+      "from": "other",
+      "to": "cat-18",
+      "value": 276
+    },
+    {
+      "from": "cat-19",
+      "to": "other",
+      "value": 55
+    },
+    {
+      "from": "cat-20",
+      "to": "other",
+      "value": 72
+    },
+    {
+      "from": "cat-21",
+      "to": "other",
+      "value": 89
+    },
+    {
+      "from": "cat-22",
+      "to": "other",
+      "value": 106
+    },
+    {
+      "from": "other",
+      "to": "cat-23",
+      "value": 131
+    },
+    {
+      "from": "other",
+      "to": "cat-24",
+      "value": 162
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-a",
+      "value": 128
+    },
+    {
+      "from": "cat-b",
+      "to": "other-unselected",
+      "value": 131
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-c",
+      "value": 190
+    },
+    {
+      "from": "cat-d",
+      "to": "other-unselected",
+      "value": 165
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-e",
+      "value": 252
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-f",
+      "value": 283
+    },
+    {
+      "from": "cat-9",
+      "to": "other-unselected",
+      "value": 216
+    },
+    {
+      "from": "cat-10",
+      "to": "other-unselected",
+      "value": 233
+    },
+    {
+      "from": "cat-11",
+      "to": "other-unselected",
+      "value": 250
+    },
+    {
+      "from": "cat-12",
+      "to": "other-unselected",
+      "value": 267
+    },
+    {
+      "from": "cat-13",
+      "to": "other-unselected",
+      "value": 284
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-14",
+      "value": 169
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-15",
+      "value": 200
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-16",
+      "value": 231
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-17",
+      "value": 262
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-18",
+      "value": 293
+    },
+    {
+      "from": "cat-19",
+      "to": "other-unselected",
+      "value": 86
+    },
+    {
+      "from": "cat-20",
+      "to": "other-unselected",
+      "value": 103
+    },
+    {
+      "from": "cat-21",
+      "to": "other-unselected",
+      "value": 120
+    },
+    {
+      "from": "cat-22",
+      "to": "other-unselected",
+      "value": 137
+    },
+    {
+      "from": "cat-23",
+      "to": "other-unselected",
+      "value": 154
+    },
+    {
+      "from": "other-unselected",
+      "to": "cat-24",
+      "value": 179
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-a",
+      "value": 162
+    },
+    {
+      "from": "cat-a",
+      "to": "cat-c",
+      "value": 207
+    },
+    {
+      "from": "cat-a",
+      "to": "cat-d",
+      "value": 238
+    },
+    {
+      "from": "cat-a",
+      "to": "cat-e",
+      "value": 269
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-a",
+      "value": 230
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-a",
+      "value": 247
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-a",
+      "value": 264
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-a",
+      "value": 281
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-a",
+      "value": 298
+    },
+    {
+      "from": "cat-a",
+      "to": "cat-13",
+      "value": 155
+    },
+    {
+      "from": "cat-a",
+      "to": "cat-14",
+      "value": 186
+    },
+    {
+      "from": "cat-a",
+      "to": "cat-15",
+      "value": 217
+    },
+    {
+      "from": "cat-a",
+      "to": "cat-16",
+      "value": 248
+    },
+    {
+      "from": "cat-a",
+      "to": "cat-17",
+      "value": 279
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-a",
+      "value": 100
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-a",
+      "value": 117
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-a",
+      "value": 134
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-a",
+      "value": 151
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-a",
+      "value": 168
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-a",
+      "value": 185
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-a",
+      "value": 202
+    },
+    {
+      "from": "cat-c",
+      "to": "cat-b",
+      "value": 210
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-d",
+      "value": 255
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-e",
+      "value": 286
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-b",
+      "value": 88
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-b",
+      "value": 278
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-b",
+      "value": 295
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-11",
+      "value": 110
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-12",
+      "value": 141
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-13",
+      "value": 172
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-14",
+      "value": 203
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-15",
+      "value": 234
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-16",
+      "value": 265
+    },
+    {
+      "from": "cat-b",
+      "to": "cat-17",
+      "value": 296
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-b",
+      "value": 131
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-b",
+      "value": 148
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-b",
+      "value": 165
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-b",
+      "value": 182
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-b",
+      "value": 199
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-b",
+      "value": 216
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-b",
+      "value": 233
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-c",
+      "value": 258
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-c",
+      "value": 275
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-c",
+      "value": 292
+    },
+    {
+      "from": "cat-c",
+      "to": "cat-9",
+      "value": 65
+    },
+    {
+      "from": "cat-c",
+      "to": "cat-10",
+      "value": 96
+    },
+    {
+      "from": "cat-c",
+      "to": "cat-11",
+      "value": 127
+    },
+    {
+      "from": "cat-c",
+      "to": "cat-12",
+      "value": 158
+    },
+    {
+      "from": "cat-c",
+      "to": "cat-13",
+      "value": 189
+    },
+    {
+      "from": "cat-c",
+      "to": "cat-14",
+      "value": 220
+    },
+    {
+      "from": "cat-c",
+      "to": "cat-15",
+      "value": 251
+    },
+    {
+      "from": "cat-c",
+      "to": "cat-16",
+      "value": 282
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-c",
+      "value": 145
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-c",
+      "value": 162
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-c",
+      "value": 179
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-c",
+      "value": 196
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-c",
+      "value": 213
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-c",
+      "value": 230
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-c",
+      "value": 247
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-c",
+      "value": 264
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-e",
+      "value": 20
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-d",
+      "value": 23
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-9",
+      "value": 82
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-10",
+      "value": 113
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-11",
+      "value": 144
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-12",
+      "value": 175
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-13",
+      "value": 206
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-14",
+      "value": 237
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-15",
+      "value": 268
+    },
+    {
+      "from": "cat-d",
+      "to": "cat-16",
+      "value": 299
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-d",
+      "value": 176
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-d",
+      "value": 193
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-d",
+      "value": 210
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-d",
+      "value": 227
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-d",
+      "value": 244
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-d",
+      "value": 261
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-d",
+      "value": 278
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-d",
+      "value": 295
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-e",
+      "value": 210
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-9",
+      "value": 99
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-10",
+      "value": 130
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-11",
+      "value": 161
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-12",
+      "value": 192
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-13",
+      "value": 223
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-14",
+      "value": 254
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-15",
+      "value": 285
+    },
+    {
+      "from": "cat-16",
+      "to": "cat-e",
+      "value": 190
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-e",
+      "value": 207
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-e",
+      "value": 224
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-e",
+      "value": 241
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-e",
+      "value": 258
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-e",
+      "value": 275
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-e",
+      "value": 292
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-23",
+      "value": 233
+    },
+    {
+      "from": "cat-e",
+      "to": "cat-24",
+      "value": 264
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-9",
+      "value": 116
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-10",
+      "value": 147
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-11",
+      "value": 178
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-12",
+      "value": 209
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-13",
+      "value": 240
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-14",
+      "value": 271
+    },
+    {
+      "from": "cat-15",
+      "to": "cat-f",
+      "value": 204
+    },
+    {
+      "from": "cat-16",
+      "to": "cat-f",
+      "value": 221
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-f",
+      "value": 238
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-f",
+      "value": 255
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-f",
+      "value": 272
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-f",
+      "value": 289
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-21",
+      "value": 188
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-22",
+      "value": 219
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-23",
+      "value": 250
+    },
+    {
+      "from": "cat-f",
+      "to": "cat-24",
+      "value": 281
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-10",
+      "value": 164
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-11",
+      "value": 195
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-12",
+      "value": 226
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-13",
+      "value": 257
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-14",
+      "value": 288
+    },
+    {
+      "from": "cat-15",
+      "to": "cat-9",
+      "value": 235
+    },
+    {
+      "from": "cat-16",
+      "to": "cat-9",
+      "value": 252
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-9",
+      "value": 269
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-9",
+      "value": 286
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-19",
+      "value": 143
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-20",
+      "value": 174
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-21",
+      "value": 205
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-22",
+      "value": 236
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-23",
+      "value": 267
+    },
+    {
+      "from": "cat-9",
+      "to": "cat-24",
+      "value": 298
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-11",
+      "value": 212
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-12",
+      "value": 243
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-13",
+      "value": 274
+    },
+    {
+      "from": "cat-14",
+      "to": "cat-10",
+      "value": 249
+    },
+    {
+      "from": "cat-15",
+      "to": "cat-10",
+      "value": 266
+    },
+    {
+      "from": "cat-16",
+      "to": "cat-10",
+      "value": 283
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-10",
+      "value": 300
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-18",
+      "value": 129
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-19",
+      "value": 160
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-20",
+      "value": 191
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-21",
+      "value": 222
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-22",
+      "value": 253
+    },
+    {
+      "from": "cat-10",
+      "to": "cat-23",
+      "value": 284
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-10",
+      "value": 119
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-12",
+      "value": 260
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-13",
+      "value": 291
+    },
+    {
+      "from": "cat-14",
+      "to": "cat-11",
+      "value": 280
+    },
+    {
+      "from": "cat-15",
+      "to": "cat-11",
+      "value": 297
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-16",
+      "value": 84
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-17",
+      "value": 115
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-18",
+      "value": 146
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-19",
+      "value": 177
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-20",
+      "value": 208
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-21",
+      "value": 239
+    },
+    {
+      "from": "cat-11",
+      "to": "cat-22",
+      "value": 270
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-11",
+      "value": 133
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-11",
+      "value": 150
+    },
+    {
+      "from": "cat-13",
+      "to": "cat-12",
+      "value": 294
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-14",
+      "value": 39
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-15",
+      "value": 70
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-16",
+      "value": 101
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-17",
+      "value": 132
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-18",
+      "value": 163
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-19",
+      "value": 194
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-20",
+      "value": 225
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-21",
+      "value": 256
+    },
+    {
+      "from": "cat-12",
+      "to": "cat-22",
+      "value": 287
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-12",
+      "value": 164
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-12",
+      "value": 181
+    },
+    {
+      "from": "cat-13",
+      "to": "cat-14",
+      "value": 56
+    },
+    {
+      "from": "cat-13",
+      "to": "cat-15",
+      "value": 87
+    },
+    {
+      "from": "cat-13",
+      "to": "cat-16",
+      "value": 118
+    },
+    {
+      "from": "cat-13",
+      "to": "cat-17",
+      "value": 149
+    },
+    {
+      "from": "cat-13",
+      "to": "cat-18",
+      "value": 180
+    },
+    {
+      "from": "cat-13",
+      "to": "cat-19",
+      "value": 211
+    },
+    {
+      "from": "cat-13",
+      "to": "cat-20",
+      "value": 242
+    },
+    {
+      "from": "cat-13",
+      "to": "cat-21",
+      "value": 273
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-13",
+      "value": 178
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-13",
+      "value": 195
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-13",
+      "value": 212
+    },
+    {
+      "from": "cat-14",
+      "to": "cat-15",
+      "value": 104
+    },
+    {
+      "from": "cat-14",
+      "to": "cat-16",
+      "value": 135
+    },
+    {
+      "from": "cat-14",
+      "to": "cat-17",
+      "value": 166
+    },
+    {
+      "from": "cat-14",
+      "to": "cat-18",
+      "value": 197
+    },
+    {
+      "from": "cat-14",
+      "to": "cat-19",
+      "value": 228
+    },
+    {
+      "from": "cat-14",
+      "to": "cat-20",
+      "value": 259
+    },
+    {
+      "from": "cat-14",
+      "to": "cat-21",
+      "value": 290
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-14",
+      "value": 209
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-14",
+      "value": 226
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-14",
+      "value": 243
+    },
+    {
+      "from": "cat-15",
+      "to": "cat-16",
+      "value": 152
+    },
+    {
+      "from": "cat-15",
+      "to": "cat-17",
+      "value": 183
+    },
+    {
+      "from": "cat-15",
+      "to": "cat-18",
+      "value": 214
+    },
+    {
+      "from": "cat-15",
+      "to": "cat-19",
+      "value": 245
+    },
+    {
+      "from": "cat-15",
+      "to": "cat-20",
+      "value": 276
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-15",
+      "value": 223
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-15",
+      "value": 240
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-15",
+      "value": 257
+    },
+    {
+      "from": "cat-24",
+      "to": "cat-15",
+      "value": 274
+    },
+    {
+      "from": "cat-16",
+      "to": "cat-17",
+      "value": 200
+    },
+    {
+      "from": "cat-16",
+      "to": "cat-18",
+      "value": 231
+    },
+    {
+      "from": "cat-16",
+      "to": "cat-19",
+      "value": 262
+    },
+    {
+      "from": "cat-16",
+      "to": "cat-20",
+      "value": 293
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-16",
+      "value": 254
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-16",
+      "value": 271
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-16",
+      "value": 288
+    },
+    {
+      "from": "cat-16",
+      "to": "cat-24",
+      "value": 117
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-18",
+      "value": 248
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-19",
+      "value": 279
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-17",
+      "value": 268
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-17",
+      "value": 285
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-22",
+      "value": 72
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-23",
+      "value": 103
+    },
+    {
+      "from": "cat-17",
+      "to": "cat-24",
+      "value": 134
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-19",
+      "value": 296
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-18",
+      "value": 299
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-21",
+      "value": 58
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-22",
+      "value": 89
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-23",
+      "value": 120
+    },
+    {
+      "from": "cat-18",
+      "to": "cat-24",
+      "value": 151
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-20",
+      "value": 44
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-21",
+      "value": 75
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-22",
+      "value": 106
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-23",
+      "value": 137
+    },
+    {
+      "from": "cat-19",
+      "to": "cat-24",
+      "value": 168
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-21",
+      "value": 92
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-22",
+      "value": 123
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-23",
+      "value": 154
+    },
+    {
+      "from": "cat-20",
+      "to": "cat-24",
+      "value": 185
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-22",
+      "value": 140
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-23",
+      "value": 171
+    },
+    {
+      "from": "cat-21",
+      "to": "cat-24",
+      "value": 202
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-23",
+      "value": 188
+    },
+    {
+      "from": "cat-22",
+      "to": "cat-24",
+      "value": 219
+    },
+    {
+      "from": "cat-23",
+      "to": "cat-24",
+      "value": 236
+    }
+  ]
+}
