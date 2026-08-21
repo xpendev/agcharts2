@@ -4,12 +4,14 @@ import {
   type AgCartesianChartOptions,
   BarSeriesModule,
   CategoryAxisModule,
+  ContextMenuModule,
   LegendModule,
   ModuleRegistry,
   NumberAxisModule,
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { chartContextMenuDownload } from '../agChartsCommon'
 import {
   fetchBuyerDropout,
   SIZE_DEFAULT,
@@ -17,23 +19,23 @@ import {
   SIZE_MIN,
   type BuyerDropoutSample,
 } from './buyerDropoutData'
+import './buyerDropout.css'
 
 ModuleRegistry.registerModules([
   BarSeriesModule,
   CategoryAxisModule,
   NumberAxisModule,
   LegendModule,
+  ContextMenuModule,
 ])
 
 function buildTopOptions(sample: BuyerDropoutSample): AgCartesianChartOptions {
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
+    contextMenu: chartContextMenuDownload,
     title: { text: sample.meta.topTitle, fontSize: 14 },
-    legend: {
-      enabled: true,
-      position: 'bottom',
-    },
+    legend: { enabled: false },
     data: sample.stacked,
     series: [
       {
@@ -88,6 +90,7 @@ function buildBottomOptions(sample: BuyerDropoutSample): AgCartesianChartOptions
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
+    contextMenu: chartContextMenuDownload,
     title: { text: sample.meta.bottomTitle, fontSize: 14 },
     legend: { enabled: false },
     data: sample.dropout,
@@ -275,13 +278,13 @@ export function BuyerDropoutPage() {
               <AgCharts
                 ref={topRef}
                 options={topOptions}
-                style={{ width: 800, height: 280 }}
+                style={{ width: 800, height: 300 }}
               />
             </div>
             <div className="ag-spike-chart-host">
               <AgCharts
                 options={bottomOptions}
-                style={{ width: 800, height: 220 }}
+                style={{ width: 800, height: 280 }}
               />
             </div>
           </div>

@@ -4,6 +4,7 @@ import {
   type AgCartesianChartOptions,
   BarSeriesModule,
   CategoryAxisModule,
+  ContextMenuModule,
   CrossLinesModule,
   LegendModule,
   ModuleRegistry,
@@ -11,6 +12,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { chartContextMenuDownload } from '../agChartsCommon'
 import {
   fetchPurchaseInOut,
   SIZE_DEFAULT,
@@ -18,6 +20,7 @@ import {
   SIZE_MIN,
   type PurchaseInOutSample,
 } from './purchaseInOutData'
+import './purchaseInOut.css'
 
 ModuleRegistry.registerModules([
   BarSeriesModule,
@@ -25,6 +28,7 @@ ModuleRegistry.registerModules([
   NumberAxisModule,
   CrossLinesModule,
   LegendModule,
+  ContextMenuModule,
 ])
 
 const PREV_PERIOD = '直近・1ヶ月'
@@ -46,6 +50,7 @@ function buildOptions(sample: PurchaseInOutSample): AgCartesianChartOptions {
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
+    contextMenu: chartContextMenuDownload,
     padding: { top: 8, right: 12, bottom: 8, left: 8 },
     legend: { enabled: true, position: 'top' },
     data,

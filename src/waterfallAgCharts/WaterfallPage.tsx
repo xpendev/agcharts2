@@ -3,6 +3,7 @@ import type { AgChartInstance } from 'ag-charts-community'
 import {
   type AgCartesianChartOptions,
   CategoryAxisModule,
+  ContextMenuModule,
   LegendModule,
   ModuleRegistry,
   NumberAxisModule,
@@ -10,6 +11,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { chartContextMenuDownload } from '../agChartsCommon'
 import {
   fetchWaterfall,
   SIZE_DEFAULT,
@@ -17,12 +19,14 @@ import {
   SIZE_MIN,
   type WaterfallSample,
 } from './waterfallData'
+import './waterfall.css'
 
 ModuleRegistry.registerModules([
   WaterfallSeriesModule,
   CategoryAxisModule,
   NumberAxisModule,
   LegendModule,
+  ContextMenuModule,
 ])
 
 function formatBarLabel(params: {
@@ -77,6 +81,7 @@ function buildOptions(sample: WaterfallSample): AgCartesianChartOptions {
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
+    contextMenu: chartContextMenuDownload,
     title: { text: sample.meta.title, fontSize: 16 },
     legend: { enabled: true },
     padding: { top: 28, right: 20, bottom: 12, left: 12 },

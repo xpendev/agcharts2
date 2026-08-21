@@ -3,6 +3,7 @@ import type { AgChartInstance } from 'ag-charts-community'
 import {
   type AgCartesianChartOptions,
   BubbleSeriesModule,
+  ContextMenuModule,
   CrossLinesModule,
   LegendModule,
   ModuleRegistry,
@@ -10,6 +11,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { chartContextMenuDownload } from '../agChartsCommon'
 import {
   fetchVolumeMatrix,
   MATRIX_SIZE_DEFAULT,
@@ -18,12 +20,14 @@ import {
   type VolumeMatrixCell,
   type VolumeMatrixSample,
 } from './volumeMatrixData'
+import './volumeMatrix.css'
 
 ModuleRegistry.registerModules([
   BubbleSeriesModule,
   NumberAxisModule,
   CrossLinesModule,
   LegendModule,
+  ContextMenuModule,
 ])
 
 const SIZE_DOMAIN_MAX = 55
@@ -85,6 +89,7 @@ function buildVolumeMatrixOptions(
   return {
     animation: { enabled: false },
     background: { fill: BACKGROUND },
+    contextMenu: chartContextMenuDownload,
     padding: { top: 8, right: 16, bottom: 8, left: 8 },
     title: {
       text: '・ボリューム付数表',

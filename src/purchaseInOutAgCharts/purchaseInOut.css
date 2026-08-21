@@ -1,0 +1,192 @@
+/* Purchase in/out — page-local styles */
+
+.ag-spike-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px;
+  padding: 12px 16px;
+  border: 1px solid #2a3238;
+  border-radius: 8px;
+  background: #1a1f24;
+}
+
+.ag-spike-controls-label {
+  font-size: 13px;
+  color: #c5d6e4;
+}
+
+.ag-spike-slider {
+  width: min(420px, 90%);
+}
+
+.ag-spike-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #f4f6f8;
+  border-radius: 8px;
+}
+
+.ag-spike-chart-host {
+  width: 100%;
+  min-height: 200px;
+  background: #ffffff;
+  border: 1px solid #d0d5da;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ag-spike-chart-host > div {
+  width: 100%;
+}
+
+.ag-spike-chart-host .ag-charts-wrapper {
+  min-width: 0 !important;
+  min-height: 0 !important;
+  width: 100%;
+  height: 100%;
+}
+
+.tn-page-stage-purchase-in-out {
+  width: 800px;
+  max-width: 100%;
+  margin-inline: auto;
+  height: auto;
+  min-height: 0;
+  padding: 12px;
+  overflow: auto;
+}
+
+.pio-frame {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #d0d5da;
+  padding: 14px 16px 16px;
+}
+
+.pio-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pio-kpi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #cfd4d9;
+}
+
+.pio-kpi-brand {
+  font-weight: 700;
+  font-size: 14px;
+  color: #222;
+}
+
+.pio-kpi-pair {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pio-kpi-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 88px;
+  padding: 8px 18px;
+  border: 1px solid #777;
+  border-radius: 10px;
+}
+
+.pio-kpi-cap {
+  font-size: 11px;
+  color: #555;
+}
+
+.pio-kpi-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+.pio-kpi-arrow {
+  width: 52px;
+  height: 18px;
+  flex-shrink: 0;
+  background: #8e8e8e;
+  clip-path: polygon(0 28%, 68% 28%, 68% 0, 100% 50%, 68% 100%, 68% 72%, 0 72%);
+}
+
+.pio-flow-title {
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pio-flow-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pio-flow-side {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pio-flow-side.out {
+  color: #c44b4b;
+}
+
+.pio-flow-side.in {
+  color: #5a9e4a;
+}
+
+.pio-flow-track {
+  display: flex;
+  flex: 1;
+  min-height: 34px;
+  border: 1px solid #b8b8b8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pio-flow-out,
+.pio-flow-mid,
+.pio-flow-in {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  color: #111;
+}
+
+.pio-flow-out {
+  background: #c44b4b;
+}
+
+.pio-flow-mid {
+  background: #f2f2f2;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.pio-flow-in {
+  background: #5a9e4a;
+}
+
+.pio-chart-host {
+  border: none;
+  background: transparent;
+}

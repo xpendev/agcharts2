@@ -4,6 +4,7 @@ import {
   type AgCartesianChartOptions,
   BarSeriesModule,
   CategoryAxisModule,
+  ContextMenuModule,
   CrossLinesModule,
   LegendModule,
   ModuleRegistry,
@@ -11,6 +12,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { chartContextMenuDownload } from '../agChartsCommon'
 import {
   fetchBrandDiverging,
   SIZE_DEFAULT,
@@ -18,6 +20,7 @@ import {
   SIZE_MIN,
   type BrandDivergingSample,
 } from './brandDivergingData'
+import './brandDiverging.css'
 
 ModuleRegistry.registerModules([
   BarSeriesModule,
@@ -25,12 +28,14 @@ ModuleRegistry.registerModules([
   NumberAxisModule,
   CrossLinesModule,
   LegendModule,
+  ContextMenuModule,
 ])
 
 function buildOptions(sample: BrandDivergingSample): AgCartesianChartOptions {
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
+    contextMenu: chartContextMenuDownload,
     title: { text: sample.meta.title, fontSize: 18 },
     legend: { enabled: false },
     data: sample.rows,

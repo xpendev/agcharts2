@@ -4,6 +4,7 @@ import {
   type AgCartesianChartOptions,
   BarSeriesModule,
   CategoryAxisModule,
+  ContextMenuModule,
   LegendModule,
   ModuleRegistry,
   NumberAxisModule,
@@ -11,6 +12,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { chartContextMenuDownload } from '../agChartsCommon'
 import {
   fetchBrandComposition,
   groupRowsByBrand,
@@ -20,6 +22,7 @@ import {
   type BrandCompositionSample,
   type BrandGroup,
 } from './brandCompositionData'
+import './brandComposition.css'
 
 ModuleRegistry.registerModules([
   BarSeriesModule,
@@ -27,6 +30,7 @@ ModuleRegistry.registerModules([
   NumberAxisModule,
   LegendModule,
   SyncModule,
+  ContextMenuModule,
 ])
 
 const SYNC_GROUP_PREFIX = 'brand-composition'
@@ -43,6 +47,7 @@ function buildBrandOptions(
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
+    contextMenu: chartContextMenuDownload,
     // タイトルは DnD ハンドル側に出す（チャート内タイトルは使わない）
     legend: {
       enabled: options.showLegend,
@@ -187,11 +192,11 @@ export function BrandCompositionPage() {
   const chartOptionsByBrand = useMemo(() => {
     if (!sample) return new Map<string, AgCartesianChartOptions>()
     const map = new Map<string, AgCartesianChartOptions>()
-    orderedGroups.forEach((group, index) => {
+    orderedGroups.forEach((group) => {
       map.set(
         group.brand,
         buildBrandOptions(sample, group, {
-          showLegend: index === 0,
+          showLegend: true,
           enableSync,
           syncGroupId,
         }),
