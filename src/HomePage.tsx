@@ -54,6 +54,11 @@ const agChartsLinks = [
     title: '②新規・継続 構成比',
     note: 'ブランド別100%積上（1〜50・Sync）',
   },
+  {
+    to: '/competitive-impact',
+    title: '⑤競合へのインパクト',
+    note: '競合ブランド別 流出・流入インパクト（1〜50）',
+  },
 ] as const
 
 export function HomePage() {

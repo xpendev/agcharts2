@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './index.css'
 import { BrandCompositionPage } from './brandCompositionAgCharts/BrandCompositionPage.tsx'
+import { CompetitiveImpactPage } from './competitiveImpactAgCharts/CompetitiveImpactPage.tsx'
 import { BrandDivergingPage } from './brandDivergingAgCharts/BrandDivergingPage.tsx'
 import { BuyerDropoutPage } from './buyerDropoutAgCharts/BuyerDropoutPage.tsx'
 import { HomePage } from './HomePage.tsx'
@@ -38,6 +39,7 @@ createRoot(document.getElementById('root')!).render(
           path="/brand-composition"
           element={<BrandCompositionPage />}
         />
+        <Route path="/competitive-impact" element={<CompetitiveImpactPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

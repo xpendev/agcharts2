@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "ブランド1 流入・流出インパクト",
+    "subtitle": "購入・販売 週数 シャフル0",
+    "xUnit": "(%)"
+  },
+  "size": 24,
+  "rows": [
+    {
+      "label": "ブランド2",
+      "outflow": 0.002,
+      "inflow": 0.002
+    },
+    {
+      "label": "ブランド3",
+      "outflow": 0.18,
+      "inflow": 0.1
+    },
+    {
+      "label": "ブランド4",
+      "outflow": 0.29,
+      "inflow": 0.17
+    },
+    {
+      "label": "ブランド5",
+      "outflow": 0.4,
+      "inflow": 0.24
+    },
+    {
+      "label": "ブランド6",
+      "outflow": 0.51,
+      "inflow": 0.31
+    },
+    {
+      "label": "ブランド7",
+      "outflow": 0.62,
+      "inflow": 0.38
+    },
+    {
+      "label": "ブランド8",
+      "outflow": 0.13,
+      "inflow": 0.45
+    },
+    {
+      "label": "ブランド9",
+      "outflow": 0.24,
+      "inflow": 0.52
+    },
+    {
+      "label": "ブランド10",
+      "outflow": 0.35,
+      "inflow": 0.59
+    },
+    {
+      "label": "ブランド11",
+      "outflow": 0.46,
+      "inflow": 0.66
+    },
+    {
+      "label": "ブランド12",
+      "outflow": 0.57,
+      "inflow": 0.08
+    },
+    {
+      "label": "ブランド13",
+      "outflow": 0.08,
+      "inflow": 0.15
+    },
+    {
+      "label": "ブランド14",
+      "outflow": 0.19,
+      "inflow": 0.22
+    },
+    {
+      "label": "ブランド15",
+      "outflow": 0.3,
+      "inflow": 0.29
+    },
+    {
+      "label": "ブランド16",
+      "outflow": 0.41,
+      "inflow": 0.36
+    },
+    {
+      "label": "ブランド17",
+      "outflow": 0.52,
+      "inflow": 0.43
+    },
+    {
+      "label": "ブランド18",
+      "outflow": 0.63,
+      "inflow": 0.5
+    },
+    {
+      "label": "ブランド19",
+      "outflow": 0.14,
+      "inflow": 0.57
+    },
+    {
+      "label": "ブランド20",
+      "outflow": 0.25,
+      "inflow": 0.64
+    },
+    {
+      "label": "ブランド21",
+      "outflow": 0.36,
+      "inflow": 0.06
+    },
+    {
+      "label": "ブランド22",
+      "outflow": 0.47,
+      "inflow": 0.13
+    },
+    {
+      "label": "ブランド23",
+      "outflow": 0.58,
+      "inflow": 0.2
+    },
+    {
+      "label": "ブランド24",
+      "outflow": 0.09,
+      "inflow": 0.27
+    },
+    {
+      "label": "ブランド25",
+      "outflow": 0.2,
+      "inflow": 0.34
+    },
+    {
+      "label": "その他（買出入合計）",
+      "outflow": 0.2,
+      "inflow": 0.1
+    }
+  ]
+}

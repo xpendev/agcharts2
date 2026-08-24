@@ -234,6 +234,41 @@ function genBrandComposition(size) {
   }
 }
 
+// --- competitive-impact (size = 競合ブランド数) ---
+function genCompetitiveImpact(size) {
+  const rows = []
+  for (let i = 1; i <= size; i += 1) {
+    // ブランド2は短い棒のラベル（outside-end）確認用
+    const isBrand2 = i === 1
+    const outflow = isBrand2
+      ? 0.002
+      : round2(0.08 + ((i * 11 + size * 7) % 60) / 100)
+    const inflow = isBrand2
+      ? 0.002
+      : round2(0.06 + ((i * 7 + size * 5) % 65) / 100)
+    rows.push({
+      label: `ブランド${i + 1}`,
+      outflow,
+      inflow,
+    })
+  }
+  // 最後に「その他（買出入合計）」を追加
+  rows.push({
+    label: 'その他（買出入合計）',
+    outflow: round2(0.12 + (size % 5) * 0.02),
+    inflow:  round2(0.10 + (size % 4) * 0.02),
+  })
+  return {
+    meta: {
+      title: 'ブランド1 流入・流出インパクト',
+      subtitle: '購入・販売 週数 シャフル0',
+      xUnit: '(%)',
+    },
+    size,
+    rows,
+  }
+}
+
 for (let size = 1; size <= MAX; size += 1) {
   writeJson(`volume-matrix-${size}.json`, genVolumeMatrix(size))
   writeJson(`purchase-in-out-${size}.json`, genPurchaseInOut(size))
@@ -241,6 +276,7 @@ for (let size = 1; size <= MAX; size += 1) {
   writeJson(`brand-diverging-${size}.json`, genBrandDiverging(size))
   writeJson(`buyer-dropout-${size}.json`, genBuyerDropout(size))
   writeJson(`brand-composition-${size}.json`, genBrandComposition(size))
+  writeJson(`competitive-impact-${size}.json`, genCompetitiveImpact(size))
 }
 
-console.log(`wrote 6 charts × ${MAX} sizes (= ${6 * MAX} files)`)
+console.log(`wrote 7 charts × ${MAX} sizes (= ${7 * MAX} files)`)

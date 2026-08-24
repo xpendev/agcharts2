@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { brandCompositionApiPlugin } from './api/viteBrandCompositionApiPlugin.ts'
 import { brandDivergingApiPlugin } from './api/viteBrandDivergingApiPlugin.ts'
 import { buyerDropoutApiPlugin } from './api/viteBuyerDropoutApiPlugin.ts'
+import { competitiveImpactApiPlugin } from './api/viteCompetitiveImpactApiPlugin.ts'
 import { purchaseInOutApiPlugin } from './api/vitePurchaseInOutApiPlugin.ts'
 import { transitionNetworkApiPlugin } from './api/viteTransitionNetworkApiPlugin.ts'
 import { volumeMatrixApiPlugin } from './api/viteVolumeMatrixApiPlugin.ts'
@@ -19,5 +20,6 @@ export default defineConfig({
     brandDivergingApiPlugin(),
     buyerDropoutApiPlugin(),
     brandCompositionApiPlugin(),
+    competitiveImpactApiPlugin(),
   ],
 })

@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "ブランド1 流入・流出インパクト",
+    "subtitle": "購入・販売 週数 シャフル0",
+    "xUnit": "(%)"
+  },
+  "size": 13,
+  "rows": [
+    {
+      "label": "ブランド2",
+      "outflow": 0.002,
+      "inflow": 0.002
+    },
+    {
+      "label": "ブランド3",
+      "outflow": 0.61,
+      "inflow": 0.2
+    },
+    {
+      "label": "ブランド4",
+      "outflow": 0.12,
+      "inflow": 0.27
+    },
+    {
+      "label": "ブランド5",
+      "outflow": 0.23,
+      "inflow": 0.34
+    },
+    {
+      "label": "ブランド6",
+      "outflow": 0.34,
+      "inflow": 0.41
+    },
+    {
+      "label": "ブランド7",
+      "outflow": 0.45,
+      "inflow": 0.48
+    },
+    {
+      "label": "ブランド8",
+      "outflow": 0.56,
+      "inflow": 0.55
+    },
+    {
+      "label": "ブランド9",
+      "outflow": 0.67,
+      "inflow": 0.62
+    },
+    {
+      "label": "ブランド10",
+      "outflow": 0.18,
+      "inflow": 0.69
+    },
+    {
+      "label": "ブランド11",
+      "outflow": 0.29,
+      "inflow": 0.11
+    },
+    {
+      "label": "ブランド12",
+      "outflow": 0.4,
+      "inflow": 0.18
+    },
+    {
+      "label": "ブランド13",
+      "outflow": 0.51,
+      "inflow": 0.25
+    },
+    {
+      "label": "ブランド14",
+      "outflow": 0.62,
+      "inflow": 0.32
+    },
+    {
+      "label": "その他（買出入合計）",
+      "outflow": 0.18,
+      "inflow": 0.12
+    }
+  ]
+}
