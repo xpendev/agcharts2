@@ -1,6 +1,8 @@
 import { AgCharts } from 'ag-charts-react'
 import type { AgChartInstance } from 'ag-charts-community'
 import {
+  type AgBarSeriesLabelFormatterParams,
+  type AgBarSeriesLabelOptions,
   type AgCartesianChartOptions,
   BarSeriesModule,
   CategoryAxisModule,
@@ -34,6 +36,23 @@ ModuleRegistry.registerModules([
 const PREV_PERIOD = '直近・1ヶ月'
 const CURR_PERIOD = '当月・11月'
 
+const barValueLabel: AgBarSeriesLabelOptions<
+  unknown,
+  AgBarSeriesLabelFormatterParams<unknown>
+> = {
+  enabled: true,
+  fontSize: 10,
+  color: '#ffffff',
+  placement: ['inside-end', 'outside-end'],
+  formatter: (params) => {
+    const value = Math.abs(params.value)
+    return value < 0.01 ? value.toFixed(3) : value.toFixed(2)
+  },
+  itemStyler: ({ placement }) => ({
+    color: String(placement).startsWith('outside') ? '#222222' : '#ffffff',
+  }),
+}
+
 function buildOptions(sample: PurchaseInOutSample): AgCartesianChartOptions {
   const data = sample.rows.map((row) => ({
     label: row.label,
@@ -64,6 +83,7 @@ function buildOptions(sample: PurchaseInOutSample): AgCartesianChartOptions {
         fill: '#c44b4b',
         strokeWidth: 0,
         cornerRadius: 0,
+        label: barValueLabel,
       },
       {
         type: 'bar',
@@ -74,6 +94,7 @@ function buildOptions(sample: PurchaseInOutSample): AgCartesianChartOptions {
         fill: '#5a9e4a',
         strokeWidth: 0,
         cornerRadius: 0,
+        label: barValueLabel,
       },
     ],
     axes: {
