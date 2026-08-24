@@ -63,182 +63,182 @@
     {
       "pastId": "brand-1",
       "currentId": "brand-1",
-      "value": 40
+      "value": 36.4
     },
     {
       "pastId": "brand-1",
       "currentId": "brand-2",
-      "value": 12
+      "value": 14.5
     },
     {
       "pastId": "brand-1",
       "currentId": "brand-3",
-      "value": 12
+      "value": 6.4
     },
     {
       "pastId": "brand-1",
       "currentId": "brand-4",
-      "value": 12
+      "value": 16.4
     },
     {
       "pastId": "brand-1",
       "currentId": "brand-5",
-      "value": 12
+      "value": 8.2
     },
     {
       "pastId": "brand-1",
       "currentId": "brand-6",
-      "value": 12
+      "value": 18.2
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-1",
-      "value": 11.5
+      "value": 12.4
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-2",
-      "value": 42.5
+      "value": 44.3
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-3",
-      "value": 11.5
+      "value": 14.4
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-4",
-      "value": 11.5
+      "value": 5.2
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-5",
-      "value": 11.5
+      "value": 16.5
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-6",
-      "value": 11.5
+      "value": 7.2
     },
     {
       "pastId": "brand-3",
       "currentId": "brand-1",
-      "value": 11
+      "value": 15.3
     },
     {
       "pastId": "brand-3",
       "currentId": "brand-2",
-      "value": 11
+      "value": 8.1
     },
     {
       "pastId": "brand-3",
       "currentId": "brand-3",
-      "value": 45
+      "value": 37.1
     },
     {
       "pastId": "brand-3",
       "currentId": "brand-4",
-      "value": 11
+      "value": 9.7
     },
     {
       "pastId": "brand-3",
       "currentId": "brand-5",
-      "value": 11
+      "value": 18.5
     },
     {
       "pastId": "brand-3",
       "currentId": "brand-6",
-      "value": 11
+      "value": 11.3
     },
     {
       "pastId": "brand-4",
       "currentId": "brand-1",
-      "value": 10.5
+      "value": 5.4
     },
     {
       "pastId": "brand-4",
       "currentId": "brand-2",
-      "value": 10.5
+      "value": 15.3
     },
     {
       "pastId": "brand-4",
       "currentId": "brand-3",
-      "value": 10.5
+      "value": 7.2
     },
     {
       "pastId": "brand-4",
       "currentId": "brand-4",
-      "value": 47.5
+      "value": 44.1
     },
     {
       "pastId": "brand-4",
       "currentId": "brand-5",
-      "value": 10.5
+      "value": 9
     },
     {
       "pastId": "brand-4",
       "currentId": "brand-6",
-      "value": 10.5
+      "value": 18.9
     },
     {
       "pastId": "brand-5",
       "currentId": "brand-1",
-      "value": 10
+      "value": 11
     },
     {
       "pastId": "brand-5",
       "currentId": "brand-2",
-      "value": 10
+      "value": 20.3
     },
     {
       "pastId": "brand-5",
       "currentId": "brand-3",
-      "value": 10
+      "value": 12.7
     },
     {
       "pastId": "brand-5",
       "currentId": "brand-4",
-      "value": 10
+      "value": 5.1
     },
     {
       "pastId": "brand-5",
       "currentId": "brand-5",
-      "value": 50
+      "value": 44.1
     },
     {
       "pastId": "brand-5",
       "currentId": "brand-6",
-      "value": 10
+      "value": 6.8
     },
     {
       "pastId": "brand-6",
       "currentId": "brand-1",
-      "value": 12
+      "value": 15.4
     },
     {
       "pastId": "brand-6",
       "currentId": "brand-2",
-      "value": 12
+      "value": 8.5
     },
     {
       "pastId": "brand-6",
       "currentId": "brand-3",
-      "value": 12
+      "value": 16.9
     },
     {
       "pastId": "brand-6",
       "currentId": "brand-4",
-      "value": 12
+      "value": 10
     },
     {
       "pastId": "brand-6",
       "currentId": "brand-5",
-      "value": 12
+      "value": 18.5
     },
     {
       "pastId": "brand-6",
       "currentId": "brand-6",
-      "value": 40
+      "value": 30.8
     }
   ]
 }

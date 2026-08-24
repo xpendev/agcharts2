@@ -13,282 +13,282 @@
     {
       "brand": "ブランド1",
       "period": "'03/4-",
-      "repeat": 59,
+      "repeat": 48,
       "switchIn": 20,
-      "entry": 21
+      "entry": 32
     },
     {
       "brand": "ブランド1",
       "period": "'04/4-",
-      "repeat": 61,
-      "switchIn": 21,
-      "entry": 18
+      "repeat": 53,
+      "switchIn": 23,
+      "entry": 24
     },
     {
       "brand": "ブランド1",
       "period": "'05/4-",
-      "repeat": 63,
-      "switchIn": 22,
-      "entry": 15
-    },
-    {
-      "brand": "ブランド1",
-      "period": "'06/4-",
-      "repeat": 49,
-      "switchIn": 23,
-      "entry": 28
-    },
-    {
-      "brand": "ブランド1",
-      "period": "'07/4-",
-      "repeat": 51,
-      "switchIn": 24,
-      "entry": 25
-    },
-    {
-      "brand": "ブランド2",
-      "period": "'03/4-",
-      "repeat": 62,
-      "switchIn": 22,
+      "repeat": 58,
+      "switchIn": 26,
       "entry": 16
     },
     {
-      "brand": "ブランド2",
-      "period": "'04/4-",
-      "repeat": 48,
-      "switchIn": 23,
-      "entry": 29
-    },
-    {
-      "brand": "ブランド2",
-      "period": "'05/4-",
-      "repeat": 50,
-      "switchIn": 24,
-      "entry": 26
-    },
-    {
-      "brand": "ブランド2",
+      "brand": "ブランド1",
       "period": "'06/4-",
-      "repeat": 52,
-      "switchIn": 25,
-      "entry": 23
+      "repeat": 63,
+      "switchIn": 29,
+      "entry": 8
+    },
+    {
+      "brand": "ブランド1",
+      "period": "'07/4-",
+      "repeat": 64.8,
+      "switchIn": 30.5,
+      "entry": 4.7
     },
     {
       "brand": "ブランド2",
-      "period": "'07/4-",
-      "repeat": 54,
-      "switchIn": 26,
-      "entry": 20
-    },
-    {
-      "brand": "ブランド3",
       "period": "'03/4-",
-      "repeat": 49,
-      "switchIn": 24,
-      "entry": 27
-    },
-    {
-      "brand": "ブランド3",
-      "period": "'04/4-",
       "repeat": 51,
       "switchIn": 25,
       "entry": 24
     },
     {
-      "brand": "ブランド3",
-      "period": "'05/4-",
-      "repeat": 53,
-      "switchIn": 26,
-      "entry": 21
-    },
-    {
-      "brand": "ブランド3",
-      "period": "'06/4-",
-      "repeat": 55,
-      "switchIn": 27,
-      "entry": 18
-    },
-    {
-      "brand": "ブランド3",
-      "period": "'07/4-",
-      "repeat": 57,
-      "switchIn": 28,
-      "entry": 15
-    },
-    {
-      "brand": "ブランド4",
-      "period": "'03/4-",
-      "repeat": 52,
-      "switchIn": 26,
-      "entry": 22
-    },
-    {
-      "brand": "ブランド4",
+      "brand": "ブランド2",
       "period": "'04/4-",
-      "repeat": 54,
-      "switchIn": 27,
-      "entry": 19
-    },
-    {
-      "brand": "ブランド4",
-      "period": "'05/4-",
       "repeat": 56,
       "switchIn": 28,
       "entry": 16
     },
     {
+      "brand": "ブランド2",
+      "period": "'05/4-",
+      "repeat": 61,
+      "switchIn": 31,
+      "entry": 8
+    },
+    {
+      "brand": "ブランド2",
+      "period": "'06/4-",
+      "repeat": 62.9,
+      "switchIn": 32.4,
+      "entry": 4.7
+    },
+    {
+      "brand": "ブランド2",
+      "period": "'07/4-",
+      "repeat": 46,
+      "switchIn": 17,
+      "entry": 37
+    },
+    {
+      "brand": "ブランド3",
+      "period": "'03/4-",
+      "repeat": 54,
+      "switchIn": 30,
+      "entry": 16
+    },
+    {
+      "brand": "ブランド3",
+      "period": "'04/4-",
+      "repeat": 59,
+      "switchIn": 33,
+      "entry": 8
+    },
+    {
+      "brand": "ブランド3",
+      "period": "'05/4-",
+      "repeat": 64,
+      "switchIn": 16,
+      "entry": 20
+    },
+    {
+      "brand": "ブランド3",
+      "period": "'06/4-",
+      "repeat": 69,
+      "switchIn": 19,
+      "entry": 12
+    },
+    {
+      "brand": "ブランド3",
+      "period": "'07/4-",
+      "repeat": 49,
+      "switchIn": 22,
+      "entry": 29
+    },
+    {
+      "brand": "ブランド4",
+      "period": "'03/4-",
+      "repeat": 57,
+      "switchIn": 15,
+      "entry": 28
+    },
+    {
+      "brand": "ブランド4",
+      "period": "'04/4-",
+      "repeat": 62,
+      "switchIn": 18,
+      "entry": 20
+    },
+    {
+      "brand": "ブランド4",
+      "period": "'05/4-",
+      "repeat": 67,
+      "switchIn": 21,
+      "entry": 12
+    },
+    {
       "brand": "ブランド4",
       "period": "'06/4-",
-      "repeat": 58,
+      "repeat": 47,
+      "switchIn": 24,
+      "entry": 29
+    },
+    {
+      "brand": "ブランド4",
+      "period": "'07/4-",
+      "repeat": 52,
+      "switchIn": 27,
+      "entry": 21
+    },
+    {
+      "brand": "ブランド5",
+      "period": "'03/4-",
+      "repeat": 60,
+      "switchIn": 20,
+      "entry": 20
+    },
+    {
+      "brand": "ブランド5",
+      "period": "'04/4-",
+      "repeat": 65,
+      "switchIn": 23,
+      "entry": 12
+    },
+    {
+      "brand": "ブランド5",
+      "period": "'05/4-",
+      "repeat": 45,
+      "switchIn": 26,
+      "entry": 29
+    },
+    {
+      "brand": "ブランド5",
+      "period": "'06/4-",
+      "repeat": 50,
       "switchIn": 29,
+      "entry": 21
+    },
+    {
+      "brand": "ブランド5",
+      "period": "'07/4-",
+      "repeat": 55,
+      "switchIn": 32,
       "entry": 13
     },
     {
-      "brand": "ブランド4",
-      "period": "'07/4-",
-      "repeat": 60,
-      "switchIn": 20,
-      "entry": 20
-    },
-    {
-      "brand": "ブランド5",
+      "brand": "ブランド6",
       "period": "'03/4-",
-      "repeat": 55,
-      "switchIn": 28,
-      "entry": 17
+      "repeat": 63,
+      "switchIn": 25,
+      "entry": 12
     },
     {
-      "brand": "ブランド5",
+      "brand": "ブランド6",
       "period": "'04/4-",
-      "repeat": 57,
-      "switchIn": 29,
-      "entry": 14
+      "repeat": 67.3,
+      "switchIn": 27.7,
+      "entry": 5
     },
     {
-      "brand": "ブランド5",
+      "brand": "ブランド6",
       "period": "'05/4-",
-      "repeat": 59,
-      "switchIn": 20,
+      "repeat": 48,
+      "switchIn": 31,
       "entry": 21
     },
     {
-      "brand": "ブランド5",
+      "brand": "ブランド6",
       "period": "'06/4-",
-      "repeat": 61,
-      "switchIn": 21,
-      "entry": 18
+      "repeat": 53,
+      "switchIn": 34,
+      "entry": 13
     },
     {
-      "brand": "ブランド5",
+      "brand": "ブランド6",
       "period": "'07/4-",
-      "repeat": 63,
-      "switchIn": 22,
-      "entry": 15
-    },
-    {
-      "brand": "ブランド6",
-      "period": "'03/4-",
       "repeat": 58,
-      "switchIn": 20,
-      "entry": 22
+      "switchIn": 17,
+      "entry": 25
     },
     {
-      "brand": "ブランド6",
+      "brand": "ブランド7",
+      "period": "'03/4-",
+      "repeat": 65.3,
+      "switchIn": 29.7,
+      "entry": 5
+    },
+    {
+      "brand": "ブランド7",
       "period": "'04/4-",
-      "repeat": 60,
-      "switchIn": 21,
-      "entry": 19
+      "repeat": 46,
+      "switchIn": 33,
+      "entry": 21
     },
     {
-      "brand": "ブランド6",
+      "brand": "ブランド7",
       "period": "'05/4-",
-      "repeat": 62,
+      "repeat": 51,
+      "switchIn": 16,
+      "entry": 33
+    },
+    {
+      "brand": "ブランド7",
+      "period": "'06/4-",
+      "repeat": 56,
+      "switchIn": 19,
+      "entry": 25
+    },
+    {
+      "brand": "ブランド7",
+      "period": "'07/4-",
+      "repeat": 61,
       "switchIn": 22,
+      "entry": 17
+    },
+    {
+      "brand": "ブランド8",
+      "period": "'03/4-",
+      "repeat": 69,
+      "switchIn": 15,
       "entry": 16
     },
     {
-      "brand": "ブランド6",
-      "period": "'06/4-",
-      "repeat": 48,
-      "switchIn": 23,
-      "entry": 29
-    },
-    {
-      "brand": "ブランド6",
-      "period": "'07/4-",
-      "repeat": 50,
-      "switchIn": 24,
-      "entry": 26
-    },
-    {
-      "brand": "ブランド7",
-      "period": "'03/4-",
-      "repeat": 61,
-      "switchIn": 22,
-      "entry": 17
-    },
-    {
-      "brand": "ブランド7",
+      "brand": "ブランド8",
       "period": "'04/4-",
-      "repeat": 63,
-      "switchIn": 23,
-      "entry": 14
-    },
-    {
-      "brand": "ブランド7",
-      "period": "'05/4-",
       "repeat": 49,
-      "switchIn": 24,
-      "entry": 27
-    },
-    {
-      "brand": "ブランド7",
-      "period": "'06/4-",
-      "repeat": 51,
-      "switchIn": 25,
-      "entry": 24
-    },
-    {
-      "brand": "ブランド7",
-      "period": "'07/4-",
-      "repeat": 53,
-      "switchIn": 26,
-      "entry": 21
+      "switchIn": 18,
+      "entry": 33
     },
     {
       "brand": "ブランド8",
-      "period": "'03/4-",
-      "repeat": 48,
-      "switchIn": 24,
-      "entry": 28
-    },
-    {
-      "brand": "ブランド8",
-      "period": "'04/4-",
-      "repeat": 50,
-      "switchIn": 25,
+      "period": "'05/4-",
+      "repeat": 54,
+      "switchIn": 21,
       "entry": 25
     },
     {
       "brand": "ブランド8",
-      "period": "'05/4-",
-      "repeat": 52,
-      "switchIn": 26,
-      "entry": 22
-    },
-    {
-      "brand": "ブランド8",
       "period": "'06/4-",
-      "repeat": 54,
-      "switchIn": 27,
-      "entry": 19
+      "repeat": 59,
+      "switchIn": 24,
+      "entry": 17
     },
     {
       "brand": "ブランド8",
       "period": "'07/4-",
-      "repeat": 56,
-      "switchIn": 28,
-      "entry": 16
+      "repeat": 64,
+      "switchIn": 27,
+      "entry": 9
     }
   ]
 }

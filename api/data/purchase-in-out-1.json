@@ -5,17 +5,17 @@
   },
   "size": 1,
   "summary": {
-    "previousPercent": 34.3,
-    "currentPercent": 34.9,
-    "outflowPercent": -3.9,
-    "retainedPercent": 30.4,
-    "inflowPercent": 4.5
+    "previousPercent": 34.2,
+    "currentPercent": 35,
+    "outflowPercent": -4.1,
+    "retainedPercent": 30.6,
+    "inflowPercent": 4.6
   },
   "rows": [
     {
       "label": "ブランド1",
-      "outflow": 0.39,
-      "inflow": 0.33
+      "outflow": 0.25,
+      "inflow": 0.19
     }
   ]
 }

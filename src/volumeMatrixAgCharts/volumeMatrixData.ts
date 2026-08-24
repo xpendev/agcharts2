@@ -1,5 +1,5 @@
 /**
- * ボリューム付数表の型と API 取得。
+ * ⑦ブランドクロスの型と API 取得。
  * GET /api/volume-matrix?size=n
  */
 
@@ -15,11 +15,11 @@ export type VolumeMatrixCell = {
 /** マス数スライダー下限 */
 export const MATRIX_SIZE_MIN = 1
 /** マス数スライダー上限 */
-export const MATRIX_SIZE_MAX = 7
+export const MATRIX_SIZE_MAX = 50
 /** マス数の初期値 */
 export const MATRIX_SIZE_DEFAULT = 7
 
-/** 行ごとの色（ブランド1〜7） */
+/** 行ごとの色（循環利用） */
 const ROW_COLORS = [
   '#8fbf5a',
   '#2f7a3a',
@@ -90,7 +90,7 @@ export function toVolumeMatrixSample(
       current,
       value: cell.value,
       label: cell.value.toFixed(1),
-      fill: ROW_COLORS[rowIndex] ?? '#888888',
+      fill: ROW_COLORS[rowIndex % ROW_COLORS.length],
     }
   })
 

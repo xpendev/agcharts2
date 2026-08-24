@@ -246,7 +246,7 @@ export function PurchaseInOutPage() {
       <header className="tn-page-header">
         <div>
           <p className="tn-page-eyebrow">AG Charts 検証</p>
-          <h1 className="tn-page-title">買出入(実績)</h1>
+          <h1 className="tn-page-title">④シェア流出・流入比較</h1>
         </div>
         <div className="tn-page-actions">
           <Link className="tn-page-link" to="/">

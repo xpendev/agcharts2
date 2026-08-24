@@ -1,11 +1,11 @@
 /**
- * 人数構成比。
+ * ②新規・継続 構成比。
  * GET /api/brand-composition?size=n
- * size = ブランド数（1〜8）
+ * size = ブランド数（1〜50）
  */
 
 export const SIZE_MIN = 1
-export const SIZE_MAX = 8
+export const SIZE_MAX = 50
 export const SIZE_DEFAULT = 4
 
 export type BrandCompositionRow = {

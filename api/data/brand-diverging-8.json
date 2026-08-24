@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "title": "ブランドA"
+  },
+  "size": 8,
+  "rows": [
+    {
+      "label": "ブランドB",
+      "value": 80
+    },
+    {
+      "label": "ブランドC",
+      "value": 70
+    },
+    {
+      "label": "ブランドD",
+      "value": 60
+    },
+    {
+      "label": "ブランドE",
+      "value": 50
+    },
+    {
+      "label": "ブランドF",
+      "value": 40
+    },
+    {
+      "label": "ブランドG",
+      "value": 30
+    },
+    {
+      "label": "ブランドH",
+      "value": -10
+    },
+    {
+      "label": "ブランドI",
+      "value": -15
+    }
+  ]
+}

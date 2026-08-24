@@ -1,11 +1,11 @@
 /**
- * 購入者割合 / 脱落者。
+ * ①新規・継続・脱落率。
  * GET /api/buyer-dropout?size=n
- * size = 期間数（1〜7）
+ * size = 期間数（1〜50）
  */
 
 export const SIZE_MIN = 1
-export const SIZE_MAX = 7
+export const SIZE_MAX = 50
 export const SIZE_DEFAULT = 3
 
 export type BuyerDropoutSample = {

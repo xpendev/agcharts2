@@ -222,7 +222,7 @@ export function WaterfallPage() {
       <header className="tn-page-header">
         <div>
           <p className="tn-page-eyebrow">AG Charts 検証</p>
-          <h1 className="tn-page-title">ウォーターフォール</h1>
+          <h1 className="tn-page-title">③シェア流出入</h1>
         </div>
         <div className="tn-page-actions">
           <Link className="tn-page-link" to="/">

@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "title": "ブランドA"
+  },
+  "size": 33,
+  "rows": [
+    {
+      "label": "ブランドB",
+      "value": 80
+    },
+    {
+      "label": "ブランドC",
+      "value": 77.8
+    },
+    {
+      "label": "ブランドD",
+      "value": 75.6
+    },
+    {
+      "label": "ブランドE",
+      "value": 73.4
+    },
+    {
+      "label": "ブランドF",
+      "value": 71.3
+    },
+    {
+      "label": "ブランドG",
+      "value": 69.1
+    },
+    {
+      "label": "ブランドH",
+      "value": 66.9
+    },
+    {
+      "label": "ブランドI",
+      "value": 64.7
+    },
+    {
+      "label": "ブランドJ",
+      "value": 62.5
+    },
+    {
+      "label": "ブランドK",
+      "value": 60.3
+    },
+    {
+      "label": "ブランドL",
+      "value": 58.1
+    },
+    {
+      "label": "ブランドM",
+      "value": 55.9
+    },
+    {
+      "label": "ブランドN",
+      "value": 53.8
+    },
+    {
+      "label": "ブランドO",
+      "value": 51.6
+    },
+    {
+      "label": "ブランドP",
+      "value": 49.4
+    },
+    {
+      "label": "ブランドQ",
+      "value": 47.2
+    },
+    {
+      "label": "ブランドR",
+      "value": 45
+    },
+    {
+      "label": "ブランドS",
+      "value": 42.8
+    },
+    {
+      "label": "ブランドT",
+      "value": 40.6
+    },
+    {
+      "label": "ブランドU",
+      "value": 38.4
+    },
+    {
+      "label": "ブランドV",
+      "value": 36.3
+    },
+    {
+      "label": "ブランドW",
+      "value": 34.1
+    },
+    {
+      "label": "ブランドX",
+      "value": 31.9
+    },
+    {
+      "label": "ブランドY",
+      "value": 29.7
+    },
+    {
+      "label": "ブランドZ",
+      "value": 27.5
+    },
+    {
+      "label": "ブランドB2",
+      "value": -15
+    },
+    {
+      "label": "ブランドC2",
+      "value": -20
+    },
+    {
+      "label": "ブランドD2",
+      "value": -25
+    },
+    {
+      "label": "ブランドE2",
+      "value": -30
+    },
+    {
+      "label": "ブランドF2",
+      "value": -35
+    },
+    {
+      "label": "ブランドG2",
+      "value": -10
+    },
+    {
+      "label": "ブランドH2",
+      "value": -15
+    },
+    {
+      "label": "ブランドI2",
+      "value": -20
+    }
+  ]
+}

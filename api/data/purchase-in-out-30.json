@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "title": "買出入(実績)",
+    "brandLabel": "ブランド"
+  },
+  "size": 30,
+  "summary": {
+    "previousPercent": 34,
+    "currentPercent": 34.8,
+    "outflowPercent": -4.2,
+    "retainedPercent": 30.5,
+    "inflowPercent": 4.5
+  },
+  "rows": [
+    {
+      "label": "ブランド1",
+      "outflow": 0.62,
+      "inflow": 0.22
+    },
+    {
+      "label": "ブランド2",
+      "outflow": 0.19,
+      "inflow": 0.27
+    },
+    {
+      "label": "ブランド3",
+      "outflow": 0.26,
+      "inflow": 0.32
+    },
+    {
+      "label": "ブランド4",
+      "outflow": 0.33,
+      "inflow": 0.37
+    },
+    {
+      "label": "ブランド5",
+      "outflow": 0.4,
+      "inflow": 0.42
+    },
+    {
+      "label": "ブランド6",
+      "outflow": 0.47,
+      "inflow": 0.47
+    },
+    {
+      "label": "ブランド7",
+      "outflow": 0.54,
+      "inflow": 0.52
+    },
+    {
+      "label": "ブランド8",
+      "outflow": 0.61,
+      "inflow": 0.57
+    },
+    {
+      "label": "ブランド9",
+      "outflow": 0.18,
+      "inflow": 0.62
+    },
+    {
+      "label": "ブランド10",
+      "outflow": 0.25,
+      "inflow": 0.12
+    },
+    {
+      "label": "ブランド11",
+      "outflow": 0.32,
+      "inflow": 0.17
+    },
+    {
+      "label": "ブランド12",
+      "outflow": 0.39,
+      "inflow": 0.22
+    },
+    {
+      "label": "ブランド13",
+      "outflow": 0.46,
+      "inflow": 0.27
+    },
+    {
+      "label": "ブランド14",
+      "outflow": 0.53,
+      "inflow": 0.32
+    },
+    {
+      "label": "ブランド15",
+      "outflow": 0.6,
+      "inflow": 0.37
+    },
+    {
+      "label": "ブランド16",
+      "outflow": 0.17,
+      "inflow": 0.42
+    },
+    {
+      "label": "ブランド17",
+      "outflow": 0.24,
+      "inflow": 0.47
+    },
+    {
+      "label": "ブランド18",
+      "outflow": 0.31,
+      "inflow": 0.52
+    },
+    {
+      "label": "ブランド19",
+      "outflow": 0.38,
+      "inflow": 0.57
+    },
+    {
+      "label": "ブランド20",
+      "outflow": 0.45,
+      "inflow": 0.62
+    },
+    {
+      "label": "ブランド21",
+      "outflow": 0.52,
+      "inflow": 0.12
+    },
+    {
+      "label": "ブランド22",
+      "outflow": 0.59,
+      "inflow": 0.17
+    },
+    {
+      "label": "ブランド23",
+      "outflow": 0.16,
+      "inflow": 0.22
+    },
+    {
+      "label": "ブランド24",
+      "outflow": 0.23,
+      "inflow": 0.27
+    },
+    {
+      "label": "ブランド25",
+      "outflow": 0.3,
+      "inflow": 0.32
+    },
+    {
+      "label": "ブランド26",
+      "outflow": 0.37,
+      "inflow": 0.37
+    },
+    {
+      "label": "ブランド27",
+      "outflow": 0.44,
+      "inflow": 0.42
+    },
+    {
+      "label": "ブランド28",
+      "outflow": 0.51,
+      "inflow": 0.47
+    },
+    {
+      "label": "ブランド29",
+      "outflow": 0.58,
+      "inflow": 0.52
+    },
+    {
+      "label": "ブランド30",
+      "outflow": 0.15,
+      "inflow": 0.57
+    }
+  ]
+}

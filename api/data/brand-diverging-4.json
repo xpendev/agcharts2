@@ -9,16 +9,16 @@
       "value": 80
     },
     {
-      "label": "ブランドD",
-      "value": 60
-    },
-    {
-      "label": "ブランドH",
-      "value": 45
-    },
-    {
       "label": "ブランドC",
-      "value": -15
+      "value": 56.7
+    },
+    {
+      "label": "ブランドD",
+      "value": 33.3
+    },
+    {
+      "label": "ブランドE",
+      "value": -25
     }
   ]
 }

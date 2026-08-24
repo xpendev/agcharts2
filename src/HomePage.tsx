@@ -26,33 +26,33 @@ const transitionLinks = [
 const agChartsLinks = [
   {
     to: '/volume-matrix',
-    title: 'ボリューム付数表',
-    note: '過去×現在の遷移マトリクス（Bubble）',
+    title: '⑦ブランドクロス',
+    note: '過去×現在の遷移マトリクス（Bubble・1〜50）',
   },
   {
     to: '/purchase-in-out',
-    title: '買出入(実績)',
-    note: 'KPI + 全体バー + 発散棒（800px）',
+    title: '④シェア流出・流入比較',
+    note: 'KPI + 全体バー + 発散棒（ブランド1〜50）',
   },
   {
     to: '/waterfall',
-    title: 'ウォーターフォール',
-    note: '職出入差（棒の数1〜7）',
+    title: '③シェア流出入',
+    note: '職出入差（棒の数1〜50）',
   },
   {
     to: '/brand-diverging',
-    title: 'ブランド発散棒',
-    note: '単一系列・符号で色分け',
+    title: '⑥流出入差ランキング',
+    note: '単一系列・符号で色分け（1〜50）',
   },
   {
     to: '/buyer-dropout',
-    title: '購入者割合 / 脱落者',
-    note: '上:積上棒 / 下:負の棒（期間1〜7）',
+    title: '①新規・継続・脱落率',
+    note: '上:積上棒 / 下:負の棒（期間1〜50）',
   },
   {
     to: '/brand-composition',
-    title: '人数構成比',
-    note: 'ブランド別100%積上（1〜8・Sync）',
+    title: '②新規・継続 構成比',
+    note: 'ブランド別100%積上（1〜50・Sync）',
   },
 ] as const
 
@@ -81,7 +81,7 @@ export function HomePage() {
           AG Charts 帳票グラフ（独立）
         </h2>
         <p className="tn-home-lead">
-          各グラフは固定 JSON（データセット 1〜7）をスライダーで切替
+          各グラフは固定 JSON（データセット 1〜50）をスライダーで切替
         </p>
         <nav className="tn-home-nav" aria-label="AG Charts 帳票グラフ一覧">
           {agChartsLinks.map((item) => (

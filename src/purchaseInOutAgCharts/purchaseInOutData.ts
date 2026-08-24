@@ -1,10 +1,10 @@
 /**
- * 買出入(実績)。
- * GET /api/purchase-in-out?size=n （size = ブランド数 1〜7）
+ * ④シェア流出・流入比較。
+ * GET /api/purchase-in-out?size=n （size = ブランド数 1〜50）
  */
 
 export const SIZE_MIN = 1
-export const SIZE_MAX = 7
+export const SIZE_MAX = 50
 export const SIZE_DEFAULT = 7
 
 export type PurchaseInOutRow = {

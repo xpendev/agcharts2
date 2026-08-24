@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "買出入(実績)",
+    "brandLabel": "ブランド"
+  },
+  "size": 12,
+  "summary": {
+    "previousPercent": 34.4,
+    "currentPercent": 35.2,
+    "outflowPercent": -4,
+    "retainedPercent": 30.5,
+    "inflowPercent": 4.7
+  },
+  "rows": [
+    {
+      "label": "ブランド1",
+      "outflow": 0.58,
+      "inflow": 0.41
+    },
+    {
+      "label": "ブランド2",
+      "outflow": 0.15,
+      "inflow": 0.46
+    },
+    {
+      "label": "ブランド3",
+      "outflow": 0.22,
+      "inflow": 0.51
+    },
+    {
+      "label": "ブランド4",
+      "outflow": 0.29,
+      "inflow": 0.56
+    },
+    {
+      "label": "ブランド5",
+      "outflow": 0.36,
+      "inflow": 0.61
+    },
+    {
+      "label": "ブランド6",
+      "outflow": 0.43,
+      "inflow": 0.66
+    },
+    {
+      "label": "ブランド7",
+      "outflow": 0.5,
+      "inflow": 0.16
+    },
+    {
+      "label": "ブランド8",
+      "outflow": 0.57,
+      "inflow": 0.21
+    },
+    {
+      "label": "ブランド9",
+      "outflow": 0.64,
+      "inflow": 0.26
+    },
+    {
+      "label": "ブランド10",
+      "outflow": 0.21,
+      "inflow": 0.31
+    },
+    {
+      "label": "ブランド11",
+      "outflow": 0.28,
+      "inflow": 0.36
+    },
+    {
+      "label": "ブランド12",
+      "outflow": 0.35,
+      "inflow": 0.41
+    }
+  ]
+}

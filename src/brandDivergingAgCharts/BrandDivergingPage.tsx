@@ -166,7 +166,7 @@ export function BrandDivergingPage() {
       <header className="tn-page-header">
         <div>
           <p className="tn-page-eyebrow">AG Charts 検証</p>
-          <h1 className="tn-page-title">ブランド発散棒</h1>
+          <h1 className="tn-page-title">⑥流出入差ランキング</h1>
         </div>
         <div className="tn-page-actions">
           <Link className="tn-page-link" to="/">

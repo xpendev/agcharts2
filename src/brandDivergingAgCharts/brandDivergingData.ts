@@ -1,11 +1,11 @@
 /**
- * ブランド発散棒。
+ * ⑥流出入差ランキング。
  * GET /api/brand-diverging?size=n
- * size = ブランド数（1〜7）
+ * size = ブランド数（1〜50）
  */
 
 export const SIZE_MIN = 1
-export const SIZE_MAX = 7
+export const SIZE_MAX = 50
 export const SIZE_DEFAULT = 7
 
 export type BrandDivergingRow = { label: string; value: number }

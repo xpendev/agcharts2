@@ -215,7 +215,7 @@ export function BuyerDropoutPage() {
       <header className="tn-page-header">
         <div>
           <p className="tn-page-eyebrow">AG Charts 検証</p>
-          <h1 className="tn-page-title">購入者割合 / 脱落者</h1>
+          <h1 className="tn-page-title">①新規・継続・脱落率</h1>
         </div>
         <div className="tn-page-actions">
           <Link className="tn-page-link" to="/">

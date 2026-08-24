@@ -5,5 +5,7 @@ export function waterfallApiPlugin() {
     name: 'waterfall-api',
     pathname: '/api/waterfall',
     filePrefix: 'waterfall',
+    min: 1,
+    max: 50,
   })
 }

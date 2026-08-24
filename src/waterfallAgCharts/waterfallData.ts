@@ -1,7 +1,7 @@
-/** GET /api/waterfall?size=n （size = 棒の数 1〜7） */
+/** GET /api/waterfall?size=n （size = 棒の数 1〜50） */
 
 export const SIZE_MIN = 1
-export const SIZE_MAX = 7
+export const SIZE_MAX = 50
 export const SIZE_DEFAULT = 3
 
 export type WaterfallSample = {

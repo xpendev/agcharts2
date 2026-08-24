@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": "ブランドA"
+  },
+  "size": 27,
+  "rows": [
+    {
+      "label": "ブランドB",
+      "value": 80
+    },
+    {
+      "label": "ブランドC",
+      "value": 77.3
+    },
+    {
+      "label": "ブランドD",
+      "value": 74.6
+    },
+    {
+      "label": "ブランドE",
+      "value": 71.9
+    },
+    {
+      "label": "ブランドF",
+      "value": 69.2
+    },
+    {
+      "label": "ブランドG",
+      "value": 66.5
+    },
+    {
+      "label": "ブランドH",
+      "value": 63.8
+    },
+    {
+      "label": "ブランドI",
+      "value": 61.2
+    },
+    {
+      "label": "ブランドJ",
+      "value": 58.5
+    },
+    {
+      "label": "ブランドK",
+      "value": 55.8
+    },
+    {
+      "label": "ブランドL",
+      "value": 53.1
+    },
+    {
+      "label": "ブランドM",
+      "value": 50.4
+    },
+    {
+      "label": "ブランドN",
+      "value": 47.7
+    },
+    {
+      "label": "ブランドO",
+      "value": 45
+    },
+    {
+      "label": "ブランドP",
+      "value": 42.3
+    },
+    {
+      "label": "ブランドQ",
+      "value": 39.6
+    },
+    {
+      "label": "ブランドR",
+      "value": 36.9
+    },
+    {
+      "label": "ブランドS",
+      "value": 34.2
+    },
+    {
+      "label": "ブランドT",
+      "value": 31.5
+    },
+    {
+      "label": "ブランドU",
+      "value": 28.8
+    },
+    {
+      "label": "ブランドV",
+      "value": 26.2
+    },
+    {
+      "label": "ブランドW",
+      "value": -25
+    },
+    {
+      "label": "ブランドX",
+      "value": -30
+    },
+    {
+      "label": "ブランドY",
+      "value": -35
+    },
+    {
+      "label": "ブランドZ",
+      "value": -10
+    },
+    {
+      "label": "ブランドB2",
+      "value": -15
+    },
+    {
+      "label": "ブランドC2",
+      "value": -20
+    }
+  ]
+}

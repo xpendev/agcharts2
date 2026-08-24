@@ -5,37 +5,37 @@
   },
   "size": 5,
   "summary": {
-    "previousPercent": 34.7,
-    "currentPercent": 35.6,
-    "outflowPercent": -4.2,
-    "retainedPercent": 30.5,
-    "inflowPercent": 4.9
+    "previousPercent": 34,
+    "currentPercent": 34.8,
+    "outflowPercent": -4.1,
+    "retainedPercent": 30.7,
+    "inflowPercent": 4.5
   },
   "rows": [
     {
       "label": "ブランド1",
-      "outflow": 0.39,
-      "inflow": 0.33
+      "outflow": 0.37,
+      "inflow": 0.27
     },
     {
       "label": "ブランド2",
-      "outflow": 0.52,
-      "inflow": 0.41
+      "outflow": 0.44,
+      "inflow": 0.32
     },
     {
       "label": "ブランド3",
-      "outflow": 0.28,
-      "inflow": 0.55
+      "outflow": 0.51,
+      "inflow": 0.37
     },
     {
       "label": "ブランド4",
-      "outflow": 0.61,
-      "inflow": 0.22
+      "outflow": 0.58,
+      "inflow": 0.42
     },
     {
       "label": "ブランド5",
-      "outflow": 0.35,
-      "inflow": 0.48
+      "outflow": 0.15,
+      "inflow": 0.47
     }
   ]
 }

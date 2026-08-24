@@ -39,47 +39,47 @@
     {
       "pastId": "brand-1",
       "currentId": "brand-1",
-      "value": 40
+      "value": 63.5
     },
     {
       "pastId": "brand-1",
       "currentId": "brand-2",
-      "value": 30
+      "value": 25.4
     },
     {
       "pastId": "brand-1",
       "currentId": "brand-3",
-      "value": 30
+      "value": 11.1
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-1",
-      "value": 28.8
+      "value": 17.4
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-2",
-      "value": 42.5
+      "value": 62.3
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-3",
-      "value": 28.7
+      "value": 20.3
     },
     {
       "pastId": "brand-3",
       "currentId": "brand-1",
-      "value": 27.5
+      "value": 25.3
     },
     {
       "pastId": "brand-3",
       "currentId": "brand-2",
-      "value": 27.5
+      "value": 13.3
     },
     {
       "pastId": "brand-3",
       "currentId": "brand-3",
-      "value": 45
+      "value": 61.3
     }
   ]
 }

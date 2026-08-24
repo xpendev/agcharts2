@@ -1,0 +1,9605 @@
+{
+  "meta": {
+    "title": "ボリューム付数表",
+    "pastPeriodLabel": "過去購入 ('09/1 - '09/12)",
+    "currentPeriodLabel": "現在購入 ('10/1 - '10/12)",
+    "note": "*数値：％（行）（人数ベース）",
+    "unit": "row_percent"
+  },
+  "size": 43,
+  "columns": [
+    {
+      "id": "brand-1",
+      "label": "ブランド1"
+    },
+    {
+      "id": "brand-2",
+      "label": "ブランド2"
+    },
+    {
+      "id": "brand-3",
+      "label": "ブランド3"
+    },
+    {
+      "id": "brand-4",
+      "label": "ブランド4"
+    },
+    {
+      "id": "brand-5",
+      "label": "ブランド5"
+    },
+    {
+      "id": "brand-6",
+      "label": "ブランド6"
+    },
+    {
+      "id": "brand-7",
+      "label": "ブランド7"
+    },
+    {
+      "id": "brand-8",
+      "label": "ブランド8"
+    },
+    {
+      "id": "brand-9",
+      "label": "ブランド9"
+    },
+    {
+      "id": "brand-10",
+      "label": "ブランド10"
+    },
+    {
+      "id": "brand-11",
+      "label": "ブランド11"
+    },
+    {
+      "id": "brand-12",
+      "label": "ブランド12"
+    },
+    {
+      "id": "brand-13",
+      "label": "ブランド13"
+    },
+    {
+      "id": "brand-14",
+      "label": "ブランド14"
+    },
+    {
+      "id": "brand-15",
+      "label": "ブランド15"
+    },
+    {
+      "id": "brand-16",
+      "label": "ブランド16"
+    },
+    {
+      "id": "brand-17",
+      "label": "ブランド17"
+    },
+    {
+      "id": "brand-18",
+      "label": "ブランド18"
+    },
+    {
+      "id": "brand-19",
+      "label": "ブランド19"
+    },
+    {
+      "id": "brand-20",
+      "label": "ブランド20"
+    },
+    {
+      "id": "brand-21",
+      "label": "ブランド21"
+    },
+    {
+      "id": "brand-22",
+      "label": "ブランド22"
+    },
+    {
+      "id": "brand-23",
+      "label": "ブランド23"
+    },
+    {
+      "id": "brand-24",
+      "label": "ブランド24"
+    },
+    {
+      "id": "brand-25",
+      "label": "ブランド25"
+    },
+    {
+      "id": "brand-26",
+      "label": "ブランド26"
+    },
+    {
+      "id": "brand-27",
+      "label": "ブランド27"
+    },
+    {
+      "id": "brand-28",
+      "label": "ブランド28"
+    },
+    {
+      "id": "brand-29",
+      "label": "ブランド29"
+    },
+    {
+      "id": "brand-30",
+      "label": "ブランド30"
+    },
+    {
+      "id": "brand-31",
+      "label": "ブランド31"
+    },
+    {
+      "id": "brand-32",
+      "label": "ブランド32"
+    },
+    {
+      "id": "brand-33",
+      "label": "ブランド33"
+    },
+    {
+      "id": "brand-34",
+      "label": "ブランド34"
+    },
+    {
+      "id": "brand-35",
+      "label": "ブランド35"
+    },
+    {
+      "id": "brand-36",
+      "label": "ブランド36"
+    },
+    {
+      "id": "brand-37",
+      "label": "ブランド37"
+    },
+    {
+      "id": "brand-38",
+      "label": "ブランド38"
+    },
+    {
+      "id": "brand-39",
+      "label": "ブランド39"
+    },
+    {
+      "id": "brand-40",
+      "label": "ブランド40"
+    },
+    {
+      "id": "brand-41",
+      "label": "ブランド41"
+    },
+    {
+      "id": "brand-42",
+      "label": "ブランド42"
+    },
+    {
+      "id": "brand-43",
+      "label": "ブランド43"
+    }
+  ],
+  "rows": [
+    {
+      "id": "brand-1",
+      "label": "ブランド1"
+    },
+    {
+      "id": "brand-2",
+      "label": "ブランド2"
+    },
+    {
+      "id": "brand-3",
+      "label": "ブランド3"
+    },
+    {
+      "id": "brand-4",
+      "label": "ブランド4"
+    },
+    {
+      "id": "brand-5",
+      "label": "ブランド5"
+    },
+    {
+      "id": "brand-6",
+      "label": "ブランド6"
+    },
+    {
+      "id": "brand-7",
+      "label": "ブランド7"
+    },
+    {
+      "id": "brand-8",
+      "label": "ブランド8"
+    },
+    {
+      "id": "brand-9",
+      "label": "ブランド9"
+    },
+    {
+      "id": "brand-10",
+      "label": "ブランド10"
+    },
+    {
+      "id": "brand-11",
+      "label": "ブランド11"
+    },
+    {
+      "id": "brand-12",
+      "label": "ブランド12"
+    },
+    {
+      "id": "brand-13",
+      "label": "ブランド13"
+    },
+    {
+      "id": "brand-14",
+      "label": "ブランド14"
+    },
+    {
+      "id": "brand-15",
+      "label": "ブランド15"
+    },
+    {
+      "id": "brand-16",
+      "label": "ブランド16"
+    },
+    {
+      "id": "brand-17",
+      "label": "ブランド17"
+    },
+    {
+      "id": "brand-18",
+      "label": "ブランド18"
+    },
+    {
+      "id": "brand-19",
+      "label": "ブランド19"
+    },
+    {
+      "id": "brand-20",
+      "label": "ブランド20"
+    },
+    {
+      "id": "brand-21",
+      "label": "ブランド21"
+    },
+    {
+      "id": "brand-22",
+      "label": "ブランド22"
+    },
+    {
+      "id": "brand-23",
+      "label": "ブランド23"
+    },
+    {
+      "id": "brand-24",
+      "label": "ブランド24"
+    },
+    {
+      "id": "brand-25",
+      "label": "ブランド25"
+    },
+    {
+      "id": "brand-26",
+      "label": "ブランド26"
+    },
+    {
+      "id": "brand-27",
+      "label": "ブランド27"
+    },
+    {
+      "id": "brand-28",
+      "label": "ブランド28"
+    },
+    {
+      "id": "brand-29",
+      "label": "ブランド29"
+    },
+    {
+      "id": "brand-30",
+      "label": "ブランド30"
+    },
+    {
+      "id": "brand-31",
+      "label": "ブランド31"
+    },
+    {
+      "id": "brand-32",
+      "label": "ブランド32"
+    },
+    {
+      "id": "brand-33",
+      "label": "ブランド33"
+    },
+    {
+      "id": "brand-34",
+      "label": "ブランド34"
+    },
+    {
+      "id": "brand-35",
+      "label": "ブランド35"
+    },
+    {
+      "id": "brand-36",
+      "label": "ブランド36"
+    },
+    {
+      "id": "brand-37",
+      "label": "ブランド37"
+    },
+    {
+      "id": "brand-38",
+      "label": "ブランド38"
+    },
+    {
+      "id": "brand-39",
+      "label": "ブランド39"
+    },
+    {
+      "id": "brand-40",
+      "label": "ブランド40"
+    },
+    {
+      "id": "brand-41",
+      "label": "ブランド41"
+    },
+    {
+      "id": "brand-42",
+      "label": "ブランド42"
+    },
+    {
+      "id": "brand-43",
+      "label": "ブランド43"
+    }
+  ],
+  "cells": [
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-1",
+      "value": 6.2
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-2",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-3",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-4",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-5",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-6",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-7",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-8",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-9",
+      "value": 2
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-10",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-11",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-12",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-13",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-14",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-15",
+      "value": 3
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-16",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-17",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-18",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-19",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-20",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-21",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-22",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-23",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-24",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-25",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-26",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-27",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-28",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-29",
+      "value": 2
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-30",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-31",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-32",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-33",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-34",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-35",
+      "value": 3
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-36",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-37",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-38",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-39",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-40",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-41",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-42",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-1",
+      "currentId": "brand-43",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-1",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-2",
+      "value": 6.6
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-3",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-4",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-5",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-6",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-7",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-8",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-9",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-10",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-11",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-12",
+      "value": 2
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-13",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-14",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-15",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-16",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-17",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-18",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-19",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-20",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-21",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-22",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-23",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-24",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-25",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-26",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-27",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-28",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-29",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-30",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-31",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-32",
+      "value": 2
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-33",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-34",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-35",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-36",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-37",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-38",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-39",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-40",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-41",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-42",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-2",
+      "currentId": "brand-43",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-1",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-2",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-3",
+      "value": 7
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-4",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-5",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-6",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-7",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-8",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-9",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-10",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-11",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-12",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-13",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-14",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-15",
+      "value": 2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-16",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-17",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-18",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-19",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-20",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-21",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-22",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-23",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-24",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-25",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-26",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-27",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-28",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-29",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-30",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-31",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-32",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-33",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-34",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-35",
+      "value": 2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-36",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-37",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-38",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-39",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-40",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-41",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-42",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-3",
+      "currentId": "brand-43",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-1",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-2",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-3",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-4",
+      "value": 7.6
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-5",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-6",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-7",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-8",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-9",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-10",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-11",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-12",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-13",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-14",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-15",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-16",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-17",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-18",
+      "value": 2
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-19",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-20",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-21",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-22",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-23",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-24",
+      "value": 3
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-25",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-26",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-27",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-28",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-29",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-30",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-31",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-32",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-33",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-34",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-35",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-36",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-37",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-38",
+      "value": 2
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-39",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-40",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-41",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-42",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-4",
+      "currentId": "brand-43",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-1",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-2",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-3",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-4",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-5",
+      "value": 7.8
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-6",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-7",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-8",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-9",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-10",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-11",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-12",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-13",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-14",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-15",
+      "value": 1
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-16",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-17",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-18",
+      "value": 3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-19",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-20",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-21",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-22",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-23",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-24",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-25",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-26",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-27",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-28",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-29",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-30",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-31",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-32",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-33",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-34",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-35",
+      "value": 1
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-36",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-37",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-38",
+      "value": 3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-39",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-40",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-41",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-42",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-5",
+      "currentId": "brand-43",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-1",
+      "value": 3
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-2",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-3",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-4",
+      "value": 2
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-5",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-6",
+      "value": 6.1
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-7",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-8",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-9",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-10",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-11",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-12",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-13",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-14",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-15",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-16",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-17",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-18",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-19",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-20",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-21",
+      "value": 3
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-22",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-23",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-24",
+      "value": 2
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-25",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-26",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-27",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-28",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-29",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-30",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-31",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-32",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-33",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-34",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-35",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-36",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-37",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-38",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-39",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-40",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-41",
+      "value": 3
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-42",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-6",
+      "currentId": "brand-43",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-1",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-2",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-3",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-4",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-5",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-6",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-7",
+      "value": 6.7
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-8",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-9",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-10",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-11",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-12",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-13",
+      "value": 3
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-14",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-15",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-16",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-17",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-18",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-19",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-20",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-21",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-22",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-23",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-24",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-25",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-26",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-27",
+      "value": 2
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-28",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-29",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-30",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-31",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-32",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-33",
+      "value": 3
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-34",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-35",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-36",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-37",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-38",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-39",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-40",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-41",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-42",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-7",
+      "currentId": "brand-43",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-1",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-2",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-3",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-4",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-5",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-6",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-7",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-8",
+      "value": 7.1
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-9",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-10",
+      "value": 2
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-11",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-12",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-13",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-14",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-15",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-16",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-17",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-18",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-19",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-20",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-21",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-22",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-23",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-24",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-25",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-26",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-27",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-28",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-29",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-30",
+      "value": 2
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-31",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-32",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-33",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-34",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-35",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-36",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-37",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-38",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-39",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-40",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-41",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-42",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-8",
+      "currentId": "brand-43",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-1",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-2",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-3",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-4",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-5",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-6",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-7",
+      "value": 1
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-8",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-9",
+      "value": 7.2
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-10",
+      "value": 3
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-11",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-12",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-13",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-14",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-15",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-16",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-17",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-18",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-19",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-20",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-21",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-22",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-23",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-24",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-25",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-26",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-27",
+      "value": 1
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-28",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-29",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-30",
+      "value": 3
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-31",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-32",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-33",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-34",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-35",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-36",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-37",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-38",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-39",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-40",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-41",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-42",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-9",
+      "currentId": "brand-43",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-1",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-2",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-3",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-4",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-5",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-6",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-7",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-8",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-9",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-10",
+      "value": 7.9
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-11",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-12",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-13",
+      "value": 3
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-14",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-15",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-16",
+      "value": 2
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-17",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-18",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-19",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-20",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-21",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-22",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-23",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-24",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-25",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-26",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-27",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-28",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-29",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-30",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-31",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-32",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-33",
+      "value": 3
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-34",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-35",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-36",
+      "value": 2
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-37",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-38",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-39",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-40",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-41",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-42",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-10",
+      "currentId": "brand-43",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-1",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-2",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-3",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-4",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-5",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-6",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-7",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-8",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-9",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-10",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-11",
+      "value": 6.1
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-12",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-13",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-14",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-15",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-16",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-17",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-18",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-19",
+      "value": 2
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-20",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-21",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-22",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-23",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-24",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-25",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-26",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-27",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-28",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-29",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-30",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-31",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-32",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-33",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-34",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-35",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-36",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-37",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-38",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-39",
+      "value": 2
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-40",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-41",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-42",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-11",
+      "currentId": "brand-43",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-1",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-2",
+      "value": 2
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-3",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-4",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-5",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-6",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-7",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-8",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-9",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-10",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-11",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-12",
+      "value": 6.5
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-13",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-14",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-15",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-16",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-17",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-18",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-19",
+      "value": 3
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-20",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-21",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-22",
+      "value": 2
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-23",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-24",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-25",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-26",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-27",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-28",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-29",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-30",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-31",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-32",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-33",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-34",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-35",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-36",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-37",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-38",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-39",
+      "value": 3
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-40",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-41",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-42",
+      "value": 2
+    },
+    {
+      "pastId": "brand-12",
+      "currentId": "brand-43",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-1",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-2",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-3",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-4",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-5",
+      "value": 2
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-6",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-7",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-8",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-9",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-10",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-11",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-12",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-13",
+      "value": 7.1
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-14",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-15",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-16",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-17",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-18",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-19",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-20",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-21",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-22",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-23",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-24",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-25",
+      "value": 2
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-26",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-27",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-28",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-29",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-30",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-31",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-32",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-33",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-34",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-35",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-36",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-37",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-38",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-39",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-40",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-41",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-42",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-13",
+      "currentId": "brand-43",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-1",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-2",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-3",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-4",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-5",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-6",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-7",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-8",
+      "value": 2
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-9",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-10",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-11",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-12",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-13",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-14",
+      "value": 7.5
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-15",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-16",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-17",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-18",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-19",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-20",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-21",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-22",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-23",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-24",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-25",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-26",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-27",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-28",
+      "value": 2
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-29",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-30",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-31",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-32",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-33",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-34",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-35",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-36",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-37",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-38",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-39",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-40",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-41",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-42",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-14",
+      "currentId": "brand-43",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-1",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-2",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-3",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-4",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-5",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-6",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-7",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-8",
+      "value": 3
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-9",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-10",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-11",
+      "value": 2
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-12",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-13",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-14",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-15",
+      "value": 7.9
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-16",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-17",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-18",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-19",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-20",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-21",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-22",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-23",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-24",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-25",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-26",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-27",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-28",
+      "value": 3
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-29",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-30",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-31",
+      "value": 2
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-32",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-33",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-34",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-35",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-36",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-37",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-38",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-39",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-40",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-41",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-42",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-15",
+      "currentId": "brand-43",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-1",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-2",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-3",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-4",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-5",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-6",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-7",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-8",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-9",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-10",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-11",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-12",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-13",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-14",
+      "value": 2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-15",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-16",
+      "value": 6.2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-17",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-18",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-19",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-20",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-21",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-22",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-23",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-24",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-25",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-26",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-27",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-28",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-29",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-30",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-31",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-32",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-33",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-34",
+      "value": 2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-35",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-36",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-37",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-38",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-39",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-40",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-41",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-42",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-16",
+      "currentId": "brand-43",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-1",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-2",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-3",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-4",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-5",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-6",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-7",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-8",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-9",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-10",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-11",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-12",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-13",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-14",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-15",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-16",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-17",
+      "value": 6.6
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-18",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-19",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-20",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-21",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-22",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-23",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-24",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-25",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-26",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-27",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-28",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-29",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-30",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-31",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-32",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-33",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-34",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-35",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-36",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-37",
+      "value": 2
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-38",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-39",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-40",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-41",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-42",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-17",
+      "currentId": "brand-43",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-1",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-2",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-3",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-4",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-5",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-6",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-7",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-8",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-9",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-10",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-11",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-12",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-13",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-14",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-15",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-16",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-17",
+      "value": 3
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-18",
+      "value": 7
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-19",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-20",
+      "value": 2
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-21",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-22",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-23",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-24",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-25",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-26",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-27",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-28",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-29",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-30",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-31",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-32",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-33",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-34",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-35",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-36",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-37",
+      "value": 3
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-38",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-39",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-40",
+      "value": 2
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-41",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-42",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-18",
+      "currentId": "brand-43",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-1",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-2",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-3",
+      "value": 2
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-4",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-5",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-6",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-7",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-8",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-9",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-10",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-11",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-12",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-13",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-14",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-15",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-16",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-17",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-18",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-19",
+      "value": 7.4
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-20",
+      "value": 3
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-21",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-22",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-23",
+      "value": 2
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-24",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-25",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-26",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-27",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-28",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-29",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-30",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-31",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-32",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-33",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-34",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-35",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-36",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-37",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-38",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-39",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-40",
+      "value": 3
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-41",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-42",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-19",
+      "currentId": "brand-43",
+      "value": 2
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-1",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-2",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-3",
+      "value": 3
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-4",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-5",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-6",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-7",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-8",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-9",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-10",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-11",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-12",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-13",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-14",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-15",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-16",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-17",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-18",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-19",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-20",
+      "value": 7.7
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-21",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-22",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-23",
+      "value": 3
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-24",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-25",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-26",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-27",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-28",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-29",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-30",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-31",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-32",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-33",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-34",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-35",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-36",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-37",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-38",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-39",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-40",
+      "value": 1
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-41",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-42",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-20",
+      "currentId": "brand-43",
+      "value": 3
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-1",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-2",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-3",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-4",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-5",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-6",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-7",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-8",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-9",
+      "value": 2
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-10",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-11",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-12",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-13",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-14",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-15",
+      "value": 3
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-16",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-17",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-18",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-19",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-20",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-21",
+      "value": 6.2
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-22",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-23",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-24",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-25",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-26",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-27",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-28",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-29",
+      "value": 2
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-30",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-31",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-32",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-33",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-34",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-35",
+      "value": 3
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-36",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-37",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-38",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-39",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-40",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-41",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-42",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-21",
+      "currentId": "brand-43",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-1",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-2",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-3",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-4",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-5",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-6",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-7",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-8",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-9",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-10",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-11",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-12",
+      "value": 2
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-13",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-14",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-15",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-16",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-17",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-18",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-19",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-20",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-21",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-22",
+      "value": 6.6
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-23",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-24",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-25",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-26",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-27",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-28",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-29",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-30",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-31",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-32",
+      "value": 2
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-33",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-34",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-35",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-36",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-37",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-38",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-39",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-40",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-41",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-42",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-22",
+      "currentId": "brand-43",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-1",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-2",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-3",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-4",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-5",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-6",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-7",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-8",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-9",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-10",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-11",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-12",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-13",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-14",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-15",
+      "value": 2
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-16",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-17",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-18",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-19",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-20",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-21",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-22",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-23",
+      "value": 7
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-24",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-25",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-26",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-27",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-28",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-29",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-30",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-31",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-32",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-33",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-34",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-35",
+      "value": 2
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-36",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-37",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-38",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-39",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-40",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-41",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-42",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-23",
+      "currentId": "brand-43",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-1",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-2",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-3",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-4",
+      "value": 3
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-5",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-6",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-7",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-8",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-9",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-10",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-11",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-12",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-13",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-14",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-15",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-16",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-17",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-18",
+      "value": 2
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-19",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-20",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-21",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-22",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-23",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-24",
+      "value": 7.6
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-25",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-26",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-27",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-28",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-29",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-30",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-31",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-32",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-33",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-34",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-35",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-36",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-37",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-38",
+      "value": 2
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-39",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-40",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-41",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-42",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-24",
+      "currentId": "brand-43",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-1",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-2",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-3",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-4",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-5",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-6",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-7",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-8",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-9",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-10",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-11",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-12",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-13",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-14",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-15",
+      "value": 1
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-16",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-17",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-18",
+      "value": 3
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-19",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-20",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-21",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-22",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-23",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-24",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-25",
+      "value": 7.8
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-26",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-27",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-28",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-29",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-30",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-31",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-32",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-33",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-34",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-35",
+      "value": 1
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-36",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-37",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-38",
+      "value": 3
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-39",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-40",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-41",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-42",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-25",
+      "currentId": "brand-43",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-1",
+      "value": 3
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-2",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-3",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-4",
+      "value": 2
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-5",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-6",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-7",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-8",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-9",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-10",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-11",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-12",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-13",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-14",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-15",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-16",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-17",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-18",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-19",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-20",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-21",
+      "value": 3
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-22",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-23",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-24",
+      "value": 2
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-25",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-26",
+      "value": 6.1
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-27",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-28",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-29",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-30",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-31",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-32",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-33",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-34",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-35",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-36",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-37",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-38",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-39",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-40",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-41",
+      "value": 3
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-42",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-26",
+      "currentId": "brand-43",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-1",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-2",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-3",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-4",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-5",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-6",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-7",
+      "value": 2
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-8",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-9",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-10",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-11",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-12",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-13",
+      "value": 3
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-14",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-15",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-16",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-17",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-18",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-19",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-20",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-21",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-22",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-23",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-24",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-25",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-26",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-27",
+      "value": 6.7
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-28",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-29",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-30",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-31",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-32",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-33",
+      "value": 3
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-34",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-35",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-36",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-37",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-38",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-39",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-40",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-41",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-42",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-27",
+      "currentId": "brand-43",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-1",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-2",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-3",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-4",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-5",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-6",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-7",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-8",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-9",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-10",
+      "value": 2
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-11",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-12",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-13",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-14",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-15",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-16",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-17",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-18",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-19",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-20",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-21",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-22",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-23",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-24",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-25",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-26",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-27",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-28",
+      "value": 7.1
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-29",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-30",
+      "value": 2
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-31",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-32",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-33",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-34",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-35",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-36",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-37",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-38",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-39",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-40",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-41",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-42",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-28",
+      "currentId": "brand-43",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-1",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-2",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-3",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-4",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-5",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-6",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-7",
+      "value": 1
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-8",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-9",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-10",
+      "value": 3
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-11",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-12",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-13",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-14",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-15",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-16",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-17",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-18",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-19",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-20",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-21",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-22",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-23",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-24",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-25",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-26",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-27",
+      "value": 1
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-28",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-29",
+      "value": 7.2
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-30",
+      "value": 3
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-31",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-32",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-33",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-34",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-35",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-36",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-37",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-38",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-39",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-40",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-41",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-42",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-29",
+      "currentId": "brand-43",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-1",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-2",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-3",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-4",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-5",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-6",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-7",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-8",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-9",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-10",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-11",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-12",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-13",
+      "value": 3
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-14",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-15",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-16",
+      "value": 2
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-17",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-18",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-19",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-20",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-21",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-22",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-23",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-24",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-25",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-26",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-27",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-28",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-29",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-30",
+      "value": 7.9
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-31",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-32",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-33",
+      "value": 3
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-34",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-35",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-36",
+      "value": 2
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-37",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-38",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-39",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-40",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-41",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-42",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-30",
+      "currentId": "brand-43",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-1",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-2",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-3",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-4",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-5",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-6",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-7",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-8",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-9",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-10",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-11",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-12",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-13",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-14",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-15",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-16",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-17",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-18",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-19",
+      "value": 2
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-20",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-21",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-22",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-23",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-24",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-25",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-26",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-27",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-28",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-29",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-30",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-31",
+      "value": 6.1
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-32",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-33",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-34",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-35",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-36",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-37",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-38",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-39",
+      "value": 2
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-40",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-41",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-42",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-31",
+      "currentId": "brand-43",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-1",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-2",
+      "value": 2
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-3",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-4",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-5",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-6",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-7",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-8",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-9",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-10",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-11",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-12",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-13",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-14",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-15",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-16",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-17",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-18",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-19",
+      "value": 3
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-20",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-21",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-22",
+      "value": 2
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-23",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-24",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-25",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-26",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-27",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-28",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-29",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-30",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-31",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-32",
+      "value": 6.5
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-33",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-34",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-35",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-36",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-37",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-38",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-39",
+      "value": 3
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-40",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-41",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-42",
+      "value": 2
+    },
+    {
+      "pastId": "brand-32",
+      "currentId": "brand-43",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-1",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-2",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-3",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-4",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-5",
+      "value": 2
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-6",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-7",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-8",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-9",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-10",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-11",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-12",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-13",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-14",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-15",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-16",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-17",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-18",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-19",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-20",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-21",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-22",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-23",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-24",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-25",
+      "value": 2
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-26",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-27",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-28",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-29",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-30",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-31",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-32",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-33",
+      "value": 7.1
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-34",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-35",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-36",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-37",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-38",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-39",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-40",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-41",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-42",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-33",
+      "currentId": "brand-43",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-1",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-2",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-3",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-4",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-5",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-6",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-7",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-8",
+      "value": 2
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-9",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-10",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-11",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-12",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-13",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-14",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-15",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-16",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-17",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-18",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-19",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-20",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-21",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-22",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-23",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-24",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-25",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-26",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-27",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-28",
+      "value": 2
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-29",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-30",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-31",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-32",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-33",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-34",
+      "value": 7.5
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-35",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-36",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-37",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-38",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-39",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-40",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-41",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-42",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-34",
+      "currentId": "brand-43",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-1",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-2",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-3",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-4",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-5",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-6",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-7",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-8",
+      "value": 3
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-9",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-10",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-11",
+      "value": 2
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-12",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-13",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-14",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-15",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-16",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-17",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-18",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-19",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-20",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-21",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-22",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-23",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-24",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-25",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-26",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-27",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-28",
+      "value": 3
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-29",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-30",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-31",
+      "value": 2
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-32",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-33",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-34",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-35",
+      "value": 7.9
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-36",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-37",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-38",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-39",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-40",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-41",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-42",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-35",
+      "currentId": "brand-43",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-1",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-2",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-3",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-4",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-5",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-6",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-7",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-8",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-9",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-10",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-11",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-12",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-13",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-14",
+      "value": 2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-15",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-16",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-17",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-18",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-19",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-20",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-21",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-22",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-23",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-24",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-25",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-26",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-27",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-28",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-29",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-30",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-31",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-32",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-33",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-34",
+      "value": 2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-35",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-36",
+      "value": 6.2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-37",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-38",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-39",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-40",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-41",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-42",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-36",
+      "currentId": "brand-43",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-1",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-2",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-3",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-4",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-5",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-6",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-7",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-8",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-9",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-10",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-11",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-12",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-13",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-14",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-15",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-16",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-17",
+      "value": 2
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-18",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-19",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-20",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-21",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-22",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-23",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-24",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-25",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-26",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-27",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-28",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-29",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-30",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-31",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-32",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-33",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-34",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-35",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-36",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-37",
+      "value": 6.6
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-38",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-39",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-40",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-41",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-42",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-37",
+      "currentId": "brand-43",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-1",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-2",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-3",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-4",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-5",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-6",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-7",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-8",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-9",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-10",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-11",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-12",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-13",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-14",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-15",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-16",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-17",
+      "value": 3
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-18",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-19",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-20",
+      "value": 2
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-21",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-22",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-23",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-24",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-25",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-26",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-27",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-28",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-29",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-30",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-31",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-32",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-33",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-34",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-35",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-36",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-37",
+      "value": 3
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-38",
+      "value": 7
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-39",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-40",
+      "value": 2
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-41",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-42",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-38",
+      "currentId": "brand-43",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-1",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-2",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-3",
+      "value": 2
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-4",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-5",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-6",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-7",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-8",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-9",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-10",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-11",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-12",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-13",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-14",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-15",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-16",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-17",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-18",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-19",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-20",
+      "value": 3
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-21",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-22",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-23",
+      "value": 2
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-24",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-25",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-26",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-27",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-28",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-29",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-30",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-31",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-32",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-33",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-34",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-35",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-36",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-37",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-38",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-39",
+      "value": 7.4
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-40",
+      "value": 3
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-41",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-42",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-39",
+      "currentId": "brand-43",
+      "value": 2
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-1",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-2",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-3",
+      "value": 3
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-4",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-5",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-6",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-7",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-8",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-9",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-10",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-11",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-12",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-13",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-14",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-15",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-16",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-17",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-18",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-19",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-20",
+      "value": 1
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-21",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-22",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-23",
+      "value": 3
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-24",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-25",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-26",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-27",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-28",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-29",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-30",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-31",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-32",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-33",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-34",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-35",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-36",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-37",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-38",
+      "value": 0.7
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-39",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-40",
+      "value": 7.7
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-41",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-42",
+      "value": 1.3
+    },
+    {
+      "pastId": "brand-40",
+      "currentId": "brand-43",
+      "value": 3
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-1",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-2",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-3",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-4",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-5",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-6",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-7",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-8",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-9",
+      "value": 2
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-10",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-11",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-12",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-13",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-14",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-15",
+      "value": 3
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-16",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-17",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-18",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-19",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-20",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-21",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-22",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-23",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-24",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-25",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-26",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-27",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-28",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-29",
+      "value": 2
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-30",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-31",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-32",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-33",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-34",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-35",
+      "value": 3
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-36",
+      "value": 1.6
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-37",
+      "value": 3.3
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-38",
+      "value": 1.9
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-39",
+      "value": 3.6
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-40",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-41",
+      "value": 6.2
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-42",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-41",
+      "currentId": "brand-43",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-1",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-2",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-3",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-4",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-5",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-6",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-7",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-8",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-9",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-10",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-11",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-12",
+      "value": 2
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-13",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-14",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-15",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-16",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-17",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-18",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-19",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-20",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-21",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-22",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-23",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-24",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-25",
+      "value": 2.5
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-26",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-27",
+      "value": 2.8
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-28",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-29",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-30",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-31",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-32",
+      "value": 2
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-33",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-34",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-35",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-36",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-37",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-38",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-39",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-40",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-41",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-42",
+      "value": 6.6
+    },
+    {
+      "pastId": "brand-42",
+      "currentId": "brand-43",
+      "value": 2.2
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-1",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-2",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-3",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-4",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-5",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-6",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-7",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-8",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-9",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-10",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-11",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-12",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-13",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-14",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-15",
+      "value": 2
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-16",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-17",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-18",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-19",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-20",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-21",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-22",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-23",
+      "value": 3.2
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-24",
+      "value": 1.8
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-25",
+      "value": 3.5
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-26",
+      "value": 2.1
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-27",
+      "value": 0.8
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-28",
+      "value": 2.4
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-29",
+      "value": 1.1
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-30",
+      "value": 2.7
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-31",
+      "value": 1.4
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-32",
+      "value": 3.1
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-33",
+      "value": 1.7
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-34",
+      "value": 3.4
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-35",
+      "value": 2
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-36",
+      "value": 3.7
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-37",
+      "value": 2.3
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-38",
+      "value": 0.9
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-39",
+      "value": 2.6
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-40",
+      "value": 1.2
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-41",
+      "value": 2.9
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-42",
+      "value": 1.5
+    },
+    {
+      "pastId": "brand-43",
+      "currentId": "brand-43",
+      "value": 7
+    }
+  ]
+}

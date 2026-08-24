@@ -92,7 +92,7 @@ function buildVolumeMatrixOptions(
     contextMenu: chartContextMenuDownload,
     padding: { top: 8, right: 16, bottom: 8, left: 8 },
     title: {
-      text: '・ボリューム付数表',
+      text: '・⑦ブランドクロス',
       color: TITLE_COLOR,
       fontSize: 16,
       fontWeight: 'bold',
@@ -198,7 +198,7 @@ function buildVolumeMatrixOptions(
 }
 
 /**
- * ボリューム付数表ページ。
+ * ⑦ブランドクロスページ。
  * マス数はクライアント指定 → GET /api/volume-matrix?size=n で固定 JSON を取得。
  */
 export function VolumeMatrixPage() {
@@ -304,7 +304,7 @@ export function VolumeMatrixPage() {
       <header className="tn-page-header">
         <div>
           <p className="tn-page-eyebrow">AG Charts 検証</p>
-          <h1 className="tn-page-title">ボリューム付数表</h1>
+          <h1 className="tn-page-title">⑦ブランドクロス</h1>
         </div>
         <div className="tn-page-actions">
           <Link className="tn-page-link" to="/">

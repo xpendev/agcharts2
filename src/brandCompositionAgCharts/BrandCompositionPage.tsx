@@ -261,7 +261,7 @@ export function BrandCompositionPage() {
       <header className="tn-page-header">
         <div>
           <p className="tn-page-eyebrow">AG Charts 検証</p>
-          <h1 className="tn-page-title">人数構成比（100%積上）</h1>
+          <h1 className="tn-page-title">②新規・継続 構成比</h1>
         </div>
         <div className="tn-page-actions">
           <Link className="tn-page-link" to="/">

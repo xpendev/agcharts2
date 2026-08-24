@@ -5,47 +5,47 @@
   },
   "size": 7,
   "summary": {
-    "previousPercent": 35,
-    "currentPercent": 35.8,
-    "outflowPercent": -4.4,
+    "previousPercent": 34.4,
+    "currentPercent": 35.2,
+    "outflowPercent": -4.3,
     "retainedPercent": 30.6,
-    "inflowPercent": 5.1
+    "inflowPercent": 4.7
   },
   "rows": [
     {
       "label": "ブランド1",
-      "outflow": 0.39,
-      "inflow": 0.33
-    },
-    {
-      "label": "ブランド2",
-      "outflow": 0.52,
-      "inflow": 0.41
-    },
-    {
-      "label": "ブランド3",
-      "outflow": 0.28,
-      "inflow": 0.55
-    },
-    {
-      "label": "ブランド4",
-      "outflow": 0.61,
-      "inflow": 0.22
-    },
-    {
-      "label": "ブランド5",
-      "outflow": 0.35,
-      "inflow": 0.48
-    },
-    {
-      "label": "ブランド6",
-      "outflow": 0.44,
+      "outflow": 0.43,
       "inflow": 0.31
     },
     {
+      "label": "ブランド2",
+      "outflow": 0.5,
+      "inflow": 0.36
+    },
+    {
+      "label": "ブランド3",
+      "outflow": 0.57,
+      "inflow": 0.41
+    },
+    {
+      "label": "ブランド4",
+      "outflow": 0.64,
+      "inflow": 0.46
+    },
+    {
+      "label": "ブランド5",
+      "outflow": 0.21,
+      "inflow": 0.51
+    },
+    {
+      "label": "ブランド6",
+      "outflow": 0.28,
+      "inflow": 0.56
+    },
+    {
       "label": "ブランド7",
-      "outflow": 0.19,
-      "inflow": 0.62
+      "outflow": 0.35,
+      "inflow": 0.61
     }
   ]
 }

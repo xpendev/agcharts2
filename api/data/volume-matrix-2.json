@@ -31,22 +31,22 @@
     {
       "pastId": "brand-1",
       "currentId": "brand-1",
-      "value": 40
+      "value": 71.4
     },
     {
       "pastId": "brand-1",
       "currentId": "brand-2",
-      "value": 60
+      "value": 28.6
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-1",
-      "value": 57.5
+      "value": 21.8
     },
     {
       "pastId": "brand-2",
       "currentId": "brand-2",
-      "value": 42.5
+      "value": 78.2
     }
   ]
 }

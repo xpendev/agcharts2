@@ -3,7 +3,7 @@ import path from 'node:path'
 import type { Connect, Plugin } from 'vite'
 
 const MATRIX_SIZE_MIN = 1
-const MATRIX_SIZE_MAX = 7
+const MATRIX_SIZE_MAX = 50
 
 /**
  * 本番バックエンドを模した API。
