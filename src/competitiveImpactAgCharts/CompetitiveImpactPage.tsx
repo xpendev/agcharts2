@@ -123,7 +123,9 @@ function buildOptions(sample: CompetitiveImpactSample): AgCartesianChartOptions 
           enabled: true,
           style: [{ stroke: '#d8dce0', strokeWidth: 1 }],
         },
-        label: { fontSize: 11, avoidCollisions: false },
+        // 高さ不足でもブランド名を間引かない
+        interval: { values: data.map((row) => row.label) },
+        label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
       },
       x: {
         type: 'number',
