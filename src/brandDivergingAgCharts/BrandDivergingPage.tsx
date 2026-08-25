@@ -13,6 +13,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createChartContextMenu } from '../agChartsCommon'
+import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchBrandDiverging,
   SIZE_DEFAULT,
@@ -134,6 +135,11 @@ export function BrandDivergingPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
+          <XlsxExportButton
+            reportKey="brand-diverging"
+            size={size}
+            disabled={!sample || isLoading}
+          />
         </div>
       </header>
 

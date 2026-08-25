@@ -5,11 +5,13 @@ import sys
 from pathlib import Path
 
 from export_xlsx.brand_composition import build_brand_composition_xlsx
+from export_xlsx.brand_diverging import build_brand_diverging_xlsx
 from export_xlsx.buyer_dropout import build_buyer_dropout_xlsx
 from export_xlsx.data import load_report_payload
 
 BUILDERS = {
     "brand-composition": build_brand_composition_xlsx,
+    "brand-diverging": build_brand_diverging_xlsx,
     "buyer-dropout": build_buyer_dropout_xlsx,
 }
 

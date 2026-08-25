@@ -6,6 +6,7 @@ from pathlib import Path
 from flask import Flask, Response, jsonify, request
 
 from export_xlsx.brand_composition import build_brand_composition_xlsx
+from export_xlsx.brand_diverging import build_brand_diverging_xlsx
 from export_xlsx.buyer_dropout import build_buyer_dropout_xlsx
 from export_xlsx.data import SIZE_MIN, clamp_size, load_report_payload
 
@@ -36,6 +37,8 @@ def create_app(data_dir: Path | None = None) -> Flask:
                 xlsx_bytes = build_brand_composition_xlsx(payload)
             elif report == "buyer-dropout":
                 xlsx_bytes = build_buyer_dropout_xlsx(payload)
+            elif report == "brand-diverging":
+                xlsx_bytes = build_brand_diverging_xlsx(payload)
             else:
                 return jsonify({"error": f"未対応の帳票: {report}"}), 404
         except Exception as error:  # noqa: BLE001 — API 境界で返却
