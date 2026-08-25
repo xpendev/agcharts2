@@ -7,6 +7,7 @@ from pathlib import Path
 from export_xlsx.brand_composition import build_brand_composition_xlsx
 from export_xlsx.brand_diverging import build_brand_diverging_xlsx
 from export_xlsx.buyer_dropout import build_buyer_dropout_xlsx
+from export_xlsx.competitive_impact import build_competitive_impact_xlsx
 from export_xlsx.data import load_report_payload
 from export_xlsx.purchase_in_out import build_purchase_in_out_xlsx
 from export_xlsx.waterfall import build_waterfall_xlsx
@@ -15,6 +16,7 @@ BUILDERS = {
     "brand-composition": build_brand_composition_xlsx,
     "brand-diverging": build_brand_diverging_xlsx,
     "buyer-dropout": build_buyer_dropout_xlsx,
+    "competitive-impact": build_competitive_impact_xlsx,
     "purchase-in-out": build_purchase_in_out_xlsx,
     "waterfall": build_waterfall_xlsx,
 }

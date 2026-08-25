@@ -15,6 +15,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createChartContextMenu } from '../agChartsCommon'
+import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchCompetitiveImpact,
   SIZE_DEFAULT,
@@ -199,6 +200,11 @@ export function CompetitiveImpactPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
+          <XlsxExportButton
+            reportKey="competitive-impact"
+            size={size}
+            disabled={!sample || isLoading}
+          />
         </div>
       </header>
 
