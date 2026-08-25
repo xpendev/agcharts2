@@ -11,7 +11,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { chartContextMenuDownload } from '../agChartsCommon'
+import { createChartContextMenu } from '../agChartsCommon'
 import {
   fetchBuyerDropout,
   SIZE_DEFAULT,
@@ -29,11 +29,14 @@ ModuleRegistry.registerModules([
   ContextMenuModule,
 ])
 
-function buildTopOptions(sample: BuyerDropoutSample): AgCartesianChartOptions {
+function buildTopOptions(
+  sample: BuyerDropoutSample,
+  getChart: () => AgChartInstance | null,
+): AgCartesianChartOptions {
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
-    contextMenu: chartContextMenuDownload,
+    contextMenu: createChartContextMenu(getChart),
     title: { text: sample.meta.topTitle, fontSize: 14 },
     legend: { enabled: false },
     data: sample.stacked,
@@ -86,11 +89,14 @@ function buildTopOptions(sample: BuyerDropoutSample): AgCartesianChartOptions {
   }
 }
 
-function buildBottomOptions(sample: BuyerDropoutSample): AgCartesianChartOptions {
+function buildBottomOptions(
+  sample: BuyerDropoutSample,
+  getChart: () => AgChartInstance | null,
+): AgCartesianChartOptions {
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
-    contextMenu: chartContextMenuDownload,
+    contextMenu: createChartContextMenu(getChart),
     title: { text: sample.meta.bottomTitle, fontSize: 14 },
     legend: { enabled: false },
     data: sample.dropout,
@@ -131,12 +137,11 @@ function buildBottomOptions(sample: BuyerDropoutSample): AgCartesianChartOptions
 
 export function BuyerDropoutPage() {
   const topRef = useRef<AgChartInstance<AgCartesianChartOptions> | null>(null)
+  const bottomRef = useRef<AgChartInstance<AgCartesianChartOptions> | null>(null)
   const [size, setSize] = useState(SIZE_DEFAULT)
   const [sample, setSample] = useState<BuyerDropoutSample | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
-  const [isDownloading, setIsDownloading] = useState(false)
-  const [isCopying, setIsCopying] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -162,53 +167,15 @@ export function BuyerDropoutPage() {
   }, [size])
 
   const topOptions = useMemo(
-    () => (sample ? buildTopOptions(sample) : null),
+    () =>
+      sample ? buildTopOptions(sample, () => topRef.current) : null,
     [sample],
   )
   const bottomOptions = useMemo(
-    () => (sample ? buildBottomOptions(sample) : null),
+    () =>
+      sample ? buildBottomOptions(sample, () => bottomRef.current) : null,
     [sample],
   )
-
-  const downloadPng = () => {
-    setIsDownloading(true)
-    setMessage(null)
-    try {
-      const chart = topRef.current
-      if (!chart || !sample) throw new Error('グラフの準備ができていません。')
-      chart.download({
-        fileName: `buyer-dropout-${sample.size}-${Date.now()}`,
-      })
-      setMessage('上段グラフのPNGをダウンロードしました。')
-    } catch (error) {
-      setMessage(
-        error instanceof Error ? error.message : 'PNGダウンロードに失敗しました。',
-      )
-    } finally {
-      setIsDownloading(false)
-    }
-  }
-
-  const copyPng = async () => {
-    setIsCopying(true)
-    setMessage(null)
-    try {
-      const chart = topRef.current
-      if (!chart) throw new Error('グラフの準備ができていません。')
-      if (!navigator.clipboard?.write) {
-        throw new Error('このブラウザでは画像コピーに対応していません。')
-      }
-      const dataUrl = await chart.getImageDataURL()
-      if (!dataUrl) throw new Error('画像の生成に失敗しました。')
-      const blob = await (await fetch(dataUrl)).blob()
-      await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
-      setMessage('上段グラフのPNGをコピーしました。')
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'PNGコピーに失敗しました。')
-    } finally {
-      setIsCopying(false)
-    }
-  }
 
   return (
     <main className="tn-page">
@@ -221,24 +188,6 @@ export function BuyerDropoutPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isCopying || !sample}
-            onClick={() => {
-              void copyPng()
-            }}
-          >
-            {isCopying ? 'コピー中…' : 'PNGをコピー'}
-          </button>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isDownloading || !sample}
-            onClick={downloadPng}
-          >
-            {isDownloading ? 'ダウンロード中…' : 'PNGをダウンロード'}
-          </button>
         </div>
       </header>
 
@@ -283,6 +232,7 @@ export function BuyerDropoutPage() {
             </div>
             <div className="ag-spike-chart-host">
               <AgCharts
+                ref={bottomRef}
                 options={bottomOptions}
                 style={{ width: 800, height: 280 }}
               />

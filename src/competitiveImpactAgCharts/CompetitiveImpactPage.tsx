@@ -14,7 +14,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { chartContextMenuDownload } from '../agChartsCommon'
+import { createChartContextMenu } from '../agChartsCommon'
 import {
   fetchCompetitiveImpact,
   SIZE_DEFAULT,
@@ -51,7 +51,10 @@ const barValueLabel: AgBarSeriesLabelOptions<
   }),
 }
 
-function buildOptions(sample: CompetitiveImpactSample): AgCartesianChartOptions {
+function buildOptions(
+  sample: CompetitiveImpactSample,
+  getChart: () => AgChartInstance | null,
+): AgCartesianChartOptions {
   const data = sample.rows.map((row) => ({
     label: row.label,
     inflow: row.inflow,
@@ -67,7 +70,7 @@ function buildOptions(sample: CompetitiveImpactSample): AgCartesianChartOptions 
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
-    contextMenu: chartContextMenuDownload,
+    contextMenu: createChartContextMenu(getChart),
     padding: { top: 8, right: 8, bottom: 8, left: 8 },
     title: {
       text: sample.meta.title,
@@ -155,8 +158,6 @@ export function CompetitiveImpactPage() {
   const [sample, setSample] = useState<CompetitiveImpactSample | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
-  const [isDownloading, setIsDownloading] = useState(false)
-  const [isCopying, setIsCopying] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -182,45 +183,10 @@ export function CompetitiveImpactPage() {
   }, [size])
 
   const options = useMemo(
-    () => (sample ? buildOptions(sample) : null),
+    () =>
+      sample ? buildOptions(sample, () => chartRef.current) : null,
     [sample],
   )
-
-  const downloadPng = () => {
-    setIsDownloading(true)
-    setMessage(null)
-    try {
-      const chart = chartRef.current
-      if (!chart || !sample) throw new Error('グラフの準備ができていません。')
-      chart.download({ fileName: `competitive-impact-${sample.size}-${Date.now()}` })
-      setMessage('PNGをダウンロードしました。')
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'PNGダウンロードに失敗しました。')
-    } finally {
-      setIsDownloading(false)
-    }
-  }
-
-  const copyPng = async () => {
-    setIsCopying(true)
-    setMessage(null)
-    try {
-      const chart = chartRef.current
-      if (!chart) throw new Error('グラフの準備ができていません。')
-      if (!navigator.clipboard?.write) {
-        throw new Error('このブラウザでは画像コピーに対応していません。')
-      }
-      const dataUrl = await chart.getImageDataURL()
-      if (!dataUrl) throw new Error('画像の生成に失敗しました。')
-      const blob = await (await fetch(dataUrl)).blob()
-      await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
-      setMessage('PNGをコピーしました。')
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'PNGコピーに失敗しました。')
-    } finally {
-      setIsCopying(false)
-    }
-  }
 
   return (
     <main className="tn-page">
@@ -233,24 +199,6 @@ export function CompetitiveImpactPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isCopying || !sample}
-            onClick={() => {
-              void copyPng()
-            }}
-          >
-            {isCopying ? 'コピー中…' : 'PNGをコピー'}
-          </button>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isDownloading || !sample}
-            onClick={downloadPng}
-          >
-            {isDownloading ? 'ダウンロード中…' : 'PNGをダウンロード'}
-          </button>
         </div>
       </header>
 

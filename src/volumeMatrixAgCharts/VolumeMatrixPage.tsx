@@ -11,7 +11,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { chartContextMenuDownload } from '../agChartsCommon'
+import { createChartContextMenu } from '../agChartsCommon'
 import {
   fetchVolumeMatrix,
   MATRIX_SIZE_DEFAULT,
@@ -70,6 +70,7 @@ function buildVolumeMatrixOptions(
   cells: VolumeMatrixCell[],
   columns: string[],
   rows: string[],
+  getChart: () => AgChartInstance | null,
 ): AgCartesianChartOptions {
   const size = columns.length
   const { minSize, maxSize } = bubbleSizesFor(size)
@@ -89,7 +90,7 @@ function buildVolumeMatrixOptions(
   return {
     animation: { enabled: false },
     background: { fill: BACKGROUND },
-    contextMenu: chartContextMenuDownload,
+    contextMenu: createChartContextMenu(getChart),
     padding: { top: 8, right: 16, bottom: 8, left: 8 },
     title: {
       text: '・⑦ブランドクロス',
@@ -222,8 +223,6 @@ export function VolumeMatrixPage() {
   const [sample, setSample] = useState<VolumeMatrixSample | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
-  const [isDownloading, setIsDownloading] = useState(false)
-  const [isCopying, setIsCopying] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -255,62 +254,13 @@ export function VolumeMatrixPage() {
 
   const options = useMemo(() => {
     if (!sample) return null
-    return buildVolumeMatrixOptions(sample.cells, sample.columns, sample.rows)
+    return buildVolumeMatrixOptions(
+      sample.cells,
+      sample.columns,
+      sample.rows,
+      () => chartRef.current,
+    )
   }, [sample])
-
-  const downloadPng = () => {
-    setIsDownloading(true)
-    setMessage(null)
-    try {
-      const chart = chartRef.current
-      if (!chart || !sample) {
-        throw new Error('グラフの準備ができていません。')
-      }
-      chart.download({
-        fileName: `volume-matrix-${sample.size}x${sample.size}-${Date.now()}`,
-      })
-      setMessage('PNGをダウンロードしました（AG Charts download API）。')
-    } catch (error) {
-      setMessage(
-        error instanceof Error
-          ? error.message
-          : 'PNGダウンロードに失敗しました。',
-      )
-    } finally {
-      setIsDownloading(false)
-    }
-  }
-
-  const copyPng = async () => {
-    setIsCopying(true)
-    setMessage(null)
-    try {
-      const chart = chartRef.current
-      if (!chart) {
-        throw new Error('グラフの準備ができていません。')
-      }
-      if (!navigator.clipboard?.write) {
-        throw new Error(
-          'このブラウザではクリップボードへの画像コピーに対応していません。',
-        )
-      }
-      const dataUrl = await chart.getImageDataURL()
-      if (!dataUrl) {
-        throw new Error('画像の生成に失敗しました。')
-      }
-      const blob = await (await fetch(dataUrl)).blob()
-      await navigator.clipboard.write([
-        new ClipboardItem({ 'image/png': blob }),
-      ])
-      setMessage('PNGをコピーしました。Ctrl+V で貼り付けできます。')
-    } catch (error) {
-      setMessage(
-        error instanceof Error ? error.message : 'PNGコピーに失敗しました。',
-      )
-    } finally {
-      setIsCopying(false)
-    }
-  }
 
   const noteText = sample?.meta.note ?? '*数値：％（行）（人数ベース）'
 
@@ -325,24 +275,6 @@ export function VolumeMatrixPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isCopying || !sample}
-            onClick={() => {
-              void copyPng()
-            }}
-          >
-            {isCopying ? 'コピー中…' : 'PNGをコピー'}
-          </button>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isDownloading || !sample}
-            onClick={downloadPng}
-          >
-            {isDownloading ? 'ダウンロード中…' : 'PNGをダウンロード'}
-          </button>
         </div>
       </header>
 

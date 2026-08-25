@@ -12,7 +12,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { chartContextMenuDownload } from '../agChartsCommon'
+import { createChartContextMenu } from '../agChartsCommon'
 import {
   fetchBrandComposition,
   groupRowsByBrand,
@@ -43,11 +43,12 @@ function buildBrandOptions(
     enableSync: boolean
     syncGroupId: string
   },
+  getChart: () => AgChartInstance | null,
 ): AgCartesianChartOptions {
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
-    contextMenu: chartContextMenuDownload,
+    contextMenu: createChartContextMenu(getChart),
     // タイトルは DnD ハンドル側に出す（チャート内タイトルは使わない）
     legend: {
       enabled: options.showLegend,
@@ -129,8 +130,8 @@ function buildBrandOptions(
 // }
 
 export function BrandCompositionPage() {
-  const firstChartRef = useRef<AgChartInstance<AgCartesianChartOptions> | null>(
-    null,
+  const chartRefs = useRef(
+    new Map<string, AgChartInstance<AgCartesianChartOptions>>(),
   )
   const [size, setSize] = useState(SIZE_DEFAULT)
   const [sample, setSample] = useState<BrandCompositionSample | null>(null)
@@ -139,8 +140,6 @@ export function BrandCompositionPage() {
   // const [dropTargetBrand, setDropTargetBrand] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
-  const [isDownloading, setIsDownloading] = useState(false)
-  const [isCopying, setIsCopying] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -195,63 +194,20 @@ export function BrandCompositionPage() {
     orderedGroups.forEach((group) => {
       map.set(
         group.brand,
-        buildBrandOptions(sample, group, {
-          showLegend: true,
-          enableSync,
-          syncGroupId,
-        }),
+        buildBrandOptions(
+          sample,
+          group,
+          {
+            showLegend: true,
+            enableSync,
+            syncGroupId,
+          },
+          () => chartRefs.current.get(group.brand) ?? null,
+        ),
       )
     })
     return map
   }, [sample, orderedGroups, enableSync, syncGroupId])
-
-  const downloadPng = () => {
-    setIsDownloading(true)
-    setMessage(null)
-    try {
-      const chart = firstChartRef.current
-      if (!chart || !sample) throw new Error('グラフの準備ができていません。')
-      chart.download({
-        fileName: `brand-composition-${sample.size}-${Date.now()}`,
-      })
-      setMessage(
-        brandCount > 1
-          ? '先頭グラフのPNGをダウンロードしました。'
-          : 'PNGをダウンロードしました。',
-      )
-    } catch (error) {
-      setMessage(
-        error instanceof Error ? error.message : 'PNGダウンロードに失敗しました。',
-      )
-    } finally {
-      setIsDownloading(false)
-    }
-  }
-
-  const copyPng = async () => {
-    setIsCopying(true)
-    setMessage(null)
-    try {
-      const chart = firstChartRef.current
-      if (!chart) throw new Error('グラフの準備ができていません。')
-      if (!navigator.clipboard?.write) {
-        throw new Error('このブラウザでは画像コピーに対応していません。')
-      }
-      const dataUrl = await chart.getImageDataURL()
-      if (!dataUrl) throw new Error('画像の生成に失敗しました。')
-      const blob = await (await fetch(dataUrl)).blob()
-      await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
-      setMessage(
-        brandCount > 1
-          ? '先頭グラフのPNGをコピーしました。'
-          : 'PNGをコピーしました。',
-      )
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'PNGコピーに失敗しました。')
-    } finally {
-      setIsCopying(false)
-    }
-  }
 
   const gridClass =
     brandCount <= 1 ? 'bc-grid bc-grid--single' : 'bc-grid bc-grid--multi'
@@ -267,24 +223,6 @@ export function BrandCompositionPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isCopying || !sample}
-            onClick={() => {
-              void copyPng()
-            }}
-          >
-            {isCopying ? 'コピー中…' : 'PNGをコピー'}
-          </button>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isDownloading || !sample}
-            onClick={downloadPng}
-          >
-            {isDownloading ? 'ダウンロード中…' : 'PNGをダウンロード'}
-          </button>
         </div>
       </header>
 
@@ -321,7 +259,7 @@ export function BrandCompositionPage() {
         {orderedGroups.length > 0 && sample ? (
           <div className="tn-chart-frame-800">
             <div key={sample.size} className={gridClass}>
-              {orderedGroups.map((group, index) => {
+              {orderedGroups.map((group) => {
                 const options = chartOptionsByBrand.get(group.brand)
                 if (!options) return null
                 // const isDragging = draggingBrand === group.brand
@@ -390,7 +328,13 @@ export function BrandCompositionPage() {
                     </div>
                     <div className="ag-spike-chart-host bc-tile-chart">
                       <AgCharts
-                        ref={index === 0 ? firstChartRef : undefined}
+                        ref={(instance) => {
+                          if (instance) {
+                            chartRefs.current.set(group.brand, instance)
+                          } else {
+                            chartRefs.current.delete(group.brand)
+                          }
+                        }}
                         options={options}
                         style={{ width: '100%', height: chartHeight }}
                       />

@@ -8,11 +8,10 @@ import {
   ModuleRegistry,
   NumberAxisModule,
   WaterfallSeriesModule,
-  ZoomModule,
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { chartContextMenuDownload } from '../agChartsCommon'
+import { createChartContextMenu } from '../agChartsCommon'
 import {
   fetchWaterfall,
   SIZE_DEFAULT,
@@ -28,7 +27,6 @@ ModuleRegistry.registerModules([
   NumberAxisModule,
   LegendModule,
   ContextMenuModule,
-  ZoomModule,
 ])
 
 function formatBarLabel(params: {
@@ -64,7 +62,10 @@ const barLabel = {
   formatter: formatBarLabel,
 }
 
-function buildOptions(sample: WaterfallSample): AgCartesianChartOptions {
+function buildOptions(
+  sample: WaterfallSample,
+  getChart: () => AgChartInstance | null,
+): AgCartesianChartOptions {
   // size = 棒数。期末は totals で挿入し、カテゴリ数と表示棒数を一致させる。
   const isSingle = sample.categories.length <= 1
   const data = isSingle
@@ -83,8 +84,7 @@ function buildOptions(sample: WaterfallSample): AgCartesianChartOptions {
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
-    contextMenu: chartContextMenuDownload,
-    zoom: { enabled: true },
+    contextMenu: createChartContextMenu(getChart),
     title: { text: sample.meta.title, fontSize: 16 },
     legend: { enabled: true },
     padding: { top: 28, right: 20, bottom: 12, left: 12 },
@@ -158,8 +158,6 @@ export function WaterfallPage() {
   const [sample, setSample] = useState<WaterfallSample | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
-  const [isDownloading, setIsDownloading] = useState(false)
-  const [isCopying, setIsCopying] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -185,45 +183,10 @@ export function WaterfallPage() {
   }, [size])
 
   const options = useMemo(
-    () => (sample ? buildOptions(sample) : null),
+    () =>
+      sample ? buildOptions(sample, () => chartRef.current) : null,
     [sample],
   )
-
-  const downloadPng = () => {
-    setIsDownloading(true)
-    setMessage(null)
-    try {
-      const chart = chartRef.current
-      if (!chart || !sample) throw new Error('グラフの準備ができていません。')
-      chart.download({ fileName: `waterfall-${sample.size}-${Date.now()}` })
-      setMessage('PNGをダウンロードしました。')
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'PNGダウンロードに失敗しました。')
-    } finally {
-      setIsDownloading(false)
-    }
-  }
-
-  const copyPng = async () => {
-    setIsCopying(true)
-    setMessage(null)
-    try {
-      const chart = chartRef.current
-      if (!chart) throw new Error('グラフの準備ができていません。')
-      if (!navigator.clipboard?.write) {
-        throw new Error('このブラウザでは画像コピーに対応していません。')
-      }
-      const dataUrl = await chart.getImageDataURL()
-      if (!dataUrl) throw new Error('画像の生成に失敗しました。')
-      const blob = await (await fetch(dataUrl)).blob()
-      await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
-      setMessage('PNGをコピーしました。')
-    } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'PNGコピーに失敗しました。')
-    } finally {
-      setIsCopying(false)
-    }
-  }
 
   return (
     <main className="tn-page">
@@ -236,24 +199,6 @@ export function WaterfallPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isCopying || !sample}
-            onClick={() => {
-              void copyPng()
-            }}
-          >
-            {isCopying ? 'コピー中…' : 'PNGをコピー'}
-          </button>
-          <button
-            type="button"
-            className="tn-page-btn"
-            disabled={isDownloading || !sample}
-            onClick={downloadPng}
-          >
-            {isDownloading ? 'ダウンロード中…' : 'PNGをダウンロード'}
-          </button>
         </div>
       </header>
 
