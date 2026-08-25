@@ -41,6 +41,7 @@ const barValueLabel: AgBarSeriesLabelOptions<
   fontSize: 10,
   color: '#ffffff',
   placement: ['inside-end', 'outside-end'],
+  collision: { alwaysShow: true },
   formatter: (params) => {
     const value = Math.abs(params.value)
     return value < 0.01 ? value.toFixed(3) : value.toFixed(2)
@@ -122,7 +123,7 @@ function buildOptions(sample: CompetitiveImpactSample): AgCartesianChartOptions 
           enabled: true,
           style: [{ stroke: '#d8dce0', strokeWidth: 1 }],
         },
-        label: { fontSize: 11 },
+        label: { fontSize: 11, avoidCollisions: false },
       },
       x: {
         type: 'number',
@@ -182,10 +183,6 @@ export function CompetitiveImpactPage() {
     () => (sample ? buildOptions(sample) : null),
     [sample],
   )
-
-  // 棒1本の高さ ≒ 36px
-  const rowCount = sample ? sample.rows.length : 1
-  const chartHeight = Math.max(260, rowCount * 36 + 100)
 
   const downloadPng = () => {
     setIsDownloading(true)
@@ -292,7 +289,7 @@ export function CompetitiveImpactPage() {
                 <AgCharts
                   ref={chartRef}
                   options={options}
-                  style={{ width: 800, height: chartHeight }}
+                  style={{ width: 800, height: 420 }}
                 />
               </div>
             </div>

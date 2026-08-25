@@ -44,6 +44,7 @@ const barValueLabel: AgBarSeriesLabelOptions<
   fontSize: 10,
   color: '#ffffff',
   placement: ['inside-end', 'outside-end'],
+  collision: { alwaysShow: true },
   formatter: (params) => {
     const value = Math.abs(params.value)
     return value < 0.01 ? value.toFixed(3) : value.toFixed(2)
@@ -114,7 +115,7 @@ function buildOptions(sample: PurchaseInOutSample): AgCartesianChartOptions {
           enabled: true,
           style: [{ stroke: '#d8dce0', strokeWidth: 1 }],
         },
-        label: { fontSize: 11 },
+        label: { fontSize: 11, avoidCollisions: false },
       },
       x: {
         type: 'number',
@@ -222,10 +223,6 @@ export function PurchaseInOutPage() {
     () => (sample ? buildOptions(sample) : null),
     [sample],
   )
-
-  const chartHeight = sample
-    ? Math.max(260, sample.rows.length * 36 + 72)
-    : 320
 
   const downloadPng = () => {
     setIsDownloading(true)
@@ -337,7 +334,7 @@ export function PurchaseInOutPage() {
                 <AgCharts
                   ref={chartRef}
                   options={options}
-                  style={{ width: 800, height: chartHeight }}
+                  style={{ width: 800, height: 420 }}
                 />
               </div>
             </div>
