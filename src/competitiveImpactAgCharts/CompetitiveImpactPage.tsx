@@ -279,15 +279,17 @@ export function CompetitiveImpactPage() {
         />
       </div>
 
-      <div className="tn-page-stage tn-page-stage-competitive-impact ag-spike-stage">
+      <div className="tn-page-stage tn-page-stage-fit ag-spike-stage">
         {sample && options ? (
-          <div className="ci-frame">
-            <div className="ag-spike-chart-host ci-chart-host">
-              <AgCharts
-                ref={chartRef}
-                options={options}
-                style={{ width: '100%', height: chartHeight }}
-              />
+          <div className="tn-chart-frame-800">
+            <div className="ci-frame">
+              <div className="ag-spike-chart-host ci-chart-host">
+                <AgCharts
+                  ref={chartRef}
+                  options={options}
+                  style={{ width: 800, height: chartHeight }}
+                />
+              </div>
             </div>
           </div>
         ) : (

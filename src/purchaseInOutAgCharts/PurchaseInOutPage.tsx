@@ -323,16 +323,18 @@ export function PurchaseInOutPage() {
         />
       </div>
 
-      <div className="tn-page-stage tn-page-stage-purchase-in-out ag-spike-stage">
+      <div className="tn-page-stage tn-page-stage-fit ag-spike-stage">
         {sample && options ? (
-          <div className="pio-frame">
-            <SummaryHeader sample={sample} />
-            <div className="ag-spike-chart-host pio-chart-host">
-              <AgCharts
-                ref={chartRef}
-                options={options}
-                style={{ width: '100%', height: chartHeight }}
-              />
+          <div className="tn-chart-frame-800">
+            <div className="pio-frame">
+              <SummaryHeader sample={sample} />
+              <div className="ag-spike-chart-host pio-chart-host">
+                <AgCharts
+                  ref={chartRef}
+                  options={options}
+                  style={{ width: 800, height: chartHeight }}
+                />
+              </div>
             </div>
           </div>
         ) : (

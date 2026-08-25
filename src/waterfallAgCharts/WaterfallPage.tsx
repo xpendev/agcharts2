@@ -278,20 +278,22 @@ export function WaterfallPage() {
         />
       </div>
 
-      <div className="tn-page-stage ag-spike-stage">
-        <div className="ag-spike-chart-host">
-          {options && sample ? (
-            <AgCharts
-              ref={chartRef}
-              options={options}
-              style={{ width: '100%', height: 480 }}
-            />
-          ) : (
-            <div className="tn-graph-placeholder" role="status">
-              {isLoading ? 'データを読み込み中…' : '表示できるデータがありません。'}
+      <div className="tn-page-stage tn-page-stage-fit ag-spike-stage">
+        {options && sample ? (
+          <div className="tn-chart-frame-800">
+            <div className="ag-spike-chart-host">
+              <AgCharts
+                ref={chartRef}
+                options={options}
+                style={{ width: 800, height: 480 }}
+              />
             </div>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="tn-graph-placeholder" role="status">
+            {isLoading ? 'データを読み込み中…' : '表示できるデータがありません。'}
+          </div>
+        )}
       </div>
     </main>
   )

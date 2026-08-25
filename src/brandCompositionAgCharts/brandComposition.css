@@ -51,6 +51,7 @@
 }
 
 .tn-page-stage-brand-composition {
+  /* 幅は tn-page-stage-fit / tn-chart-frame-800 に統一 */
   height: auto;
   min-height: 0;
   overflow: visible;

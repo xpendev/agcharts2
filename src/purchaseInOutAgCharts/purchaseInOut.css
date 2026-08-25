@@ -51,9 +51,7 @@
 }
 
 .tn-page-stage-purchase-in-out {
-  width: 800px;
-  max-width: 100%;
-  margin-inline: auto;
+  /* 幅は tn-page-stage-fit / tn-chart-frame-800 に統一 */
   height: auto;
   min-height: 0;
   padding: 12px;

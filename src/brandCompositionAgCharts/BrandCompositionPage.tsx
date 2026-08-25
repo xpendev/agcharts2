@@ -317,86 +317,88 @@ export function BrandCompositionPage() {
         />
       </div>
 
-      <div className="tn-page-stage tn-page-stage-brand-composition ag-spike-stage">
+      <div className="tn-page-stage tn-page-stage-fit ag-spike-stage">
         {orderedGroups.length > 0 && sample ? (
-          <div key={sample.size} className={gridClass}>
-            {orderedGroups.map((group, index) => {
-              const options = chartOptionsByBrand.get(group.brand)
-              if (!options) return null
-              // const isDragging = draggingBrand === group.brand
-              // const isDropTarget =
-              //   dropTargetBrand === group.brand && draggingBrand !== group.brand
-              return (
-                <div
-                  key={group.brand}
-                  className="bc-tile"
-                  // className={[
-                  //   'bc-tile',
-                  //   isDragging ? 'bc-tile--dragging' : '',
-                  //   isDropTarget ? 'bc-tile--drop-target' : '',
-                  // ]
-                  //   .filter(Boolean)
-                  //   .join(' ')}
-                  // onDragOver={(event) => {
-                  //   if (!canDrag || !draggingBrand) return
-                  //   event.preventDefault()
-                  //   event.dataTransfer.dropEffect = 'move'
-                  //   if (dropTargetBrand !== group.brand) {
-                  //     setDropTargetBrand(group.brand)
-                  //   }
-                  // }}
-                  // onDragLeave={() => {
-                  //   if (dropTargetBrand === group.brand) {
-                  //     setDropTargetBrand(null)
-                  //   }
-                  // }}
-                  // onDrop={(event) => {
-                  //   if (!canDrag || !draggingBrand) return
-                  //   event.preventDefault()
-                  //   setBrandOrder((prev) =>
-                  //     reorderBrands(prev, draggingBrand, group.brand),
-                  //   )
-                  //   setDraggingBrand(null)
-                  //   setDropTargetBrand(null)
-                  // }}
-                >
+          <div className="tn-chart-frame-800">
+            <div key={sample.size} className={gridClass}>
+              {orderedGroups.map((group, index) => {
+                const options = chartOptionsByBrand.get(group.brand)
+                if (!options) return null
+                // const isDragging = draggingBrand === group.brand
+                // const isDropTarget =
+                //   dropTargetBrand === group.brand && draggingBrand !== group.brand
+                return (
                   <div
-                    className="bc-tile-handle"
-                    // draggable={canDrag}
-                    // title={
-                    //   canDrag
-                    //     ? 'ドラッグして並べ替え'
-                    //     : undefined
-                    // }
-                    // onDragStart={(event) => {
-                    //   if (!canDrag) {
-                    //     event.preventDefault()
-                    //     return
+                    key={group.brand}
+                    className="bc-tile"
+                    // className={[
+                    //   'bc-tile',
+                    //   isDragging ? 'bc-tile--dragging' : '',
+                    //   isDropTarget ? 'bc-tile--drop-target' : '',
+                    // ]
+                    //   .filter(Boolean)
+                    //   .join(' ')}
+                    // onDragOver={(event) => {
+                    //   if (!canDrag || !draggingBrand) return
+                    //   event.preventDefault()
+                    //   event.dataTransfer.dropEffect = 'move'
+                    //   if (dropTargetBrand !== group.brand) {
+                    //     setDropTargetBrand(group.brand)
                     //   }
-                    //   event.dataTransfer.effectAllowed = 'move'
-                    //   event.dataTransfer.setData('text/plain', group.brand)
-                    //   setDraggingBrand(group.brand)
                     // }}
-                    // onDragEnd={() => {
+                    // onDragLeave={() => {
+                    //   if (dropTargetBrand === group.brand) {
+                    //     setDropTargetBrand(null)
+                    //   }
+                    // }}
+                    // onDrop={(event) => {
+                    //   if (!canDrag || !draggingBrand) return
+                    //   event.preventDefault()
+                    //   setBrandOrder((prev) =>
+                    //     reorderBrands(prev, draggingBrand, group.brand),
+                    //   )
                     //   setDraggingBrand(null)
                     //   setDropTargetBrand(null)
                     // }}
                   >
-                    {/* <span className="bc-tile-handle-grip" aria-hidden>
-                      ⋮⋮
-                    </span> */}
-                    <span className="bc-tile-title">{group.brand}</span>
+                    <div
+                      className="bc-tile-handle"
+                      // draggable={canDrag}
+                      // title={
+                      //   canDrag
+                      //     ? 'ドラッグして並べ替え'
+                      //     : undefined
+                      // }
+                      // onDragStart={(event) => {
+                      //   if (!canDrag) {
+                      //     event.preventDefault()
+                      //     return
+                      //   }
+                      //   event.dataTransfer.effectAllowed = 'move'
+                      //   event.dataTransfer.setData('text/plain', group.brand)
+                      //   setDraggingBrand(group.brand)
+                      // }}
+                      // onDragEnd={() => {
+                      //   setDraggingBrand(null)
+                      //   setDropTargetBrand(null)
+                      // }}
+                    >
+                      {/* <span className="bc-tile-handle-grip" aria-hidden>
+                        ⋮⋮
+                      </span> */}
+                      <span className="bc-tile-title">{group.brand}</span>
+                    </div>
+                    <div className="ag-spike-chart-host bc-tile-chart">
+                      <AgCharts
+                        ref={index === 0 ? firstChartRef : undefined}
+                        options={options}
+                        style={{ width: '100%', height: chartHeight }}
+                      />
+                    </div>
                   </div>
-                  <div className="ag-spike-chart-host bc-tile-chart">
-                    <AgCharts
-                      ref={index === 0 ? firstChartRef : undefined}
-                      options={options}
-                      style={{ width: '100%', height: chartHeight }}
-                    />
-                  </div>
-                </div>
-              )
-            })}
+                )
+              })}
+            </div>
           </div>
         ) : (
           <div className="tn-graph-placeholder" role="status">
