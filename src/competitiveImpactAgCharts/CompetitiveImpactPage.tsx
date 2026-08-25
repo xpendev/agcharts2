@@ -88,6 +88,9 @@ function buildOptions(sample: CompetitiveImpactSample): AgCartesianChartOptions 
         xKey: 'label',
         yKey: 'outflowNeg',
         yName: '流出',
+        // 同一カテゴリ帯に重ねる（上下ずれ防止）
+        grouped: false,
+        widthRatio: 0.55,
         fill: '#c44b4b',
         strokeWidth: 0,
         cornerRadius: 0,
@@ -99,6 +102,8 @@ function buildOptions(sample: CompetitiveImpactSample): AgCartesianChartOptions 
         xKey: 'label',
         yKey: 'inflow',
         yName: '流入',
+        grouped: false,
+        widthRatio: 0.55,
         fill: '#5a9e4a',
         strokeWidth: 0,
         cornerRadius: 0,
