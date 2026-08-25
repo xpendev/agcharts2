@@ -120,7 +120,9 @@ function genWaterfall(size) {
     const positive = i % 2 === 0
     const mag = 6 + ((i * 3 + size) % 10)
     const delta = positive ? mag : -mag
-    categories.push(positive ? `流入${String.fromCharCode(65 + (i % 26))}` : `流出${String.fromCharCode(65 + (i % 26))}`)
+    // カテゴリ名は一意にする（A〜Zの循環だと重複し、同一X位置に棒が重なる）
+    const n = i + 1
+    categories.push(positive ? `流入${n}` : `流出${n}`)
     values.push(delta)
     running += delta
   }
