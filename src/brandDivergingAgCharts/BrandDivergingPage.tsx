@@ -64,7 +64,7 @@ function buildOptions(sample: BrandDivergingSample): AgCartesianChartOptions {
         paddingInner: 0.35,
         tick: { enabled: false },
         gridLine: { enabled: false },
-        label: { fontSize: 11 },
+        label: { fontSize: 11, avoidCollisions: false },
       },
       x: {
         type: 'number',

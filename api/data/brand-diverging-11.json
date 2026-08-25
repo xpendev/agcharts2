@@ -1,51 +1,51 @@
 {
   "meta": {
-    "title": "ブランドA"
+    "title": "ブランド"
   },
   "size": 11,
   "rows": [
     {
-      "label": "ブランドB",
+      "label": "ブランド1",
       "value": 80
     },
     {
-      "label": "ブランドC",
+      "label": "ブランド2",
       "value": 73
     },
     {
-      "label": "ブランドD",
+      "label": "ブランド3",
       "value": 66
     },
     {
-      "label": "ブランドE",
+      "label": "ブランド4",
       "value": 59
     },
     {
-      "label": "ブランドF",
+      "label": "ブランド5",
       "value": 52
     },
     {
-      "label": "ブランドG",
+      "label": "ブランド6",
       "value": 45
     },
     {
-      "label": "ブランドH",
+      "label": "ブランド7",
       "value": 38
     },
     {
-      "label": "ブランドI",
+      "label": "ブランド8",
       "value": 31
     },
     {
-      "label": "ブランドJ",
+      "label": "ブランド9",
       "value": 24
     },
     {
-      "label": "ブランドK",
+      "label": "ブランド10",
       "value": -25
     },
     {
-      "label": "ブランドL",
+      "label": "ブランド11",
       "value": -30
     }
   ]

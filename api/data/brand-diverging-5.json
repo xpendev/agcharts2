@@ -1,27 +1,27 @@
 {
   "meta": {
-    "title": "ブランドA"
+    "title": "ブランド"
   },
   "size": 5,
   "rows": [
     {
-      "label": "ブランドB",
+      "label": "ブランド1",
       "value": 80
     },
     {
-      "label": "ブランドC",
+      "label": "ブランド2",
       "value": 62.5
     },
     {
-      "label": "ブランドD",
+      "label": "ブランド3",
       "value": 45
     },
     {
-      "label": "ブランドE",
+      "label": "ブランド4",
       "value": 27.5
     },
     {
-      "label": "ブランドF",
+      "label": "ブランド5",
       "value": -30
     }
   ]

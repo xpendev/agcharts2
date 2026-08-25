@@ -138,21 +138,19 @@ function genWaterfall(size) {
 
 // --- brand-diverging (size = ブランド数) ---
 function genBrandDiverging(size) {
-  const letters = 'BCDEFGHIJKLMNOPQRSTUVWXYZ'
   const rows = []
   for (let i = 0; i < size; i += 1) {
-    const letter = letters[i % letters.length]
     const positive = i < Math.ceil(size * 0.75)
     const mag = positive
       ? round1(80 - i * (70 / Math.max(size - 1, 1)))
       : -round1(10 + ((i * 5) % 30))
     rows.push({
-      label: `ブランド${letter}${i >= letters.length ? Math.floor(i / letters.length) + 1 : ''}`,
+      label: `ブランド${i + 1}`,
       value: mag,
     })
   }
   return {
-    meta: { title: 'ブランドA' },
+    meta: { title: 'ブランド' },
     size,
     rows,
   }
