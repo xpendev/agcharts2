@@ -85,11 +85,12 @@ export function toVolumeMatrixSample(
     const past = labelById.get(cell.pastId) ?? cell.pastId
     const current = labelById.get(cell.currentId) ?? cell.currentId
     const rowIndex = indexById.get(cell.pastId) ?? 0
+    const isSameBrand = cell.pastId === cell.currentId
     return {
       past,
       current,
       value: cell.value,
-      label: cell.value.toFixed(1),
+      label: isSameBrand ? '-' : cell.value.toFixed(1),
       fill: ROW_COLORS[rowIndex % ROW_COLORS.length],
     }
   })

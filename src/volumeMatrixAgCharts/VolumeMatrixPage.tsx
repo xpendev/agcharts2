@@ -119,6 +119,13 @@ function buildVolumeMatrixOptions(
         strokeWidth: 0.8,
         itemStyler: ({ datum }: { datum: unknown }) => {
           const cell = datum as ChartCell
+          const isSameBrand = cell.past === cell.current
+          if (isSameBrand) {
+            return {
+              fillOpacity: 0,
+              strokeWidth: 0,
+            }
+          }
           return {
             fill: cell.fill,
             fillOpacity: cell.value <= 0 ? 0.15 : 0.78,
@@ -137,9 +144,15 @@ function buildVolumeMatrixOptions(
         tooltip: {
           renderer: ({ datum }: { datum: unknown }) => {
             const cell = datum as ChartCell
+            const isSameBrand = cell.past === cell.current
             return {
               title: `${cell.past} → ${cell.current}`,
-              data: [{ label: '行%', value: `${cell.label}%` }],
+              data: [
+                {
+                  label: '行%',
+                  value: isSameBrand ? '-' : `${cell.label}%`,
+                },
+              ],
             }
           },
         },
