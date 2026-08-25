@@ -8,6 +8,7 @@ REPORT_FILE_PREFIX: dict[str, str] = {
     "brand-composition": "brand-composition",
     "buyer-dropout": "buyer-dropout",
     "brand-diverging": "brand-diverging",
+    "waterfall": "waterfall",
 }
 
 SIZE_MIN = 1

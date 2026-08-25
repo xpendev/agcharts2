@@ -12,6 +12,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createChartContextMenu } from '../agChartsCommon'
+import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchWaterfall,
   SIZE_DEFAULT,
@@ -199,6 +200,11 @@ export function WaterfallPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
+          <XlsxExportButton
+            reportKey="waterfall"
+            size={size}
+            disabled={!sample || isLoading}
+          />
         </div>
       </header>
 
