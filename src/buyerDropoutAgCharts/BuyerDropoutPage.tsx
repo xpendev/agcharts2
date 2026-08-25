@@ -12,6 +12,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createChartContextMenu } from '../agChartsCommon'
+import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchBuyerDropout,
   SIZE_DEFAULT,
@@ -188,6 +189,11 @@ export function BuyerDropoutPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
+          <XlsxExportButton
+            reportKey="buyer-dropout"
+            size={size}
+            disabled={!sample || isLoading}
+          />
         </div>
       </header>
 

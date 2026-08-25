@@ -5,14 +5,20 @@ import sys
 from pathlib import Path
 
 from export_xlsx.brand_composition import build_brand_composition_xlsx
+from export_xlsx.buyer_dropout import build_buyer_dropout_xlsx
 from export_xlsx.data import load_report_payload
+
+BUILDERS = {
+    "brand-composition": build_brand_composition_xlsx,
+    "buyer-dropout": build_buyer_dropout_xlsx,
+}
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="帳票 xlsx を生成する（xlsxwriter）")
     parser.add_argument(
         "report",
-        choices=["brand-composition"],
+        choices=sorted(BUILDERS.keys()),
         help="帳票キー",
     )
     parser.add_argument("--size", type=int, required=True, help="データ size パラメータ")
@@ -31,10 +37,10 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     payload = load_report_payload(args.data_dir, args.report, args.size)
-    if args.report == "brand-composition":
-        xlsx_bytes = build_brand_composition_xlsx(payload)
-    else:
+    builder = BUILDERS.get(args.report)
+    if builder is None:
         raise SystemExit(f"未対応の帳票: {args.report}")
+    xlsx_bytes = builder(payload)
 
     if args.output is not None:
         args.output.write_bytes(xlsx_bytes)

@@ -6,6 +6,7 @@ from typing import Any
 
 REPORT_FILE_PREFIX: dict[str, str] = {
     "brand-composition": "brand-composition",
+    "buyer-dropout": "buyer-dropout",
 }
 
 SIZE_MIN = 1
