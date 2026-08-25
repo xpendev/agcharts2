@@ -1,27 +1,27 @@
 import { Link } from 'react-router-dom'
 
-const transitionLinks = [
-  {
-    to: '/transition-network',
-    title: 'スクラッチ',
-    note: 'React + SVG（見た目の基準）',
-  },
-  {
-    to: '/transition-network/cytoscape',
-    title: 'Cytoscape.js',
-    note: '無料ライブラリ',
-  },
-  {
-    to: '/transition-network/gojs',
-    title: 'GoJS',
-    note: '評価版・有償',
-  },
-  {
-    to: '/transition-network/agcharts',
-    title: 'AG Charts Chord',
-    note: 'Enterprise・カテゴリ間流出入（圏外なし・最大30）',
-  },
-] as const
+// const transitionLinks = [
+//   {
+//     to: '/transition-network',
+//     title: 'スクラッチ',
+//     note: 'React + SVG（見た目の基準）',
+//   },
+//   {
+//     to: '/transition-network/cytoscape',
+//     title: 'Cytoscape.js',
+//     note: '無料ライブラリ',
+//   },
+//   {
+//     to: '/transition-network/gojs',
+//     title: 'GoJS',
+//     note: '評価版・有償',
+//   },
+//   {
+//     to: '/transition-network/agcharts',
+//     title: 'AG Charts Chord',
+//     note: 'Enterprise・カテゴリ間流出入（圏外なし・最大30）',
+//   },
+// ] as const
 
 const agChartsLinks = [
   {
@@ -66,7 +66,7 @@ export function HomePage() {
     <main className="tn-home">
       <h1 className="tn-home-title">チャート検証</h1>
 
-      <section className="tn-home-section" aria-labelledby="tn-home-mandala">
+      {/* <section className="tn-home-section" aria-labelledby="tn-home-mandala">
         <h2 id="tn-home-mandala" className="tn-home-section-title">
           曼荼羅チャート（transitionNetwork）
         </h2>
@@ -79,7 +79,7 @@ export function HomePage() {
             </Link>
           ))}
         </nav>
-      </section>
+      </section> */}
 
       <section className="tn-home-section" aria-labelledby="tn-home-agcharts">
         <h2 id="tn-home-agcharts" className="tn-home-section-title">
