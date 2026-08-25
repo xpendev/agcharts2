@@ -110,6 +110,7 @@ function buildVolumeMatrixOptions(
         xName: '現在購入',
         yName: '過去購入',
         sizeName: '%',
+        maxRenderedItems: 3000,
         minSize,
         maxSize,
         sizeDomain: [0, SIZE_DOMAIN_MAX],
