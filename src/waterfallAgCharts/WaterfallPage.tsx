@@ -8,6 +8,7 @@ import {
   ModuleRegistry,
   NumberAxisModule,
   WaterfallSeriesModule,
+  ZoomModule,
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -27,6 +28,7 @@ ModuleRegistry.registerModules([
   NumberAxisModule,
   LegendModule,
   ContextMenuModule,
+  ZoomModule,
 ])
 
 function formatBarLabel(params: {
@@ -82,6 +84,7 @@ function buildOptions(sample: WaterfallSample): AgCartesianChartOptions {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
     contextMenu: chartContextMenuDownload,
+    zoom: { enabled: true },
     title: { text: sample.meta.title, fontSize: 16 },
     legend: { enabled: true },
     padding: { top: 28, right: 20, bottom: 12, left: 12 },
@@ -131,7 +134,12 @@ function buildOptions(sample: WaterfallSample): AgCartesianChartOptions {
     axes: {
       x: {
         type: 'category',
-        label: { autoRotate: true, fontSize: 10 },
+        label: {
+          autoRotate: false,
+          rotation: 270,
+          fontSize: 10,
+          avoidCollisions: false,
+        },
         tick: { enabled: false },
       },
       y: {
