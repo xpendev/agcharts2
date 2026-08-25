@@ -162,6 +162,7 @@ function buildVolumeMatrixOptions(
           color: AXIS_LABEL,
           fontSize: 11,
           autoRotate: false,
+          rotation: 270,
           formatter: ({ value }) => columns[Math.round(Number(value))] ?? '',
         },
         line: { enabled: true, stroke: '#222222', width: 1 },
