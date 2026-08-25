@@ -25,26 +25,6 @@ import { Link } from 'react-router-dom'
 
 const agChartsLinks = [
   {
-    to: '/volume-matrix',
-    title: '⑦ブランドクロス',
-    note: '過去×現在の遷移マトリクス（Bubble・1〜50）',
-  },
-  {
-    to: '/purchase-in-out',
-    title: '④シェア流出・流入比較',
-    note: 'KPI + 全体バー + 発散棒（ブランド1〜50）',
-  },
-  {
-    to: '/waterfall',
-    title: '③シェア流出入',
-    note: '職出入差（棒の数1〜50）',
-  },
-  {
-    to: '/brand-diverging',
-    title: '⑥流出入差ランキング',
-    note: '単一系列・符号で色分け（1〜50）',
-  },
-  {
     to: '/buyer-dropout',
     title: '①新規・継続・脱落率',
     note: '上:積上棒 / 下:負の棒（期間1〜50）',
@@ -55,9 +35,29 @@ const agChartsLinks = [
     note: 'ブランド別100%積上（1〜50・Sync）',
   },
   {
+    to: '/waterfall',
+    title: '③シェア流出入',
+    note: '職出入差（棒の数1〜50）',
+  },
+  {
+    to: '/purchase-in-out',
+    title: '④シェア流出・流入比較',
+    note: 'KPI + 全体バー + 発散棒（ブランド1〜50）',
+  },
+  {
     to: '/competitive-impact',
     title: '⑤競合へのインパクト',
     note: '競合ブランド別 流出・流入インパクト（1〜50）',
+  },
+  {
+    to: '/brand-diverging',
+    title: '⑥流出入差ランキング',
+    note: '単一系列・符号で色分け（1〜50）',
+  },
+  {
+    to: '/volume-matrix',
+    title: '⑦ブランドクロス',
+    note: '過去×現在の遷移マトリクス（Bubble・1〜50）',
   },
 ] as const
 
