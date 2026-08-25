@@ -22,4 +22,12 @@ export default defineConfig({
     brandCompositionApiPlugin(),
     competitiveImpactApiPlugin(),
   ],
+  server: {
+    proxy: {
+      '/api/xlsx': {
+        target: 'http://127.0.0.1:5001',
+        changeOrigin: true,
+      },
+    },
+  },
 })

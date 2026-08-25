@@ -13,6 +13,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createChartContextMenu } from '../agChartsCommon'
+import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchBrandComposition,
   groupRowsByBrand,
@@ -223,6 +224,11 @@ export function BrandCompositionPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
+          <XlsxExportButton
+            reportKey="brand-composition"
+            size={size}
+            disabled={!sample || isLoading}
+          />
         </div>
       </header>
 
