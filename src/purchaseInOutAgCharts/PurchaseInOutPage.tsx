@@ -15,6 +15,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createChartContextMenu } from '../agChartsCommon'
+import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchPurchaseInOut,
   SIZE_DEFAULT,
@@ -237,6 +238,11 @@ export function PurchaseInOutPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
+          <XlsxExportButton
+            reportKey="purchase-in-out"
+            size={size}
+            disabled={!sample || isLoading}
+          />
         </div>
       </header>
 
