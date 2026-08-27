@@ -177,6 +177,8 @@ function buildVolumeMatrixOptions(
           fontSize: 11,
           autoRotate: false,
           rotation: 270,
+          avoidCollisions: false,
+          minSpacing: 0,
           formatter: ({ value }) => columns[Math.round(Number(value))] ?? '',
         },
         line: { enabled: true, stroke: '#222222', width: 1 },
@@ -201,6 +203,8 @@ function buildVolumeMatrixOptions(
         label: {
           color: AXIS_LABEL,
           fontSize: 11,
+          avoidCollisions: false,
+          minSpacing: 0,
           formatter: ({ value }) => rows[Math.round(Number(value))] ?? '',
         },
         line: { enabled: true, stroke: '#222222', width: 1 },

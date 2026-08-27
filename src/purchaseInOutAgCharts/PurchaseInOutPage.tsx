@@ -119,7 +119,8 @@ function buildOptions(
           enabled: true,
           style: [{ stroke: '#d8dce0', strokeWidth: 1 }],
         },
-        label: { fontSize: 11, avoidCollisions: false },
+        interval: { values: data.map((row) => row.label) },
+        label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
       },
       x: {
         type: 'number',
@@ -129,7 +130,7 @@ function buildOptions(
         nice: false,
         interval: { step: 0.5 },
         title: { text: '(%)', fontSize: 11 },
-        label: { fontSize: 10 },
+        label: { fontSize: 10, avoidCollisions: false, minSpacing: 0 },
         gridLine: { enabled: false },
         crossLines: [
           {

@@ -74,8 +74,9 @@ function buildTopOptions(
       x: {
         type: 'category',
         tick: { enabled: false },
-        // 参考画像どおり期間ラベルは上段
-        label: { fontSize: 11 },
+        // 参考画像どおり期間ラベルは上段。件数多くても間引かない
+        interval: { values: sample.stacked.map((row) => row.period) },
+        label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
       },
       y: {
         type: 'number',
@@ -85,6 +86,7 @@ function buildTopOptions(
         nice: false,
         interval: { step: 10 },
         gridLine: { enabled: true },
+        label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
       },
     },
   }
@@ -113,6 +115,7 @@ function buildBottomOptions(
           enabled: true,
           placement: 'outside-end',
           orientation: 'vertical',
+          collision: { alwaysShow: true },
           formatter: ({ value }) => Number(value).toFixed(2),
         },
       },
@@ -132,6 +135,7 @@ function buildBottomOptions(
         nice: false,
         interval: { step: 3 },
         gridLine: { enabled: true },
+        label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
       },
     },
   }

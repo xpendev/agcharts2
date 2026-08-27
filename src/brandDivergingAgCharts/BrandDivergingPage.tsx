@@ -68,13 +68,15 @@ function buildOptions(
         paddingInner: 0.35,
         tick: { enabled: false },
         gridLine: { enabled: false },
-        label: { fontSize: 11, avoidCollisions: false },
+        interval: { values: sample.rows.map((row) => row.label) },
+        label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
       },
       x: {
         type: 'number',
         position: 'bottom',
         nice: true,
         gridLine: { enabled: true },
+        label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
         crossLines: [
           {
             type: 'line',

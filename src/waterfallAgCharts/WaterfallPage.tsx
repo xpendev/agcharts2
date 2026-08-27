@@ -59,6 +59,7 @@ const barLabel = {
   placement: 'outside-end' as const,
   fontSize: 11,
   spacing: 4,
+  collision: { alwaysShow: true },
   formatter: formatBarLabel,
 }
 
@@ -134,11 +135,17 @@ function buildOptions(
     axes: {
       x: {
         type: 'category',
+        interval: {
+          values: isSingle
+            ? data.map((row) => row.category)
+            : [...data.map((row) => row.category), endLabel],
+        },
         label: {
           autoRotate: false,
           rotation: 270,
           fontSize: 10,
           avoidCollisions: false,
+          minSpacing: 0,
         },
         tick: { enabled: false },
       },
@@ -147,6 +154,7 @@ function buildOptions(
         title: { text: sample.meta.yUnit, fontSize: 11 },
         nice: true,
         gridLine: { enabled: true },
+        label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
       },
     },
   }

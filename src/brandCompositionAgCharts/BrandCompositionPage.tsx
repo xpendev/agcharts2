@@ -100,7 +100,8 @@ function buildBrandOptions(
     axes: {
       x: {
         type: 'category',
-        label: { fontSize: 10 },
+        interval: { values: group.rows.map((row) => row.period) },
+        label: { fontSize: 10, avoidCollisions: false, minSpacing: 0 },
         tick: { enabled: false },
       },
       y: {
@@ -110,6 +111,7 @@ function buildBrandOptions(
         max: 100,
         nice: false,
         gridLine: { enabled: true },
+        label: { fontSize: 10, avoidCollisions: false, minSpacing: 0 },
       },
     },
   }

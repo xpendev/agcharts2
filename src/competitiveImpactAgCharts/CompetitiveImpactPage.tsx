@@ -42,6 +42,7 @@ const barValueLabel: AgBarSeriesLabelOptions<
   fontSize: 10,
   color: '#222222',
   placement: 'outside-end',
+  collision: { alwaysShow: true },
   formatter: (params) => {
     const value = Math.abs(params.value)
     return value < 0.01 ? value.toFixed(3) : value.toFixed(2)
@@ -135,7 +136,7 @@ function buildOptions(
         max: axisMax,
         nice: false,
         title: { text: sample.meta.xUnit, fontSize: 11 },
-        label: { fontSize: 10 },
+        label: { fontSize: 10, avoidCollisions: false, minSpacing: 0 },
         gridLine: { enabled: false },
         crossLines: [
           {
