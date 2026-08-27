@@ -12,7 +12,6 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createChartContextMenu } from '../agChartsCommon'
-import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchWaterfall,
   SIZE_DEFAULT,
@@ -200,11 +199,8 @@ export function WaterfallPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
-          <XlsxExportButton
-            reportKey="waterfall"
-            size={size}
-            disabled={!sample || isLoading}
-          />
+          {/* xlsxwriter は waterfall 非対応のため、顧客提示用に Excel 出力ボタンを非表示。
+              Flask API / waterfall.py の生成処理は残置。 */}
         </div>
       </header>
 
