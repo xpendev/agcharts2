@@ -10,7 +10,6 @@ from export_xlsx.brand_diverging import build_brand_diverging_xlsx
 from export_xlsx.buyer_dropout import build_buyer_dropout_xlsx
 from export_xlsx.competitive_impact import build_competitive_impact_xlsx
 from export_xlsx.purchase_in_out import build_purchase_in_out_xlsx
-from export_xlsx.waterfall import build_waterfall_xlsx
 from export_xlsx.data import SIZE_MIN, clamp_size, load_report_payload
 
 DEFAULT_PORT = 5001
@@ -42,8 +41,6 @@ def create_app(data_dir: Path | None = None) -> Flask:
                 xlsx_bytes = build_buyer_dropout_xlsx(payload)
             elif report == "brand-diverging":
                 xlsx_bytes = build_brand_diverging_xlsx(payload)
-            elif report == "waterfall":
-                xlsx_bytes = build_waterfall_xlsx(payload)
             elif report == "purchase-in-out":
                 xlsx_bytes = build_purchase_in_out_xlsx(payload)
             elif report == "competitive-impact":
