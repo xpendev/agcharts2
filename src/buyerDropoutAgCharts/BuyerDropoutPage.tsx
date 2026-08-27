@@ -112,6 +112,7 @@ function buildBottomOptions(
         label: {
           enabled: true,
           placement: 'outside-end',
+          orientation: 'vertical',
           formatter: ({ value }) => Number(value).toFixed(2),
         },
       },

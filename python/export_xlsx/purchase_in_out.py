@@ -170,18 +170,22 @@ def build_purchase_in_out_xlsx(payload: dict[str, Any]) -> bytes:
             "label_align": "left",
         }
     )
-    chart.set_legend({"position": "top"})
+    chart.set_legend({"position": "bottom"})
+    # タイトル／凡例／(%) はほぼ固定ピクセル相当。件数増で相対余白が膨らまないよう換算する。
+    chart_height = max(400, len(chart_rows) * 28 + 140)
+    top_margin = 48 / chart_height
+    bottom_margin = 100 / chart_height
     chart.set_plotarea(
         {
             "layout": {
                 "x": 0.14,
-                "y": 0.12,
+                "y": round(top_margin, 4),
                 "width": 0.82,
-                "height": 0.8,
+                "height": round(max(0.5, 1.0 - top_margin - bottom_margin), 4),
             }
         }
     )
-    chart.set_size({"width": 720, "height": max(360, len(chart_rows) * 28 + 100)})
+    chart.set_size({"width": 720, "height": chart_height})
     worksheet.insert_chart("E4", chart)
 
     workbook.close()

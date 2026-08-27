@@ -128,17 +128,21 @@ def build_competitive_impact_xlsx(payload: dict[str, Any]) -> bytes:
         }
     )
     chart.set_legend({"position": "none"})
+    # タイトル／軸名はほぼ固定ピクセル相当。件数増で相対余白が膨らまないよう換算する。
+    chart_height = max(360, len(chart_rows) * 28 + 100)
+    top_margin = 48 / chart_height
+    bottom_margin = 70 / chart_height  # 凡例なしのため④より小さめ
     chart.set_plotarea(
         {
             "layout": {
                 "x": 0.18,
-                "y": 0.14,
+                "y": round(top_margin, 4),
                 "width": 0.78,
-                "height": 0.78,
+                "height": round(max(0.5, 1.0 - top_margin - bottom_margin), 4),
             }
         }
     )
-    chart.set_size({"width": 720, "height": max(360, len(chart_rows) * 28 + 100)})
+    chart.set_size({"width": 720, "height": chart_height})
     worksheet.insert_chart("E4", chart)
 
     workbook.close()

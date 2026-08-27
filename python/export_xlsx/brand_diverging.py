@@ -11,6 +11,7 @@ def build_brand_diverging_xlsx(payload: dict[str, Any]) -> bytes:
     ⑥流出入差ランキング。
     符号付き横棒（bar）を Excel ネイティブグラフで出力する。
     正負で色分けするため、正値列・負値列の2系列に分ける。
+    ④⑤と同様、reverse 軸は使わずデータ行を逆順にしてブランド1を上にする。
     """
     meta = payload.get("meta") or {}
     rows: list[dict[str, Any]] = list(payload.get("rows") or [])
@@ -31,6 +32,7 @@ def build_brand_diverging_xlsx(payload: dict[str, Any]) -> bytes:
     worksheet.write(
         "A2",
         "（仮）符号付き横棒 bar。正値=青、負値=赤の Excel ネイティブグラフ。"
+        " データ行を逆順にしブランド1を上へ（reverse 軸は不使用）。"
         f" ブランド数={size}。",
         text,
     )
@@ -48,7 +50,9 @@ def build_brand_diverging_xlsx(payload: dict[str, Any]) -> bytes:
 
     data_start = table_header_row + 1
     values: list[float] = []
-    for i, row in enumerate(rows):
+    # Excel 既定（minMax）では先頭行が下・末尾行が上。reverse 軸の代わりに逆順で書く。
+    chart_rows = list(reversed(rows))
+    for i, row in enumerate(chart_rows):
         label = str(row.get("label") or "")
         value = float(row.get("value") or 0)
         values.append(value)
@@ -61,11 +65,11 @@ def build_brand_diverging_xlsx(payload: dict[str, Any]) -> bytes:
             worksheet.write_blank(r, 1, None)
             worksheet.write_number(r, 2, value, number)
 
-    if not rows:
+    if not chart_rows:
         workbook.close()
         return bio.getvalue()
 
-    data_end = data_start + len(rows) - 1
+    data_end = data_start + len(chart_rows) - 1
     categories = [sheet_name, data_start, 0, data_end, 0]
 
     chart = workbook.add_chart({"type": "bar"})
@@ -108,7 +112,7 @@ def build_brand_diverging_xlsx(payload: dict[str, Any]) -> bytes:
             }
         )
     chart.set_legend({"position": "none"})
-    chart.set_size({"width": 640, "height": max(320, len(rows) * 28 + 80)})
+    chart.set_size({"width": 640, "height": max(320, len(chart_rows) * 28 + 80)})
     worksheet.insert_chart("E5", chart)
 
     workbook.close()
