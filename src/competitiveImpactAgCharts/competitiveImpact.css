@@ -58,7 +58,11 @@
   overflow: auto;
 }
 
-/* chart wrapper */
+/* chart wrapper — 外側ラベル用に少し広げる */
+.ci-chart-frame {
+  width: 920px;
+}
+
 .ci-frame {
   background: #ffffff;
   border: 1px solid #d0d5da;

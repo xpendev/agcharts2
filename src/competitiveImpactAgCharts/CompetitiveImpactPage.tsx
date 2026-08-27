@@ -40,16 +40,12 @@ const barValueLabel: AgBarSeriesLabelOptions<
 > = {
   enabled: true,
   fontSize: 10,
-  color: '#ffffff',
-  placement: ['inside-end', 'outside-end'],
-  collision: { alwaysShow: true },
+  color: '#222222',
+  placement: 'outside-end',
   formatter: (params) => {
     const value = Math.abs(params.value)
     return value < 0.01 ? value.toFixed(3) : value.toFixed(2)
   },
-  itemStyler: ({ placement }) => ({
-    color: String(placement).startsWith('outside') ? '#222222' : '#ffffff',
-  }),
 }
 
 function buildOptions(
@@ -66,13 +62,14 @@ function buildOptions(
     0.5,
     ...data.map((row) => Math.max(-row.outflowNeg, row.inflow)),
   )
-  const axisMax = Math.ceil(maxAbs * 10) / 10
+  // 外側ラベル用に軸域を少し広げる
+  const axisMax = Math.ceil(maxAbs * 12) / 10
 
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
     contextMenu: createChartContextMenu(getChart),
-    padding: { top: 8, right: 8, bottom: 8, left: 8 },
+    padding: { top: 8, right: 20, bottom: 8, left: 8 },
     title: {
       text: sample.meta.title,
       fontSize: 13,
@@ -239,13 +236,13 @@ export function CompetitiveImpactPage() {
 
       <div className="tn-page-stage tn-page-stage-fit ag-spike-stage">
         {sample && options ? (
-          <div className="tn-chart-frame-800">
+          <div className="tn-chart-frame-800 ci-chart-frame">
             <div className="ci-frame">
               <div className="ag-spike-chart-host ci-chart-host">
                 <AgCharts
                   ref={chartRef}
                   options={options}
-                  style={{ width: 800, height: 420 }}
+                  style={{ width: 920, height: 420 }}
                 />
               </div>
             </div>
