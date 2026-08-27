@@ -89,7 +89,14 @@ def build_brand_diverging_xlsx(payload: dict[str, Any]) -> bytes:
         # 棒は 0 交差（autoZero）のまま正負で左右に伸ばす。
         # ラベル位置は crossing ではなく label_position=low で左端に固定する。
         chart.set_x_axis({"min": val_min, "max": val_max})
-        chart.set_y_axis({"label_position": "low", "label_align": "left"})
+        chart.set_y_axis(
+            {
+                "label_position": "low",
+                "label_align": "left",
+                "interval_unit": 1,
+                "interval_tick": 1,
+            }
+        )
         # プロット領域を右へずらし、左側にラベル用の余白を確保する。
         chart.set_plotarea(
             {

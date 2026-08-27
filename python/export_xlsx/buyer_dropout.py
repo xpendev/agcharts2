@@ -101,6 +101,7 @@ def build_buyer_dropout_xlsx(payload: dict[str, Any]) -> bytes:
             }
         )
         chart_top.set_title({"name": top_title})
+        chart_top.set_x_axis({"interval_unit": 1, "interval_tick": 1})
         chart_top.set_y_axis({"name": y_unit, "min": 0, "max": 50})
         chart_top.set_legend({"position": "bottom"})
         chart_top.set_size({"width": 520, "height": 320})
@@ -124,7 +125,9 @@ def build_buyer_dropout_xlsx(payload: dict[str, Any]) -> bytes:
             }
         )
         chart_bottom.set_title({"name": bottom_title})
-        chart_bottom.set_x_axis({"label_position": "low"})
+        chart_bottom.set_x_axis(
+            {"label_position": "low", "interval_unit": 1, "interval_tick": 1}
+        )
         chart_bottom.set_y_axis({"name": y_unit, "min": -9, "max": 0})
         chart_bottom.set_legend({"position": "none"})
         chart_bottom.set_size({"width": 520, "height": 300})

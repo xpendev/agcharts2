@@ -116,6 +116,7 @@ def build_competitive_impact_xlsx(payload: dict[str, Any]) -> bytes:
             "label_position": "low",
             "label_align": "left",
             "interval_unit": 1,
+            "interval_tick": 1,
         }
     )
     chart.set_legend({"position": "none"})

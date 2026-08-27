@@ -95,6 +95,7 @@ def build_brand_composition_xlsx(payload: dict[str, Any]) -> bytes:
         }
     )
     chart.set_title({"name": title})
+    chart.set_x_axis({"interval_unit": 1, "interval_tick": 1})
     chart.set_y_axis({"name": y_title, "min": 0, "max": 100})
     chart.set_legend({"position": "bottom"})
     chart.set_size({"width": 720, "height": 420})
