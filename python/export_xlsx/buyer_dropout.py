@@ -5,6 +5,8 @@ from typing import Any
 
 from xlsxwriter import Workbook
 
+DROPOUT_LABEL_FONT = {"rotation": -90, "size": 9}
+
 
 def build_buyer_dropout_xlsx(payload: dict[str, Any]) -> bytes:
     """
@@ -110,7 +112,7 @@ def build_buyer_dropout_xlsx(payload: dict[str, Any]) -> bytes:
         chart_top.set_title({"name": top_title})
         chart_top.set_y_axis({"name": y_unit, "min": 0, "max": 50})
         chart_top.set_legend({"position": "bottom"})
-        chart_top.set_size({"width": 520, "height": 280})
+        chart_top.set_size({"width": 520, "height": 320})
         worksheet.insert_chart("F6", chart_top)
 
     if dropout:
@@ -122,13 +124,19 @@ def build_buyer_dropout_xlsx(payload: dict[str, Any]) -> bytes:
                 "categories": categories,
                 "values": [sheet_name, bottom_data_start, 1, bottom_data_end, 1],
                 "fill": {"color": "#C44B4B"},
+                "data_labels": {
+                    "value": True,
+                    "position": "outside_end",
+                    "num_format": "0.00",
+                    "font": DROPOUT_LABEL_FONT,
+                },
             }
         )
         chart_bottom.set_title({"name": bottom_title})
         chart_bottom.set_x_axis({"label_position": "low"})
         chart_bottom.set_y_axis({"name": y_unit, "min": -9, "max": 0})
         chart_bottom.set_legend({"position": "none"})
-        chart_bottom.set_size({"width": 520, "height": 240})
+        chart_bottom.set_size({"width": 520, "height": 300})
         # 下段表の右隣（1-based 行番号）
         worksheet.insert_chart(f"F{bottom_header_row + 2}", chart_bottom)
 
