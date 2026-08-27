@@ -20,7 +20,6 @@ def build_competitive_impact_xlsx(payload: dict[str, Any]) -> bytes:
     title = str(meta.get("title") or "競合へのインパクト")
     subtitle = str(meta.get("subtitle") or "")
     x_unit = str(meta.get("xUnit") or "(%)")
-    size = int(payload.get("size") or 0)
 
     bio = BytesIO()
     workbook = Workbook(bio, {"in_memory": True})
@@ -33,16 +32,8 @@ def build_competitive_impact_xlsx(payload: dict[str, Any]) -> bytes:
     number = workbook.add_format({"num_format": "0.000"})
 
     worksheet.write("A1", "・⑤競合へのインパクト", bold)
-    worksheet.write(
-        "A2",
-        "（仮）流出=赤（負）・流入=緑（正）の積上横棒 bar。"
-        " データ行を逆順にし画面と同じ上→下順にする（reverse 軸は不使用）。"
-        f" 競合数={size}。",
-        text,
-    )
     if subtitle:
         worksheet.write("A3", subtitle, text)
-    worksheet.set_row(1, 36)
     worksheet.set_column("A:A", 22)
     worksheet.set_column("B:C", 12)
 

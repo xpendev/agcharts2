@@ -42,7 +42,6 @@ def build_purchase_in_out_xlsx(payload: dict[str, Any]) -> bytes:
     rows: list[dict[str, Any]] = list(payload.get("rows") or [])
     title = str(meta.get("title") or "買出入(実績)")
     brand_label = str(meta.get("brandLabel") or "ブランド")
-    size = int(payload.get("size") or 0)
 
     bio = BytesIO()
     workbook = Workbook(bio, {"in_memory": True})
@@ -51,20 +50,11 @@ def build_purchase_in_out_xlsx(payload: dict[str, Any]) -> bytes:
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
     section = workbook.add_format({"bold": True, "font_size": 11})
-    text = workbook.add_format({"font_size": 10, "text_wrap": True})
     header = workbook.add_format({"bold": True, "bg_color": "#F2F2F2"})
     number = workbook.add_format({"num_format": "0.00"})
     percent1 = workbook.add_format({"num_format": "0.0"})
 
     worksheet.write("A1", "・④シェア流出・流入比較", bold)
-    worksheet.write(
-        "A2",
-        "（仮）流出=赤（負）・流入=緑（正）の積上横棒 bar。"
-        " データ行を逆順にしブランド1を上へ（reverse 軸はラベルずれのため不使用）。"
-        f" ブランド数={size}。",
-        text,
-    )
-    worksheet.set_row(1, 36)
     worksheet.set_column("A:A", 14)
     worksheet.set_column("B:C", 12)
 

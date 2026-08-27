@@ -16,7 +16,6 @@ def build_brand_diverging_xlsx(payload: dict[str, Any]) -> bytes:
     meta = payload.get("meta") or {}
     rows: list[dict[str, Any]] = list(payload.get("rows") or [])
     title = str(meta.get("title") or "ブランド")
-    size = int(payload.get("size") or 0)
 
     bio = BytesIO()
     workbook = Workbook(bio, {"in_memory": True})
@@ -24,19 +23,10 @@ def build_brand_diverging_xlsx(payload: dict[str, Any]) -> bytes:
     sheet_name = "流出入差"
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
-    text = workbook.add_format({"font_size": 10, "text_wrap": True})
     header = workbook.add_format({"bold": True, "bg_color": "#F2F2F2"})
     number = workbook.add_format({"num_format": "0.0"})
 
     worksheet.write("A1", "・⑥流出入差ランキング", bold)
-    worksheet.write(
-        "A2",
-        "（仮）符号付き横棒 bar。正値=青、負値=赤の Excel ネイティブグラフ。"
-        " データ行を逆順にしブランド1を上へ（reverse 軸は不使用）。"
-        f" ブランド数={size}。",
-        text,
-    )
-    worksheet.set_row(1, 28)
     worksheet.set_column("A:A", 14)
     worksheet.set_column("B:C", 12)
 

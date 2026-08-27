@@ -23,7 +23,6 @@ def build_buyer_dropout_xlsx(payload: dict[str, Any]) -> bytes:
     name_base = str(series_meta.get("base") or "継続")
     name_mid = str(series_meta.get("mid") or "トライアル")
     name_top = str(series_meta.get("top") or "その他")
-    size = int(payload.get("size") or 0)
 
     bio = BytesIO()
     workbook = Workbook(bio, {"in_memory": True})
@@ -32,18 +31,10 @@ def build_buyer_dropout_xlsx(payload: dict[str, Any]) -> bytes:
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
     section = workbook.add_format({"bold": True, "font_size": 11})
-    text = workbook.add_format({"font_size": 10, "text_wrap": True})
     header = workbook.add_format({"bold": True, "bg_color": "#F2F2F2"})
     number = workbook.add_format({"num_format": "0.0"})
 
     worksheet.write("A1", "・①新規・継続・脱落率", bold)
-    worksheet.write(
-        "A2",
-        "（仮）上段=積上 column、下段=負値 column の Excel ネイティブグラフ2枚。"
-        f" 期間数={size}。",
-        text,
-    )
-    worksheet.set_row(1, 28)
     worksheet.set_column("A:A", 12)
     worksheet.set_column("B:D", 12)
 

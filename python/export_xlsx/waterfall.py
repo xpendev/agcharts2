@@ -94,7 +94,6 @@ def build_waterfall_xlsx(payload: dict[str, Any]) -> bytes:
     raw_values: list[float] = [float(v) for v in list(payload.get("values") or [])]
     title = str(meta.get("title") or "シェア流出入")
     y_unit = str(meta.get("yUnit") or "(%)")
-    size = int(payload.get("size") or len(categories))
 
     display_categories, bases, positives, negatives, totals = _compute_waterfall_bars(
         categories,
@@ -107,18 +106,10 @@ def build_waterfall_xlsx(payload: dict[str, Any]) -> bytes:
     sheet_name = "シェア流出入"
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
-    text = workbook.add_format({"font_size": 10, "text_wrap": True})
     header = workbook.add_format({"bold": True, "bg_color": "#F2F2F2"})
     number = workbook.add_format({"num_format": "0.0"})
 
     worksheet.write("A1", "・③シェア流出入", bold)
-    worksheet.write(
-        "A2",
-        "（仮）waterfall 非対応のため、積上 column（不可視ベース + 増加/減少/合計）で近似。"
-        f" 棒数={size}。",
-        text,
-    )
-    worksheet.set_row(1, 32)
     worksheet.set_column("A:A", 14)
     worksheet.set_column("B:F", 11)
 

@@ -20,27 +20,17 @@ def build_brand_composition_xlsx(payload: dict[str, Any]) -> bytes:
     name_repeat = str(series_meta.get("repeat") or "継続リピート")
     name_switch = str(series_meta.get("switchIn") or "トライアル(スイッチイン)")
     name_entry = str(series_meta.get("entry") or "トライアル(カテゴリエントリ)")
-    size = int(payload.get("size") or 0)
 
     bio = BytesIO()
     workbook = Workbook(bio, {"in_memory": True})
     worksheet = workbook.add_worksheet("構成比")
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
-    text = workbook.add_format({"font_size": 10, "text_wrap": True})
     header = workbook.add_format({"bold": True, "bg_color": "#F2F2F2"})
     number = workbook.add_format({"num_format": "0.0"})
 
     # --- テキスト（仮置き） ---
     worksheet.write("A1", f"・②新規・継続 構成比 / {title}", bold)
-    worksheet.write(
-        "A2",
-        "（仮）xlsxwriter による Excel ネイティブグラフ出力スパイク。"
-        f" ブランド数={size}。"
-        " グラフは Clustered（ブランド×期間の多段カテゴリ）+ 積上列。",
-        text,
-    )
-    worksheet.set_row(1, 36)
     worksheet.set_column("A:A", 18)
     worksheet.set_column("B:B", 12)
     worksheet.set_column("C:E", 14)
