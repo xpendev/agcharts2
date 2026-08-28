@@ -10,6 +10,7 @@ REPORT_FILE_PREFIX: dict[str, str] = {
     "brand-diverging": "brand-diverging",
     "competitive-impact": "competitive-impact",
     "purchase-in-out": "purchase-in-out",
+    "volume-matrix": "volume-matrix",
 }
 
 SIZE_MIN = 1

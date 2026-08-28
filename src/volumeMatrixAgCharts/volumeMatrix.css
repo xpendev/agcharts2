@@ -21,6 +21,26 @@
   width: min(420px, 90%);
 }
 
+.tn-page-actions-volume-matrix {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.vm-xlsx-style-label {
+  font-size: 12px;
+  color: #555;
+}
+
+.vm-xlsx-style-select {
+  font-size: 13px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
 .tn-page-stage-volume-matrix {
   display: flex;
   justify-content: center;

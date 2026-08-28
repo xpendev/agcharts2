@@ -12,6 +12,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createChartContextMenu } from '../agChartsCommon'
+import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchVolumeMatrix,
   MATRIX_SIZE_DEFAULT,
@@ -31,6 +32,16 @@ ModuleRegistry.registerModules([
 ])
 
 const SIZE_DOMAIN_MAX = 55
+
+export type VolumeMatrixXlsxCellStyle = 'icon-set' | 'data-bar'
+
+const XLSX_CELL_STYLE_OPTIONS: {
+  value: VolumeMatrixXlsxCellStyle
+  label: string
+}[] = [
+  { value: 'icon-set', label: 'アイコンセット' },
+  { value: 'data-bar', label: 'データバー' },
+]
 
 const TITLE_COLOR = '#222222'
 const AXIS_LABEL = '#333333'
@@ -224,6 +235,8 @@ function buildVolumeMatrixOptions(
 export function VolumeMatrixPage() {
   const chartRef = useRef<AgChartInstance<AgCartesianChartOptions> | null>(null)
   const [matrixSize, setMatrixSize] = useState(MATRIX_SIZE_DEFAULT)
+  const [xlsxCellStyle, setXlsxCellStyle] =
+    useState<VolumeMatrixXlsxCellStyle>('icon-set')
   const [sample, setSample] = useState<VolumeMatrixSample | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
@@ -275,10 +288,34 @@ export function VolumeMatrixPage() {
           <p className="tn-page-eyebrow">AG Charts 検証</p>
           <h1 className="tn-page-title">⑦ブランドクロス</h1>
         </div>
-        <div className="tn-page-actions">
+        <div className="tn-page-actions tn-page-actions-volume-matrix">
+          <label className="vm-xlsx-style-label" htmlFor="vm-xlsx-cell-style">
+            Excel近似
+          </label>
+          <select
+            id="vm-xlsx-cell-style"
+            className="vm-xlsx-style-select"
+            value={xlsxCellStyle}
+            onChange={(e) =>
+              setXlsxCellStyle(e.target.value as VolumeMatrixXlsxCellStyle)
+            }
+          >
+            {XLSX_CELL_STYLE_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
+          <XlsxExportButton
+            reportKey="volume-matrix"
+            size={matrixSize}
+            disabled={!sample || isLoading}
+            queryParams={{ cellStyle: xlsxCellStyle }}
+            fileSuffix={xlsxCellStyle}
+          />
         </div>
       </header>
 

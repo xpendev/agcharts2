@@ -10,6 +10,7 @@ from export_xlsx.buyer_dropout import build_buyer_dropout_xlsx
 from export_xlsx.competitive_impact import build_competitive_impact_xlsx
 from export_xlsx.data import load_report_payload
 from export_xlsx.purchase_in_out import build_purchase_in_out_xlsx
+from export_xlsx.volume_matrix import build_volume_matrix_xlsx, normalize_cell_style
 
 BUILDERS = {
     "brand-composition": build_brand_composition_xlsx,
@@ -17,6 +18,7 @@ BUILDERS = {
     "buyer-dropout": build_buyer_dropout_xlsx,
     "competitive-impact": build_competitive_impact_xlsx,
     "purchase-in-out": build_purchase_in_out_xlsx,
+    "volume-matrix": build_volume_matrix_xlsx,
 }
 
 
@@ -40,13 +42,25 @@ def main(argv: list[str] | None = None) -> int:
         type=Path,
         help="出力パス（省略時は stdout にバイナリ出力）",
     )
+    parser.add_argument(
+        "--cell-style",
+        choices=("icon-set", "data-bar"),
+        default="icon-set",
+        help="volume-matrix の条件付き書式（icon-set / data-bar）",
+    )
     args = parser.parse_args(argv)
 
     payload = load_report_payload(args.data_dir, args.report, args.size)
-    builder = BUILDERS.get(args.report)
-    if builder is None:
-        raise SystemExit(f"未対応の帳票: {args.report}")
-    xlsx_bytes = builder(payload)
+    if args.report == "volume-matrix":
+        xlsx_bytes = build_volume_matrix_xlsx(
+            payload,
+            cell_style=normalize_cell_style(args.cell_style),
+        )
+    else:
+        builder = BUILDERS.get(args.report)
+        if builder is None:
+            raise SystemExit(f"未対応の帳票: {args.report}")
+        xlsx_bytes = builder(payload)
 
     if args.output is not None:
         args.output.write_bytes(xlsx_bytes)

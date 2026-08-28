@@ -5,6 +5,10 @@ type XlsxExportButtonProps = {
   reportKey: string
   size: number
   disabled?: boolean
+  /** 追加クエリ（例: cellStyle=data-bar） */
+  queryParams?: Record<string, string>
+  /** ダウンロードファイル名の末尾（例: data-bar → report-size-data-bar.xlsx） */
+  fileSuffix?: string
 }
 
 /**
@@ -15,13 +19,21 @@ export function XlsxExportButton({
   reportKey,
   size,
   disabled = false,
+  queryParams,
+  fileSuffix,
 }: XlsxExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false)
 
   const onClick = async () => {
     setIsExporting(true)
     try {
-      const response = await fetch(`/api/xlsx/${reportKey}?size=${size}`)
+      const params = new URLSearchParams({ size: String(size) })
+      if (queryParams) {
+        for (const [key, value] of Object.entries(queryParams)) {
+          params.set(key, value)
+        }
+      }
+      const response = await fetch(`/api/xlsx/${reportKey}?${params.toString()}`)
       if (!response.ok) {
         let detail = `HTTP ${response.status}`
         try {
@@ -36,7 +48,9 @@ export function XlsxExportButton({
       const url = URL.createObjectURL(blob)
       const anchor = document.createElement('a')
       anchor.href = url
-      anchor.download = `${reportKey}-${size}.xlsx`
+      anchor.download = fileSuffix
+        ? `${reportKey}-${size}-${fileSuffix}.xlsx`
+        : `${reportKey}-${size}.xlsx`
       anchor.click()
       URL.revokeObjectURL(url)
     } catch (error) {
