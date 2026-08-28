@@ -30,6 +30,9 @@ def normalize_cell_style(raw: str | None) -> VolumeMatrixCellStyle:
     return "icon-set"
 
 
+CATEGORY_USER_ID = "category-user"
+
+
 def build_volume_matrix_xlsx(
     payload: dict[str, Any],
     *,
@@ -37,7 +40,7 @@ def build_volume_matrix_xlsx(
 ) -> bytes:
     """
     ⑦ブランドクロス。
-    Bubble チャート非対応のため、N×N 表＋条件付き書式で近似する。
+    Bubble チャート非対応のため、(N+1)×N 表＋条件付き書式で近似する。
     cell_style: icon-set（5_quarters）または data-bar（0〜100）。
     """
     meta = payload.get("meta") or {}
@@ -48,7 +51,6 @@ def build_volume_matrix_xlsx(
     title = str(meta.get("title") or "ボリューム付数表")
     note = str(meta.get("note") or "*数値：％（行）（人数ベース）")
     past_label = str(meta.get("pastPeriodLabel") or "過去購入")
-    current_label = str(meta.get("currentPeriodLabel") or "現在購入")
     style_label = _CELL_STYLE_LABELS[cell_style]
 
     value_by_pair = {
@@ -64,7 +66,14 @@ def build_volume_matrix_xlsx(
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
     caption = workbook.add_format({"font_size": 9, "font_color": "#555555"})
-    axis_title = workbook.add_format({"bold": True, "font_size": 11})
+    axis_title_center = workbook.add_format(
+        {
+            "bold": True,
+            "font_size": 11,
+            "align": "center",
+            "valign": "vcenter",
+        }
+    )
     col_header = workbook.add_format(
         {
             "bold": True,
@@ -118,14 +127,25 @@ def build_volume_matrix_xlsx(
     if col_count:
         worksheet.set_column(1, col_count, 11)
 
-    corner_row = 3
-    data_start_row = 4
-    worksheet.write(corner_row, 0, past_label, axis_title)
-    worksheet.write(corner_row, 1, current_label, axis_title)
+    # 行3: 過去購入タイトル（データ領域の上）
+    # 行4: 列見出し / 行5〜: データ
+    past_title_row = 3
+    header_row = 4
+    data_start_row = 5
+
+    if col_count:
+        worksheet.merge_range(
+            past_title_row,
+            1,
+            past_title_row,
+            col_count,
+            past_label,
+            axis_title_center,
+        )
 
     for j, column in enumerate(columns):
         worksheet.write(
-            corner_row,
+            header_row,
             j + 1,
             str(column.get("label") or ""),
             col_header,
@@ -148,7 +168,7 @@ def build_volume_matrix_xlsx(
         for j, column in enumerate(columns):
             col_id = str(column.get("id") or "")
             value = value_by_pair.get((row_id, col_id), 0.0)
-            is_diagonal = row_id == col_id
+            is_diagonal = row_id == col_id and row_id != CATEGORY_USER_ID
             if is_diagonal:
                 worksheet.write(excel_row, j + 1, "-", diag_format)
             else:

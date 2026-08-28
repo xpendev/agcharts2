@@ -19,6 +19,10 @@
   ],
   "rows": [
     {
+      "id": "category-user",
+      "label": "カテゴリユーザー"
+    },
+    {
       "id": "brand-1",
       "label": "ブランド1"
     },
@@ -28,6 +32,16 @@
     }
   ],
   "cells": [
+    {
+      "pastId": "category-user",
+      "currentId": "brand-1",
+      "value": 36.2
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-2",
+      "value": 63.8
+    },
     {
       "pastId": "brand-1",
       "currentId": "brand-1",

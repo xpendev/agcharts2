@@ -30,10 +30,12 @@ function periodLabel(index) {
   return `'${String(3 + index).padStart(2, '0')}/4-`
 }
 
-// --- volume-matrix (size = N×N) ---
+// --- volume-matrix (size = ブランド数 N → (N+1) 行 × N 列) ---
+const CATEGORY_USER_ID = 'category-user'
+
 function genVolumeMatrix(size) {
   const columns = []
-  const rows = []
+  const rows = [{ id: CATEGORY_USER_ID, label: 'カテゴリユーザー' }]
   for (let i = 1; i <= size; i += 1) {
     const id = `brand-${i}`
     const label = `ブランド${i}`
@@ -41,6 +43,22 @@ function genVolumeMatrix(size) {
     rows.push({ id, label })
   }
   const cells = []
+
+  const catWeights = []
+  let catSum = 0
+  for (let c = 0; c < size; c += 1) {
+    const w = 10 + ((c * 13 + 7) % 25)
+    catWeights.push(w)
+    catSum += w
+  }
+  for (let c = 0; c < size; c += 1) {
+    cells.push({
+      pastId: CATEGORY_USER_ID,
+      currentId: `brand-${c + 1}`,
+      value: round1((catWeights[c] / catSum) * 100),
+    })
+  }
+
   for (let r = 0; r < size; r += 1) {
     const weights = []
     let sum = 0

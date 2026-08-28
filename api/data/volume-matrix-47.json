@@ -199,6 +199,10 @@
   ],
   "rows": [
     {
+      "id": "category-user",
+      "label": "カテゴリユーザー"
+    },
+    {
       "id": "brand-1",
       "label": "ブランド1"
     },
@@ -388,6 +392,241 @@
     }
   ],
   "cells": [
+    {
+      "pastId": "category-user",
+      "currentId": "brand-1",
+      "value": 1.7
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-2",
+      "value": 2.9
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-3",
+      "value": 1.8
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-4",
+      "value": 3
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-5",
+      "value": 1.9
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-6",
+      "value": 3.1
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-7",
+      "value": 1.9
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-8",
+      "value": 3.2
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-9",
+      "value": 2
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-10",
+      "value": 3.3
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-11",
+      "value": 2.1
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-12",
+      "value": 1
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-13",
+      "value": 2.2
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-14",
+      "value": 1.1
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-15",
+      "value": 2.3
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-16",
+      "value": 1.2
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-17",
+      "value": 2.4
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-18",
+      "value": 1.3
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-19",
+      "value": 2.5
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-20",
+      "value": 1.4
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-21",
+      "value": 2.6
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-22",
+      "value": 1.5
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-23",
+      "value": 2.7
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-24",
+      "value": 1.6
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-25",
+      "value": 2.8
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-26",
+      "value": 1.7
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-27",
+      "value": 2.9
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-28",
+      "value": 1.8
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-29",
+      "value": 3
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-30",
+      "value": 1.9
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-31",
+      "value": 3.1
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-32",
+      "value": 1.9
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-33",
+      "value": 3.2
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-34",
+      "value": 2
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-35",
+      "value": 3.3
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-36",
+      "value": 2.1
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-37",
+      "value": 1
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-38",
+      "value": 2.2
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-39",
+      "value": 1.1
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-40",
+      "value": 2.3
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-41",
+      "value": 1.2
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-42",
+      "value": 2.4
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-43",
+      "value": 1.3
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-44",
+      "value": 2.5
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-45",
+      "value": 1.4
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-46",
+      "value": 2.6
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-47",
+      "value": 1.5
+    },
     {
       "pastId": "brand-1",
       "currentId": "brand-1",

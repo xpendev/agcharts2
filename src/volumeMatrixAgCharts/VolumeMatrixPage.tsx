@@ -54,10 +54,12 @@ type ChartCell = VolumeMatrixCell & {
   yIndex: number
 }
 
-function bubbleSizesFor(size: number): { minSize: number; maxSize: number } {
-  // 800×600 の描画領域を粗く見積もり。マスが少ないほど1セルが大きくなる
-  const approxBand = Math.floor(480 / Math.max(size, 1))
-  // 少マス時は大きく（上限 140）、多マス時は格子内に収める
+function bubbleSizesFor(colCount: number, rowCount: number): {
+  minSize: number
+  maxSize: number
+} {
+  const bandCount = Math.max(colCount, rowCount, 1)
+  const approxBand = Math.floor(480 / bandCount)
   const maxSize = Math.max(20, Math.min(140, approxBand - 8))
   const minSize = Math.max(14, Math.floor(maxSize * 0.4))
   return { minSize, maxSize }
@@ -81,15 +83,25 @@ function buildVolumeMatrixOptions(
   cells: VolumeMatrixCell[],
   columns: string[],
   rows: string[],
+  meta: VolumeMatrixSample['meta'],
   getChart: () => AgChartInstance | null,
 ): AgCartesianChartOptions {
-  const size = columns.length
-  const { minSize, maxSize } = bubbleSizesFor(size)
+  const colCount = columns.length
+  const rowCount = rows.length
+  const { minSize, maxSize } = bubbleSizesFor(colCount, rowCount)
   const chartCells = toChartCells(cells, columns, rows)
 
-  // セル境界の区切り線（1マスは0本、3×3 なら 0.5 / 1.5 の2本）
-  const tickValues = Array.from({ length: size }, (_, i) => i)
-  const dividers = Array.from({ length: Math.max(0, size - 1) }, (_, i) => ({
+  const xTickValues = Array.from({ length: colCount }, (_, i) => i)
+  const yTickValues = Array.from({ length: rowCount }, (_, i) => i)
+  const xDividers = Array.from({ length: Math.max(0, colCount - 1) }, (_, i) => ({
+    type: 'line' as const,
+    value: i + 0.5,
+    enabled: true,
+    stroke: GRID,
+    strokeWidth: 1.5,
+    lineDash: [4, 3],
+  }))
+  const yDividers = Array.from({ length: Math.max(0, rowCount - 1) }, (_, i) => ({
     type: 'line' as const,
     value: i + 0.5,
     enabled: true,
@@ -131,8 +143,7 @@ function buildVolumeMatrixOptions(
         strokeWidth: 0.8,
         itemStyler: ({ datum }: { datum: unknown }) => {
           const cell = datum as ChartCell
-          const isSameBrand = cell.past === cell.current
-          if (isSameBrand) {
+          if (cell.hideBubble) {
             return {
               fillOpacity: 0,
               strokeWidth: 0,
@@ -149,20 +160,19 @@ function buildVolumeMatrixOptions(
           enabled: true,
           placement: 'inside',
           color: '#111111',
-          fontSize: size >= 6 ? 8 : 9,
+          fontSize: colCount >= 6 ? 8 : 9,
           fontWeight: 'bold',
           collision: { alwaysShow: true },
         },
         tooltip: {
           renderer: ({ datum }: { datum: unknown }) => {
             const cell = datum as ChartCell
-            const isSameBrand = cell.past === cell.current
             return {
               title: `${cell.past} → ${cell.current}`,
               data: [
                 {
                   label: '行%',
-                  value: isSameBrand ? '-' : `${cell.label}%`,
+                  value: cell.hideBubble ? '-' : `${cell.label}%`,
                 },
               ],
             }
@@ -175,10 +185,10 @@ function buildVolumeMatrixOptions(
         type: 'number',
         position: 'top',
         min: -0.5,
-        max: size - 0.5,
+        max: colCount - 0.5,
         nice: false,
         title: {
-          text: "現在購入 ('10/1 - '10/12)",
+          text: meta.currentPeriodLabel,
           color: TITLE_COLOR,
           fontSize: 13,
           spacing: 26,
@@ -194,20 +204,20 @@ function buildVolumeMatrixOptions(
         },
         line: { enabled: true, stroke: '#222222', width: 1 },
         tick: { enabled: false },
-        interval: { values: tickValues },
+        interval: { values: xTickValues },
         gridLine: { enabled: false },
-        crossLines: dividers,
+        crossLines: xDividers,
       },
       y: {
         type: 'number',
         position: 'left',
         min: -0.5,
-        max: size - 0.5,
+        max: rowCount - 0.5,
         nice: false,
-        // 0 を上（ブランド1）に
+        // 0 を上（カテゴリユーザー）に
         reverse: true,
         title: {
-          text: "過去購入 ('09/1 - '09/12)",
+          text: meta.pastPeriodLabel,
           color: TITLE_COLOR,
           fontSize: 13,
         },
@@ -220,9 +230,9 @@ function buildVolumeMatrixOptions(
         },
         line: { enabled: true, stroke: '#222222', width: 1 },
         tick: { enabled: false },
-        interval: { values: tickValues },
+        interval: { values: yTickValues },
         gridLine: { enabled: false },
-        crossLines: dividers,
+        crossLines: yDividers,
       },
     },
   }
@@ -275,6 +285,7 @@ export function VolumeMatrixPage() {
       sample.cells,
       sample.columns,
       sample.rows,
+      sample.meta,
       () => chartRef.current,
     )
   }, [sample])
@@ -334,7 +345,7 @@ export function VolumeMatrixPage() {
 
       <div className="ag-spike-controls" aria-label="マトリクス制御">
         <label className="ag-spike-controls-label" htmlFor="vm-size">
-          マス数: {matrixSize}×{matrixSize}
+          マス数: {matrixSize + 1}×{matrixSize}
         </label>
         <input
           id="vm-size"

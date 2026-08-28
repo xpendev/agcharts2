@@ -31,6 +31,10 @@
   ],
   "rows": [
     {
+      "id": "category-user",
+      "label": "カテゴリユーザー"
+    },
+    {
       "id": "brand-1",
       "label": "ブランド1"
     },
@@ -52,6 +56,31 @@
     }
   ],
   "cells": [
+    {
+      "pastId": "category-user",
+      "currentId": "brand-1",
+      "value": 14.8
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-2",
+      "value": 26.1
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-3",
+      "value": 15.7
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-4",
+      "value": 27
+    },
+    {
+      "pastId": "category-user",
+      "currentId": "brand-5",
+      "value": 16.5
+    },
     {
       "pastId": "brand-1",
       "currentId": "brand-1",

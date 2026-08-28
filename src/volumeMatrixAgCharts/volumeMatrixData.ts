@@ -10,6 +10,8 @@ export type VolumeMatrixCell = {
   value: number
   label: string
   fill: string
+  /** ブランド行の対角セル（同一ブランド）は非表示 */
+  hideBubble: boolean
 }
 
 /** マス数スライダー下限 */
@@ -19,8 +21,13 @@ export const MATRIX_SIZE_MAX = 50
 /** マス数の初期値 */
 export const MATRIX_SIZE_DEFAULT = 7
 
-/** 行ごとの色（循環利用） */
-const ROW_COLORS = [
+const CATEGORY_USER_ID = 'category-user'
+
+/** カテゴリユーザー行 */
+const CATEGORY_USER_COLOR = '#e07070'
+
+/** ブランド行ごとの色（循環利用） */
+const BRAND_ROW_COLORS = [
   '#8fbf5a',
   '#2f7a3a',
   '#d4c45a',
@@ -29,6 +36,12 @@ const ROW_COLORS = [
   '#6aa8d8',
   '#2a4a8a',
 ] as const
+
+function rowFill(pastId: string, rowIndex: number): string {
+  if (pastId === CATEGORY_USER_ID) return CATEGORY_USER_COLOR
+  const brandIndex = Math.max(0, rowIndex - 1)
+  return BRAND_ROW_COLORS[brandIndex % BRAND_ROW_COLORS.length]
+}
 
 export function clampMatrixSize(size: number): number {
   return Math.min(
@@ -85,13 +98,15 @@ export function toVolumeMatrixSample(
     const past = labelById.get(cell.pastId) ?? cell.pastId
     const current = labelById.get(cell.currentId) ?? cell.currentId
     const rowIndex = indexById.get(cell.pastId) ?? 0
-    const isSameBrand = cell.pastId === cell.currentId
+    const hideBubble =
+      cell.pastId !== CATEGORY_USER_ID && cell.pastId === cell.currentId
     return {
       past,
       current,
       value: cell.value,
-      label: isSameBrand ? '-' : cell.value.toFixed(1),
-      fill: ROW_COLORS[rowIndex % ROW_COLORS.length],
+      label: hideBubble ? '-' : cell.value.toFixed(1),
+      fill: rowFill(cell.pastId, rowIndex),
+      hideBubble,
     }
   })
 
