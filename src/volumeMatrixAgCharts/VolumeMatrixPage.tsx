@@ -65,6 +65,11 @@ function bubbleSizesFor(colCount: number, rowCount: number): {
   return { minSize, maxSize }
 }
 
+/** バブル maxSize に比例（2×1 付近は大きく、10×10 付近は小さく） */
+function bubbleLabelFontSize(maxSize: number): number {
+  return Math.max(7, Math.min(16, Math.round(maxSize * 0.16)))
+}
+
 function toChartCells(
   cells: VolumeMatrixCell[],
   columns: string[],
@@ -83,12 +88,12 @@ function buildVolumeMatrixOptions(
   cells: VolumeMatrixCell[],
   columns: string[],
   rows: string[],
-  meta: VolumeMatrixSample['meta'],
   getChart: () => AgChartInstance | null,
 ): AgCartesianChartOptions {
   const colCount = columns.length
   const rowCount = rows.length
   const { minSize, maxSize } = bubbleSizesFor(colCount, rowCount)
+  const labelFontSize = bubbleLabelFontSize(maxSize)
   const chartCells = toChartCells(cells, columns, rows)
 
   const xTickValues = Array.from({ length: colCount }, (_, i) => i)
@@ -114,13 +119,13 @@ function buildVolumeMatrixOptions(
     animation: { enabled: false },
     background: { fill: BACKGROUND },
     contextMenu: createChartContextMenu(getChart),
-    padding: { top: 8, right: 16, bottom: 8, left: 8 },
+    padding: { top: 16, right: 16, bottom: 8, left: 8 },
     title: {
       text: '・⑦ブランドクロス',
       color: TITLE_COLOR,
       fontSize: 16,
       fontWeight: 'bold',
-      spacing: 2,
+      spacing: 28,
     },
     legend: { enabled: false },
     data: chartCells,
@@ -160,7 +165,7 @@ function buildVolumeMatrixOptions(
           enabled: true,
           placement: 'inside',
           color: '#111111',
-          fontSize: colCount >= 6 ? 8 : 9,
+          fontSize: labelFontSize,
           fontWeight: 'bold',
           collision: { alwaysShow: true },
         },
@@ -187,12 +192,6 @@ function buildVolumeMatrixOptions(
         min: -0.5,
         max: colCount - 0.5,
         nice: false,
-        title: {
-          text: meta.currentPeriodLabel,
-          color: TITLE_COLOR,
-          fontSize: 13,
-          spacing: 26,
-        },
         label: {
           color: AXIS_LABEL,
           fontSize: 11,
@@ -216,11 +215,6 @@ function buildVolumeMatrixOptions(
         nice: false,
         // 0 を上（カテゴリユーザー）に
         reverse: true,
-        title: {
-          text: meta.pastPeriodLabel,
-          color: TITLE_COLOR,
-          fontSize: 13,
-        },
         label: {
           color: AXIS_LABEL,
           fontSize: 11,
@@ -285,7 +279,6 @@ export function VolumeMatrixPage() {
       sample.cells,
       sample.columns,
       sample.rows,
-      sample.meta,
       () => chartRef.current,
     )
   }, [sample])
