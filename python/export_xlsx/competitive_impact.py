@@ -18,7 +18,6 @@ def build_competitive_impact_xlsx(payload: dict[str, Any]) -> bytes:
     meta = payload.get("meta") or {}
     rows: list[dict[str, Any]] = list(payload.get("rows") or [])
     title = str(meta.get("title") or "競合へのインパクト")
-    subtitle = str(meta.get("subtitle") or "")
     x_unit = str(meta.get("xUnit") or "(%)")
 
     bio = BytesIO()
@@ -27,17 +26,14 @@ def build_competitive_impact_xlsx(payload: dict[str, Any]) -> bytes:
     sheet_name = "競合インパクト"
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
-    text = workbook.add_format({"font_size": 10, "text_wrap": True})
     header = workbook.add_format({"bold": True, "bg_color": "#F2F2F2"})
     number = workbook.add_format({"num_format": "0.000"})
 
     worksheet.write("A1", "・⑤競合へのインパクト", bold)
-    if subtitle:
-        worksheet.write("A3", subtitle, text)
     worksheet.set_column("A:A", 22)
     worksheet.set_column("B:C", 12)
 
-    table_header_row = 5 if subtitle else 4
+    table_header_row = 4
     worksheet.write_row(
         table_header_row,
         0,
