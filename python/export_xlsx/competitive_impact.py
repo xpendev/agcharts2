@@ -119,11 +119,11 @@ def build_competitive_impact_xlsx(payload: dict[str, Any]) -> bytes:
             "interval_tick": 1,
         }
     )
-    chart.set_legend({"position": "none"})
+    chart.set_legend({"position": "top"})
     # タイトル／軸名はほぼ固定ピクセル相当。件数増で相対余白が膨らまないよう換算する。
     chart_height = max(360, len(chart_rows) * 28 + 100)
-    top_margin = 48 / chart_height
-    bottom_margin = 70 / chart_height  # 凡例なしのため④より小さめ
+    top_margin = 80 / chart_height  # タイトル + 上凡例
+    bottom_margin = 70 / chart_height
     chart.set_plotarea(
         {
             "layout": {

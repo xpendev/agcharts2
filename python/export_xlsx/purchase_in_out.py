@@ -273,10 +273,10 @@ def build_purchase_in_out_xlsx(payload: dict[str, Any]) -> bytes:
             "interval_tick": 1,
         }
     )
-    chart.set_legend({"position": "bottom"})
+    chart.set_legend({"position": "top"})
     chart_height = max(400, len(chart_rows) * 28 + 140)
-    top_margin = 48 / chart_height
-    bottom_margin = 100 / chart_height
+    top_margin = 80 / chart_height  # タイトル + 上凡例
+    bottom_margin = 70 / chart_height
     chart.set_plotarea(
         {
             "layout": {
