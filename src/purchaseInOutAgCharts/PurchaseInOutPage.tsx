@@ -85,7 +85,6 @@ function buildOptions(
         xKey: 'label',
         yKey: 'outflowNeg',
         yName: '流出',
-        // 同一カテゴリ帯に重ねる（上下ずれ防止）
         grouped: false,
         widthRatio: 0.55,
         fill: '#c44b4b',
@@ -243,6 +242,17 @@ export function PurchaseInOutPage() {
             reportKey="purchase-in-out"
             size={size}
             disabled={!sample || isLoading}
+            label="XlsX出力（PNG）"
+            queryParams={{ summaryStyle: 'png' }}
+            fileSuffix="png"
+          />
+          <XlsxExportButton
+            reportKey="purchase-in-out"
+            size={size}
+            disabled={!sample || isLoading}
+            label="XlsX出力（オブジェクト）"
+            queryParams={{ summaryStyle: 'objects' }}
+            fileSuffix="objects"
           />
         </div>
       </header>

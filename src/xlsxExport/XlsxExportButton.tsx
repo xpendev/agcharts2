@@ -9,6 +9,8 @@ type XlsxExportButtonProps = {
   queryParams?: Record<string, string>
   /** ダウンロードファイル名の末尾（例: data-bar → report-size-data-bar.xlsx） */
   fileSuffix?: string
+  /** ボタン表示ラベル */
+  label?: string
 }
 
 /**
@@ -21,6 +23,7 @@ export function XlsxExportButton({
   disabled = false,
   queryParams,
   fileSuffix,
+  label = 'XlsX出力',
 }: XlsxExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false)
 
@@ -73,7 +76,7 @@ export function XlsxExportButton({
         void onClick()
       }}
     >
-      {isExporting ? 'XlsX出力中…' : 'XlsX出力'}
+      {isExporting ? 'XlsX出力中…' : label}
     </button>
   )
 }
