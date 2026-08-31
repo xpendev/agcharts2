@@ -61,30 +61,68 @@ type ChartCell = VolumeMatrixCell & {
   yIndex: number
 }
 
-function bubbleSizesForBandCount(bandCount: number): {
-  minSize: number
-  maxSize: number
-} {
-  const safeBandCount = Math.max(bandCount, 1)
-  const approxBand = Math.floor(480 / safeBandCount)
-  const maxSize = Math.max(20, Math.min(280, approxBand - 8))
-  const minSize = Math.max(14, Math.floor(maxSize * 0.4))
-  return { minSize, maxSize }
+const CHART_WIDTH = 800
+const CHART_HEIGHT = 600
+/** タイトル・軸ラベル・padding を除いたプロット領域の推定余白 */
+const PLOT_INSET = { left: 95, right: 24, top: 130, bottom: 16 }
+/** 最大バブルがマス内に収まる占有率（破線グリッドとの余白） */
+const BUBBLE_CELL_FILL_RATIO = 0.88
+const BUBBLE_MIN_MAX = 8
+
+function plotAreaSize(): { width: number; height: number } {
+  return {
+    width: CHART_WIDTH - PLOT_INSET.left - PLOT_INSET.right,
+    height: CHART_HEIGHT - PLOT_INSET.top - PLOT_INSET.bottom,
+  }
 }
 
-/** 表示中の viewport 幅（マス数）に応じてバブルサイズを決定 */
-function bubbleSizesForViewport(viewport: MatrixViewport): {
-  minSize: number
-  maxSize: number
-} {
+function cellPixelSize(viewport: MatrixViewport): { width: number; height: number } {
+  const plot = plotAreaSize()
   const visibleCols = viewport.xMax - viewport.xMin
   const visibleRows = viewport.yMax - viewport.yMin
-  return bubbleSizesForBandCount(Math.max(visibleCols, visibleRows))
+  return {
+    width: plot.width / visibleCols,
+    height: plot.height / visibleRows,
+  }
 }
 
-/** バブル maxSize に比例（2×1 付近は大きく、10×10 付近は小さく） */
+function isCellInViewport(cell: ChartCell, viewport: MatrixViewport): boolean {
+  return (
+    cell.xIndex >= viewport.xMin &&
+    cell.xIndex <= viewport.xMax &&
+    cell.yIndex >= viewport.yMin &&
+    cell.yIndex <= viewport.yMax
+  )
+}
+
+function maxVisibleBubbleValue(
+  chartCells: ChartCell[],
+  viewport: MatrixViewport,
+): number {
+  return chartCells.reduce((max, cell) => {
+    if (cell.hideBubble || !isCellInViewport(cell, viewport)) return max
+    return Math.max(max, cell.value)
+  }, 0)
+}
+
+/** マスのピクセルサイズに基づき、最大バブルがマス内に収まるようサイズを決定 */
+function bubbleSizesForViewport(
+  viewport: MatrixViewport,
+  chartCells: ChartCell[],
+): { minSize: number; maxSize: number; sizeDomainMax: number } {
+  const { width: cellWidth, height: cellHeight } = cellPixelSize(viewport)
+  const cellDiameter =
+    Math.min(cellWidth, cellHeight) * BUBBLE_CELL_FILL_RATIO
+  const maxValue = maxVisibleBubbleValue(chartCells, viewport)
+  const sizeDomainMax = maxValue > 0 ? maxValue : SIZE_DOMAIN_MAX
+  const maxSize = Math.round(Math.max(BUBBLE_MIN_MAX, cellDiameter))
+  const minSize = Math.max(6, Math.round(maxSize * 0.28))
+  return { minSize, maxSize, sizeDomainMax }
+}
+
+/** バブル maxSize に比例（マス数が少ないほどラベルも大きく） */
 function bubbleLabelFontSize(maxSize: number): number {
-  return Math.max(7, Math.min(16, Math.round(maxSize * 0.16)))
+  return Math.max(8, Math.min(24, Math.round(maxSize * 0.17)))
 }
 
 function toChartCells(
@@ -110,9 +148,12 @@ function buildVolumeMatrixOptions(
 ): AgCartesianChartOptions {
   const colCount = columns.length
   const rowCount = rows.length
-  const { minSize, maxSize } = bubbleSizesForViewport(viewport)
-  const labelFontSize = bubbleLabelFontSize(maxSize)
   const chartCells = toChartCells(cells, columns, rows)
+  const { minSize, maxSize, sizeDomainMax } = bubbleSizesForViewport(
+    viewport,
+    chartCells,
+  )
+  const labelFontSize = bubbleLabelFontSize(maxSize)
 
   const xTickValues = Array.from({ length: colCount }, (_, i) => i)
   const yTickValues = Array.from({ length: rowCount }, (_, i) => i)
@@ -160,7 +201,7 @@ function buildVolumeMatrixOptions(
         maxRenderedItems: 3000,
         minSize,
         maxSize,
-        sizeDomain: [0, SIZE_DOMAIN_MAX],
+        sizeDomain: [0, sizeDomainMax],
         fillOpacity: 0.78,
         stroke: '#333333',
         strokeWidth: 0.8,
