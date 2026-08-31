@@ -285,7 +285,7 @@ export function PurchaseInOutPage() {
                 <AgCharts
                   ref={chartRef}
                   options={options}
-                  style={{ width: 800, height: 420 }}
+                  style={{ width: "100%", height: 420 }}
                 />
               </div>
             </div>
