@@ -59,13 +59,6 @@ function buildOptions(
     outflowNeg: -row.outflow,
   }))
 
-  const maxAbs = Math.max(
-    0.5,
-    ...data.map((row) => Math.max(-row.outflowNeg, row.inflow)),
-  )
-  // 外側ラベル用に軸域を少し広げる
-  const axisMax = Math.ceil(maxAbs * 12) / 10
-
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
@@ -132,9 +125,10 @@ function buildOptions(
       x: {
         type: 'number',
         position: 'top',
-        min: -axisMax,
-        max: axisMax,
+        min: -1,
+        max: 1,
         nice: false,
+        interval: { step: 0.5 },
         title: { text: sample.meta.xUnit, fontSize: 11 },
         label: { fontSize: 10, avoidCollisions: false, minSpacing: 0 },
         gridLine: { enabled: false },
@@ -243,7 +237,7 @@ export function CompetitiveImpactPage() {
                 <AgCharts
                   ref={chartRef}
                   options={options}
-                  style={{ width: 920, height: 420 }}
+                  style={{ width: '100%', height: 420 }}
                 />
               </div>
             </div>
