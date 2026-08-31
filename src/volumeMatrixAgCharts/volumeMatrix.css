@@ -69,6 +69,19 @@
   min-height: 0 !important;
 }
 
+.tn-volume-matrix-host.is-pan-ready {
+  cursor: grab;
+}
+
+.tn-volume-matrix-host.is-panning {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.tn-volume-matrix-host.is-panning * {
+  pointer-events: none;
+}
+
 .volume-matrix-note {
   position: absolute;
   top: 48px;

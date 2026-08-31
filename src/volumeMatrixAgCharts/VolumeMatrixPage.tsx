@@ -22,6 +22,13 @@ import {
   type VolumeMatrixSample,
 } from './volumeMatrixData'
 import './volumeMatrix.css'
+import {
+  applyCtrlWheelZoom,
+  createFullViewport,
+  isViewportZoomed,
+  panViewportByPixels,
+  type MatrixViewport,
+} from './volumeMatrixZoom'
 
 ModuleRegistry.registerModules([
   BubbleSeriesModule,
@@ -54,15 +61,25 @@ type ChartCell = VolumeMatrixCell & {
   yIndex: number
 }
 
-function bubbleSizesFor(colCount: number, rowCount: number): {
+function bubbleSizesForBandCount(bandCount: number): {
   minSize: number
   maxSize: number
 } {
-  const bandCount = Math.max(colCount, rowCount, 1)
-  const approxBand = Math.floor(480 / bandCount)
-  const maxSize = Math.max(20, Math.min(140, approxBand - 8))
+  const safeBandCount = Math.max(bandCount, 1)
+  const approxBand = Math.floor(480 / safeBandCount)
+  const maxSize = Math.max(20, Math.min(280, approxBand - 8))
   const minSize = Math.max(14, Math.floor(maxSize * 0.4))
   return { minSize, maxSize }
+}
+
+/** 表示中の viewport 幅（マス数）に応じてバブルサイズを決定 */
+function bubbleSizesForViewport(viewport: MatrixViewport): {
+  minSize: number
+  maxSize: number
+} {
+  const visibleCols = viewport.xMax - viewport.xMin
+  const visibleRows = viewport.yMax - viewport.yMin
+  return bubbleSizesForBandCount(Math.max(visibleCols, visibleRows))
 }
 
 /** バブル maxSize に比例（2×1 付近は大きく、10×10 付近は小さく） */
@@ -88,11 +105,12 @@ function buildVolumeMatrixOptions(
   cells: VolumeMatrixCell[],
   columns: string[],
   rows: string[],
+  viewport: MatrixViewport,
   getChart: () => AgChartInstance | null,
 ): AgCartesianChartOptions {
   const colCount = columns.length
   const rowCount = rows.length
-  const { minSize, maxSize } = bubbleSizesFor(colCount, rowCount)
+  const { minSize, maxSize } = bubbleSizesForViewport(viewport)
   const labelFontSize = bubbleLabelFontSize(maxSize)
   const chartCells = toChartCells(cells, columns, rows)
 
@@ -189,8 +207,8 @@ function buildVolumeMatrixOptions(
       x: {
         type: 'number',
         position: 'top',
-        min: -0.5,
-        max: colCount - 0.5,
+        min: viewport.xMin,
+        max: viewport.xMax,
         nice: false,
         label: {
           color: AXIS_LABEL,
@@ -210,8 +228,8 @@ function buildVolumeMatrixOptions(
       y: {
         type: 'number',
         position: 'left',
-        min: -0.5,
-        max: rowCount - 0.5,
+        min: viewport.yMin,
+        max: viewport.yMax,
         nice: false,
         // 0 を上（カテゴリユーザー）に
         reverse: true,
@@ -238,10 +256,14 @@ function buildVolumeMatrixOptions(
  */
 export function VolumeMatrixPage() {
   const chartRef = useRef<AgChartInstance<AgCartesianChartOptions> | null>(null)
+  const hostRef = useRef<HTMLDivElement>(null)
+  const viewportRef = useRef<MatrixViewport | null>(null)
+  const fullViewportRef = useRef<MatrixViewport | null>(null)
   const [matrixSize, setMatrixSize] = useState(MATRIX_SIZE_DEFAULT)
   const [xlsxCellStyle, setXlsxCellStyle] =
     useState<VolumeMatrixXlsxCellStyle>('icon-set')
   const [sample, setSample] = useState<VolumeMatrixSample | null>(null)
+  const [viewport, setViewport] = useState<MatrixViewport | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
 
@@ -273,15 +295,126 @@ export function VolumeMatrixPage() {
     }
   }, [matrixSize])
 
-  const options = useMemo(() => {
+  useEffect(() => {
+    if (!sample) {
+      setViewport(null)
+      return
+    }
+    setViewport(createFullViewport(sample.columns.length, sample.rows.length))
+  }, [sample])
+
+  const fullViewport = useMemo(() => {
     if (!sample) return null
+    return createFullViewport(sample.columns.length, sample.rows.length)
+  }, [sample])
+
+  viewportRef.current = viewport
+  fullViewportRef.current = fullViewport
+
+  const options = useMemo(() => {
+    if (!sample || !viewport) return null
     return buildVolumeMatrixOptions(
       sample.cells,
       sample.columns,
       sample.rows,
+      viewport,
       () => chartRef.current,
     )
-  }, [sample])
+  }, [sample, viewport])
+
+  const isPanReady =
+    viewport != null &&
+    fullViewport != null &&
+    isViewportZoomed(viewport, fullViewport)
+
+  useEffect(() => {
+    const host = hostRef.current
+    if (!host) return
+
+    const PAN_THRESHOLD = 4
+    let pointerDown = false
+    let panning = false
+    let startX = 0
+    let startY = 0
+    let lastX = 0
+    let lastY = 0
+
+    const onWheel = (event: WheelEvent) => {
+      const vp = viewportRef.current
+      const full = fullViewportRef.current
+      if (!vp || !full) return
+      const next = applyCtrlWheelZoom(vp, full, host, event)
+      if (next) setViewport(next)
+    }
+
+    const onDoubleClick = () => {
+      const full = fullViewportRef.current
+      if (full) setViewport(full)
+    }
+
+    const endPan = () => {
+      pointerDown = false
+      panning = false
+      host.classList.remove('is-panning')
+    }
+
+    const onPointerDown = (event: PointerEvent) => {
+      if (event.button !== 0) return
+      const vp = viewportRef.current
+      const full = fullViewportRef.current
+      if (!vp || !full || !isViewportZoomed(vp, full)) return
+
+      pointerDown = true
+      panning = false
+      startX = lastX = event.clientX
+      startY = lastY = event.clientY
+    }
+
+    const onPointerMove = (event: PointerEvent) => {
+      if (!pointerDown) return
+      const vp = viewportRef.current
+      const full = fullViewportRef.current
+      if (!vp || !full) return
+
+      if (!panning) {
+        const dx = event.clientX - startX
+        const dy = event.clientY - startY
+        if (Math.hypot(dx, dy) < PAN_THRESHOLD) return
+        panning = true
+        host.classList.add('is-panning')
+      }
+
+      const dx = event.clientX - lastX
+      const dy = event.clientY - lastY
+      lastX = event.clientX
+      lastY = event.clientY
+
+      const rect = host.getBoundingClientRect()
+      setViewport((prev) => {
+        if (!prev) return prev
+        return panViewportByPixels(prev, full, rect, dx, dy)
+      })
+      event.preventDefault()
+    }
+
+    const onPointerUp = () => endPan()
+    const onPointerCancel = () => endPan()
+
+    host.addEventListener('wheel', onWheel, { passive: false, capture: true })
+    host.addEventListener('dblclick', onDoubleClick)
+    host.addEventListener('pointerdown', onPointerDown)
+    window.addEventListener('pointermove', onPointerMove)
+    window.addEventListener('pointerup', onPointerUp)
+    window.addEventListener('pointercancel', onPointerCancel)
+    return () => {
+      host.removeEventListener('wheel', onWheel, { capture: true })
+      host.removeEventListener('dblclick', onDoubleClick)
+      host.removeEventListener('pointerdown', onPointerDown)
+      window.removeEventListener('pointermove', onPointerMove)
+      window.removeEventListener('pointerup', onPointerUp)
+      window.removeEventListener('pointercancel', onPointerCancel)
+    }
+  }, [])
 
   const noteText = sample?.meta.note ?? '*数値：％（行）（人数ベース）'
 
@@ -354,7 +487,12 @@ export function VolumeMatrixPage() {
 
       <div className="tn-page-stage tn-page-stage-volume-matrix">
         <div className="volume-matrix">
-          <div className="tn-lib-canvas-host tn-volume-matrix-host">
+          <div
+            ref={hostRef}
+            className={`tn-lib-canvas-host tn-volume-matrix-host${
+              isPanReady ? ' is-pan-ready' : ''
+            }`}
+          >
             {options && sample ? (
               <AgCharts
                 ref={chartRef}
