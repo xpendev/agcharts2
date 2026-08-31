@@ -8,7 +8,6 @@ import {
   LegendModule,
   ModuleRegistry,
   NumberAxisModule,
-  SyncModule,
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -30,39 +29,23 @@ ModuleRegistry.registerModules([
   CategoryAxisModule,
   NumberAxisModule,
   LegendModule,
-  SyncModule,
   ContextMenuModule,
 ])
-
-const SYNC_GROUP_PREFIX = 'brand-composition'
 
 function buildBrandOptions(
   sample: BrandCompositionSample,
   group: BrandGroup,
-  options: {
-    showLegend: boolean
-    enableSync: boolean
-    syncGroupId: string
-  },
   getChart: () => AgChartInstance | null,
 ): AgCartesianChartOptions {
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
     contextMenu: createChartContextMenu(getChart),
-    // タイトルは DnD ハンドル側に出す（チャート内タイトルは使わない）
     legend: {
-      enabled: options.showLegend,
+      enabled: true,
       position: 'bottom',
     },
-    sync: options.enableSync
-      ? {
-          enabled: true,
-          groupId: options.syncGroupId,
-          axes: 'xy',
-          nodeInteraction: true,
-        }
-      : { enabled: false },
+    sync: { enabled: false },
     padding: { top: 8, right: 12, bottom: 8, left: 8 },
     data: group.rows,
     series: [
@@ -117,30 +100,10 @@ function buildBrandOptions(
   }
 }
 
-// function reorderBrands(
-//   brands: string[],
-//   fromBrand: string,
-//   toBrand: string,
-// ): string[] {
-//   if (fromBrand === toBrand) return brands
-//   const next = [...brands]
-//   const fromIndex = next.indexOf(fromBrand)
-//   const toIndex = next.indexOf(toBrand)
-//   if (fromIndex < 0 || toIndex < 0) return brands
-//   next.splice(fromIndex, 1)
-//   next.splice(toIndex, 0, fromBrand)
-//   return next
-// }
-
 export function BrandCompositionPage() {
-  const chartRefs = useRef(
-    new Map<string, AgChartInstance<AgCartesianChartOptions>>(),
-  )
+  const chartRefs = useRef(new Map<string, AgChartInstance>())
   const [size, setSize] = useState(SIZE_DEFAULT)
   const [sample, setSample] = useState<BrandCompositionSample | null>(null)
-  const [brandOrder, setBrandOrder] = useState<string[]>([])
-  // const [draggingBrand, setDraggingBrand] = useState<string | null>(null)
-  // const [dropTargetBrand, setDropTargetBrand] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
 
@@ -150,16 +113,11 @@ export function BrandCompositionPage() {
     setMessage(null)
     void fetchBrandComposition(size)
       .then((next) => {
-        if (cancelled) return
-        setSample(next)
-        setBrandOrder(groupRowsByBrand(next.rows).map((g) => g.brand))
-        // setDraggingBrand(null)
-        // setDropTargetBrand(null)
+        if (!cancelled) setSample(next)
       })
       .catch((error: unknown) => {
         if (cancelled) return
         setSample(null)
-        setBrandOrder([])
         setMessage(
           error instanceof Error ? error.message : 'データの取得に失敗しました。',
         )
@@ -172,45 +130,25 @@ export function BrandCompositionPage() {
     }
   }, [size])
 
-  const brandGroupMap = useMemo(() => {
-    if (!sample) return new Map<string, BrandGroup>()
-    return new Map(
-      groupRowsByBrand(sample.rows).map((group) => [group.brand, group]),
-    )
+  const brandGroups = useMemo(() => {
+    if (!sample) return []
+    return groupRowsByBrand(sample.rows)
   }, [sample])
 
-  const orderedGroups = useMemo(() => {
-    return brandOrder
-      .map((brand) => brandGroupMap.get(brand))
-      .filter((group): group is BrandGroup => Boolean(group))
-  }, [brandOrder, brandGroupMap])
-
-  const brandCount = orderedGroups.length
-  const enableSync = brandCount >= 2
-  // const canDrag = brandCount >= 2
-  const syncGroupId = `${SYNC_GROUP_PREFIX}-${sample?.size ?? size}`
+  const brandCount = brandGroups.length
   const chartHeight = brandCount <= 1 ? 440 : 260
 
   const chartOptionsByBrand = useMemo(() => {
     if (!sample) return new Map<string, AgCartesianChartOptions>()
     const map = new Map<string, AgCartesianChartOptions>()
-    orderedGroups.forEach((group) => {
+    brandGroups.forEach((group) => {
       map.set(
         group.brand,
-        buildBrandOptions(
-          sample,
-          group,
-          {
-            showLegend: true,
-            enableSync,
-            syncGroupId,
-          },
-          () => chartRefs.current.get(group.brand) ?? null,
-        ),
+        buildBrandOptions(sample, group, () => chartRefs.current.get(group.brand) ?? null),
       )
     })
     return map
-  }, [sample, orderedGroups, enableSync, syncGroupId])
+  }, [sample, brandGroups])
 
   const gridClass =
     brandCount <= 1 ? 'bc-grid bc-grid--single' : 'bc-grid bc-grid--multi'
@@ -264,74 +202,15 @@ export function BrandCompositionPage() {
       </div>
 
       <div className="tn-page-stage tn-page-stage-fit ag-spike-stage">
-        {orderedGroups.length > 0 && sample ? (
+        {brandGroups.length > 0 && sample ? (
           <div className="tn-chart-frame-800">
             <div key={sample.size} className={gridClass}>
-              {orderedGroups.map((group) => {
+              {brandGroups.map((group) => {
                 const options = chartOptionsByBrand.get(group.brand)
                 if (!options) return null
-                // const isDragging = draggingBrand === group.brand
-                // const isDropTarget =
-                //   dropTargetBrand === group.brand && draggingBrand !== group.brand
                 return (
-                  <div
-                    key={group.brand}
-                    className="bc-tile"
-                    // className={[
-                    //   'bc-tile',
-                    //   isDragging ? 'bc-tile--dragging' : '',
-                    //   isDropTarget ? 'bc-tile--drop-target' : '',
-                    // ]
-                    //   .filter(Boolean)
-                    //   .join(' ')}
-                    // onDragOver={(event) => {
-                    //   if (!canDrag || !draggingBrand) return
-                    //   event.preventDefault()
-                    //   event.dataTransfer.dropEffect = 'move'
-                    //   if (dropTargetBrand !== group.brand) {
-                    //     setDropTargetBrand(group.brand)
-                    //   }
-                    // }}
-                    // onDragLeave={() => {
-                    //   if (dropTargetBrand === group.brand) {
-                    //     setDropTargetBrand(null)
-                    //   }
-                    // }}
-                    // onDrop={(event) => {
-                    //   if (!canDrag || !draggingBrand) return
-                    //   event.preventDefault()
-                    //   setBrandOrder((prev) =>
-                    //     reorderBrands(prev, draggingBrand, group.brand),
-                    //   )
-                    //   setDraggingBrand(null)
-                    //   setDropTargetBrand(null)
-                    // }}
-                  >
-                    <div
-                      className="bc-tile-handle"
-                      // draggable={canDrag}
-                      // title={
-                      //   canDrag
-                      //     ? 'ドラッグして並べ替え'
-                      //     : undefined
-                      // }
-                      // onDragStart={(event) => {
-                      //   if (!canDrag) {
-                      //     event.preventDefault()
-                      //     return
-                      //   }
-                      //   event.dataTransfer.effectAllowed = 'move'
-                      //   event.dataTransfer.setData('text/plain', group.brand)
-                      //   setDraggingBrand(group.brand)
-                      // }}
-                      // onDragEnd={() => {
-                      //   setDraggingBrand(null)
-                      //   setDropTargetBrand(null)
-                      // }}
-                    >
-                      {/* <span className="bc-tile-handle-grip" aria-hidden>
-                        ⋮⋮
-                      </span> */}
+                  <div key={group.brand} className="bc-tile">
+                    <div className="bc-tile-header">
                       <span className="bc-tile-title">{group.brand}</span>
                     </div>
                     <div className="ag-spike-chart-host bc-tile-chart">
