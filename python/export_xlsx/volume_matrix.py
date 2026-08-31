@@ -18,11 +18,6 @@ _ICON_THRESHOLDS: tuple[tuple[str, str, float], ...] = (
 # データバー: 最小0・最大100・単色塗りつぶし・枠線なし
 _DATA_BAR_COLOR = "#4472C4"
 
-_CELL_STYLE_LABELS: dict[VolumeMatrixCellStyle, str] = {
-    "icon-set": "条件付き書式（アイコンセット）",
-    "data-bar": "条件付き書式（データバー）",
-}
-
 
 def normalize_cell_style(raw: str | None) -> VolumeMatrixCellStyle:
     if raw in ("data-bar", "data_bar", "databar"):
@@ -49,9 +44,7 @@ def build_volume_matrix_xlsx(
     cells: list[dict[str, Any]] = list(payload.get("cells") or [])
 
     title = str(meta.get("title") or "ボリューム付数表")
-    note = str(meta.get("note") or "*数値：％（行）（人数ベース）")
     past_label = str(meta.get("pastPeriodLabel") or "過去購入")
-    style_label = _CELL_STYLE_LABELS[cell_style]
 
     value_by_pair = {
         (str(cell.get("pastId") or ""), str(cell.get("currentId") or "")): float(
@@ -65,7 +58,6 @@ def build_volume_matrix_xlsx(
     worksheet = workbook.add_worksheet("ブランドクロス")
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
-    caption = workbook.add_format({"font_size": 9, "font_color": "#555555"})
     axis_title_center = workbook.add_format(
         {
             "bold": True,
@@ -116,11 +108,6 @@ def build_volume_matrix_xlsx(
     )
 
     worksheet.write("A1", f"・⑦ブランドクロス / {title}", bold)
-    worksheet.write(
-        "A2",
-        f"{note}（Excel 近似: {style_label}。Bubble チャート非対応）",
-        caption,
-    )
     worksheet.set_column("A:A", 16)
 
     col_count = len(columns)
