@@ -235,7 +235,7 @@ function buildVolumeMatrixOptions(
               title: `${cell.past} → ${cell.current}`,
               data: [
                 {
-                  label: '行%',
+                  label: '',
                   value: cell.hideBubble ? '-' : `${cell.label}%`,
                 },
               ],
