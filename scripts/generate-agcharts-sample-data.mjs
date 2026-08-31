@@ -44,7 +44,7 @@ for (let size = 1; size <= 7; size += 1) {
   }
   writeJson(`waterfall-${size}.json`, {
     meta: {
-      title: `メーカーA 職出入差（全国）`,
+      title: `メーカーA 流出入差（全国）`,
       yUnit: '(%)',
     },
     size,

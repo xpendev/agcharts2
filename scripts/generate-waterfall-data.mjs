@@ -34,7 +34,7 @@ function buildPayload(size) {
 
   return {
     meta: {
-      title: 'メーカーA 職出入差（全国）',
+      title: 'メーカーA 流出入差（全国）',
       yUnit: '(%)',
     },
     size,

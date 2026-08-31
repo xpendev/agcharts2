@@ -37,7 +37,7 @@ const agChartsLinks = [
   {
     to: '/waterfall',
     title: '③シェア流出入',
-    note: '職出入差（棒の数1〜50）',
+    note: '流出入差（棒の数1〜50）',
   },
   {
     to: '/purchase-in-out',

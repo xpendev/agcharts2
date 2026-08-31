@@ -124,7 +124,7 @@ function genPurchaseInOut(size) {
 function genWaterfall(size) {
   if (size === 1) {
     return {
-      meta: { title: 'メーカーA 職出入差（全国）', yUnit: '(%)' },
+      meta: { title: 'メーカーA 流出入差（全国）', yUnit: '(%)' },
       size,
       categories: ['期首'],
       values: [22],
@@ -147,7 +147,7 @@ function genWaterfall(size) {
   categories.push('期末')
   values.push(round1(running))
   return {
-    meta: { title: 'メーカーA 職出入差（全国）', yUnit: '(%)' },
+    meta: { title: 'メーカーA 流出入差（全国）', yUnit: '(%)' },
     size,
     categories,
     values,
