@@ -36,6 +36,7 @@ ModuleRegistry.registerModules([
 
 const PREV_PERIOD = '直近・1ヶ月'
 const CURR_PERIOD = '当月・11月'
+const FLOW_BAND_TITLE = '流出入（金額）'
 
 const barValueLabel: AgBarSeriesLabelOptions<
   unknown,
@@ -170,18 +171,25 @@ function SummaryHeader({ sample }: { sample: PurchaseInOutSample }) {
       </div>
 
       <div className="pio-flow">
-        <p className="pio-flow-title">{meta.title}</p>
+        <p className="pio-flow-title">{FLOW_BAND_TITLE}</p>
         <div className="pio-flow-row">
           <span className="pio-flow-side out">流出</span>
-          <div className="pio-flow-track">
-            <div className="pio-flow-out">
-              {summary.outflowPercent.toFixed(1)}%
+          <div className="pio-flow-track-wrap">
+            <div className="pio-flow-cap-row">
+              <span aria-hidden />
+              <span className="pio-flow-cap">維持</span>
+              <span aria-hidden />
             </div>
-            <div className="pio-flow-mid">
-              {summary.retainedPercent.toFixed(1)}%
-            </div>
-            <div className="pio-flow-in">
-              +{summary.inflowPercent.toFixed(1)}%
+            <div className="pio-flow-track">
+              <div className="pio-flow-out">
+                {summary.outflowPercent.toFixed(1)}%
+              </div>
+              <div className="pio-flow-mid">
+                {summary.retainedPercent.toFixed(1)}%
+              </div>
+              <div className="pio-flow-in">
+                +{summary.inflowPercent.toFixed(1)}%
+              </div>
             </div>
           </div>
           <span className="pio-flow-side in">流入</span>

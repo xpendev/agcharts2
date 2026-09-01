@@ -86,7 +86,7 @@ def _insert_summary_objects(
 ) -> None:
     meta = payload.get("meta") or {}
     summary = payload.get("summary") or {}
-    title = str(meta.get("title") or "買出入(実績)")
+    title = str(meta.get("title") or "流出入（金額）")
     brand_label = str(meta.get("brandLabel") or "ブランド")
 
     prev_pct = float(summary.get("previousPercent") or 0)
@@ -96,7 +96,18 @@ def _insert_summary_objects(
     inflow_pct = abs(float(summary.get("inflowPercent") or 0))
 
     section = workbook.add_format({"bold": True, "font_size": 11})
+    section_center = workbook.add_format(
+        {"bold": True, "font_size": 11, "align": "center", "valign": "vcenter"}
+    )
     caption = workbook.add_format({"font_size": 9, "font_color": "#555555"})
+    retain_caption = workbook.add_format(
+        {
+            "font_size": 9,
+            "font_color": "#555555",
+            "align": "center",
+            "valign": "vcenter",
+        }
+    )
     side = workbook.add_format({"font_size": 10, "bold": True})
     band_out = workbook.add_format(
         {
@@ -151,13 +162,13 @@ def _insert_summary_objects(
     )
     worksheet.insert_textbox("I4", f"{curr_pct:.1f}%", _kpi_box_options())
 
-    worksheet.write("E7", title, section)
-    worksheet.write("H7", "維持", caption)
-    worksheet.write("E9", "流出", side)
-    worksheet.write("L9", "流入", side)
-    worksheet.merge_range("F9:G9", f"-{outflow_pct:.1f}%", band_out)
-    worksheet.merge_range("H9:I9", f"{retained_pct:.1f}%", band_mid)
-    worksheet.merge_range("J9:K9", f"+{inflow_pct:.1f}%", band_in)
+    worksheet.merge_range("E7:K7", title, section_center)
+    worksheet.merge_range("H8:I8", "維持", retain_caption)
+    worksheet.write("E10", "流出", side)
+    worksheet.write("L10", "流入", side)
+    worksheet.merge_range("F10:G10", f"-{outflow_pct:.1f}%", band_out)
+    worksheet.merge_range("H10:I10", f"{retained_pct:.1f}%", band_mid)
+    worksheet.merge_range("J10:K10", f"+{inflow_pct:.1f}%", band_in)
 
     worksheet.write("AA1", "帯")
     worksheet.write_number("AB1", outflow_pct)
@@ -202,7 +213,7 @@ def _insert_summary_objects(
     band_chart.set_chartarea({"border": {"none": True}, "fill": {"none": True}})
     band_chart.set_plotarea({"border": {"none": True}, "fill": {"none": True}})
     band_chart.set_size({"width": 420, "height": 70})
-    worksheet.insert_chart("F11", band_chart)
+    worksheet.insert_chart("F12", band_chart)
 
 
 def build_purchase_in_out_xlsx(
@@ -214,9 +225,7 @@ def build_purchase_in_out_xlsx(
     ④シェア流出・流入比較。
     左: 数表 / 右: 上段（PNG または Excel オブジェクト）＋本グラフ。
     """
-    meta = payload.get("meta") or {}
     rows: list[dict[str, Any]] = list(payload.get("rows") or [])
-    title = str(meta.get("title") or "買出入(実績)")
 
     bio = BytesIO()
     workbook = Workbook(bio, {"in_memory": True})
@@ -305,7 +314,7 @@ def build_purchase_in_out_xlsx(
             },
         }
     )
-    chart.set_title({"name": title})
+    chart.set_title({"none": True})
     chart.set_x_axis(
         {
             "name": "(%)",

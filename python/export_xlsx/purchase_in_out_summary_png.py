@@ -32,6 +32,7 @@ ARROW_WIDTH = 52
 ARROW_HEIGHT = 18
 FLOW_SIDE_GAP = 8
 FLOW_TITLE_MARGIN_BOTTOM = 6
+RETAIN_CAP_ROW = 12
 FLOW_ROW_HEIGHT = 34
 
 SUMMARY_IMAGE_WIDTH = 720
@@ -156,7 +157,7 @@ def render_purchase_in_out_summary_png(
     summary = payload.get("summary") or {}
 
     brand_label = str(meta.get("brandLabel") or "ブランド")
-    title = str(meta.get("title") or "買出入(実績)")
+    title = str(meta.get("title") or "流出入（金額）")
     prev_value = f"{float(summary.get('previousPercent') or 0):.1f}%"
     curr_value = f"{float(summary.get('currentPercent') or 0):.1f}%"
     outflow_value = f"{float(summary.get('outflowPercent') or 0):.1f}%"
@@ -188,9 +189,17 @@ def render_purchase_in_out_summary_png(
 
     kpi_section_height = box_height + KPI_PADDING_BOTTOM + 1
     flow_title_y = kpi_section_height + SUMMARY_GAP + 10
-    flow_row_y = flow_title_y + 8 + FLOW_TITLE_MARGIN_BOTTOM + FLOW_ROW_HEIGHT / 2
+    retain_cap_y = flow_title_y + 14
+    flow_row_y = (
+        retain_cap_y + RETAIN_CAP_ROW + FLOW_TITLE_MARGIN_BOTTOM + FLOW_ROW_HEIGHT / 2
+    )
     height = int(
-        kpi_section_height + SUMMARY_GAP + 14 + FLOW_TITLE_MARGIN_BOTTOM + FLOW_ROW_HEIGHT
+        kpi_section_height
+        + SUMMARY_GAP
+        + 14
+        + RETAIN_CAP_ROW
+        + FLOW_TITLE_MARGIN_BOTTOM
+        + FLOW_ROW_HEIGHT
     )
 
     image = Image.new("RGB", (width, height), "#ffffff")
@@ -261,6 +270,15 @@ def render_purchase_in_out_summary_png(
         flow_row_y,
         side_font,
         COLOR_INFLOW,
+    )
+
+    _draw_centered_text(
+        draw,
+        "維持",
+        track_x + segment_width * 1.5,
+        retain_cap_y,
+        caption_font,
+        COLOR_MUTED,
     )
 
     draw.rectangle(

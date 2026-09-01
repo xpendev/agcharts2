@@ -128,6 +128,7 @@
   text-align: center;
   font-size: 14px;
   font-weight: 700;
+  color: #111111;
 }
 
 .pio-flow-row {
@@ -148,6 +149,26 @@
 
 .pio-flow-side.in {
   color: #5a9e4a;
+}
+
+.pio-flow-track-wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.pio-flow-cap-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pio-flow-cap {
+  grid-column: 2;
+  text-align: center;
+  font-size: 11px;
+  color: #555;
 }
 
 .pio-flow-track {

@@ -27,7 +27,7 @@ function buildPayload(size) {
 
   return {
     meta: {
-      title: '買出入(実績)',
+      title: '流出入（金額）',
       brandLabel: 'ブランド',
     },
     size,
