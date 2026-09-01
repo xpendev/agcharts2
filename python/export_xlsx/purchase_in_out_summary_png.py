@@ -32,8 +32,9 @@ ARROW_WIDTH = 52
 ARROW_HEIGHT = 18
 FLOW_SIDE_GAP = 8
 FLOW_TITLE_MARGIN_BOTTOM = 6
-RETAIN_CAP_ROW = 12
+RETAIN_CAP_ROW = 14
 FLOW_ROW_HEIGHT = 34
+FLOW_BOTTOM_PADDING = 12
 
 SUMMARY_IMAGE_WIDTH = 720
 
@@ -189,18 +190,11 @@ def render_purchase_in_out_summary_png(
 
     kpi_section_height = box_height + KPI_PADDING_BOTTOM + 1
     flow_title_y = kpi_section_height + SUMMARY_GAP + 10
-    retain_cap_y = flow_title_y + 14
+    retain_cap_y = flow_title_y + 16
     flow_row_y = (
         retain_cap_y + RETAIN_CAP_ROW + FLOW_TITLE_MARGIN_BOTTOM + FLOW_ROW_HEIGHT / 2
     )
-    height = int(
-        kpi_section_height
-        + SUMMARY_GAP
-        + 14
-        + RETAIN_CAP_ROW
-        + FLOW_TITLE_MARGIN_BOTTOM
-        + FLOW_ROW_HEIGHT
-    )
+    height = int(flow_row_y + FLOW_ROW_HEIGHT / 2 + FLOW_BOTTOM_PADDING)
 
     image = Image.new("RGB", (width, height), "#ffffff")
     draw = ImageDraw.Draw(image)
