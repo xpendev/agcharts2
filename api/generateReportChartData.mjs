@@ -121,33 +121,43 @@ function genPurchaseInOut(size) {
 }
 
 // --- waterfall (size = 棒の数) ---
+const WF_FROM_PERIOD = "'26/02 - '26/04"
+const WF_TO_PERIOD = "'26/05 - '26/07"
+function wfMidCategory(index) {
+  return `ブランド${index + 1}`
+}
+
 function genWaterfall(size) {
+  const meta = {
+    title: 'サトウ食品 流出入差(金額)',
+    yUnit: '(%)',
+    fromPeriod: WF_FROM_PERIOD,
+    toPeriod: WF_TO_PERIOD,
+  }
   if (size === 1) {
     return {
-      meta: { title: 'メーカーA 流出入差（全国）', yUnit: '(%)' },
+      meta,
       size,
-      categories: ['期首'],
-      values: [22],
+      categories: [WF_FROM_PERIOD],
+      values: [17 + (size % 5)],
     }
   }
-  const categories = ['期首']
-  const values = [20 + (size % 6)]
+  const categories = [WF_FROM_PERIOD]
+  const values = [17 + (size % 6)]
   let running = values[0]
   const midCount = size - 2
   for (let i = 0; i < midCount; i += 1) {
     const positive = i % 2 === 0
     const mag = 6 + ((i * 3 + size) % 10)
     const delta = positive ? mag : -mag
-    // カテゴリ名は一意にする（A〜Zの循環だと重複し、同一X位置に棒が重なる）
-    const n = i + 1
-    categories.push(positive ? `流入${n}` : `流出${n}`)
+    categories.push(wfMidCategory(i))
     values.push(delta)
     running += delta
   }
-  categories.push('期末')
+  categories.push(WF_TO_PERIOD)
   values.push(round1(running))
   return {
-    meta: { title: 'メーカーA 流出入差（全国）', yUnit: '(%)' },
+    meta,
     size,
     categories,
     values,

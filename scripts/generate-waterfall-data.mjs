@@ -5,42 +5,43 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const outDir = path.join(__dirname, '..', 'api', 'data')
 
-/** size = 棒の数。期首 + 中間 + 期末（size=1 は期首のみ） */
-const midLabels = ['流入A', '流入B', '流出A', '流出B', '流入C', '流出C']
-/** 上下にばらけた増減（横ばい回避・極端な単発値は避ける） */
-const midDeltas = [8.0, -12.0, 10.0, -18.0, 22.0, -9.0]
+/** 1〜50 は api/generateReportChartData.mjs を使用 */
+const WF_FROM_PERIOD = "'26/02 - '26/04"
+const WF_TO_PERIOD = "'26/05 - '26/07"
+function wfMidCategory(index) {
+  return `ブランド${index + 1}`
+}
 
 function buildPayload(size) {
-  let labels
+  const meta = {
+    title: 'サトウ食品 流出入差(金額)',
+    yUnit: '(%)',
+    fromPeriod: WF_FROM_PERIOD,
+    toPeriod: WF_TO_PERIOD,
+  }
   if (size === 1) {
-    labels = ['期首']
-  } else {
-    const midCount = size - 2
-    labels = ['期首', ...midLabels.slice(0, midCount), '期末']
+    return {
+      meta,
+      size,
+      categories: [WF_FROM_PERIOD],
+      values: [17 + (size % 5)],
+    }
   }
-
-  const values = []
-  let total = 18 + size
-  values.push(total)
-  const midCount = size <= 1 ? 0 : size - 2
+  const categories = [WF_FROM_PERIOD]
+  const values = [17 + (size % 6)]
+  let running = values[0]
+  const midCount = size - 2
   for (let i = 0; i < midCount; i += 1) {
-    const delta = midDeltas[i] ?? (i % 2 === 0 ? 3 : -3)
+    const positive = i % 2 === 0
+    const mag = 6 + ((i * 3 + size) % 10)
+    const delta = positive ? mag : -mag
+    categories.push(wfMidCategory(i))
     values.push(delta)
-    total = Math.round((total + delta) * 10) / 10
+    running = Math.round((running + delta) * 10) / 10
   }
-  if (size >= 2) {
-    values.push(total)
-  }
-
-  return {
-    meta: {
-      title: 'メーカーA 流出入差（全国）',
-      yUnit: '(%)',
-    },
-    size,
-    categories: labels,
-    values,
-  }
+  categories.push(WF_TO_PERIOD)
+  values.push(running)
+  return { meta, size, categories, values }
 }
 
 for (let size = 1; size <= 7; size += 1) {

@@ -6,7 +6,12 @@ export const SIZE_DEFAULT = 3
 
 export type WaterfallSample = {
   size: number
-  meta: { title: string; yUnit: string }
+  meta: {
+    title: string
+    yUnit: string
+    fromPeriod?: string
+    toPeriod?: string
+  }
   categories: string[]
   values: number[]
 }

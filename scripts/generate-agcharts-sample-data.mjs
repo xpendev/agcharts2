@@ -18,40 +18,9 @@ spawnSync(process.execPath, [path.join(__dirname, 'generate-purchase-in-out-data
 })
 
 // --- waterfall（size = 棒の数 1〜7） ---
-// 期首 + 中間ステップ + 期末。size=1 は期首のみ、size=2 は期首+期末。
-const wfMidLabels = ['流入A', '流入B', '流出A', '流出B', '流入C', '流出C']
-/** 上下にばらけた増減（横ばい回避・極端な単発値は避ける） */
-const wfMidDeltas = [8.0, -12.0, 10.0, -18.0, 22.0, -9.0]
-for (let size = 1; size <= 7; size += 1) {
-  let labels
-  if (size === 1) {
-    labels = ['期首']
-  } else {
-    const midCount = size - 2
-    labels = ['期首', ...wfMidLabels.slice(0, midCount), '期末']
-  }
-  const values = []
-  let total = 18 + size
-  values.push(total) // 期首（絶対値・0起点の正棒として描画）
-  const midCount = size <= 1 ? 0 : size - 2
-  for (let i = 0; i < midCount; i += 1) {
-    const delta = wfMidDeltas[i] ?? (i % 2 === 0 ? 3 : -3)
-    values.push(delta)
-    total = Math.round((total + delta) * 10) / 10
-  }
-  if (size >= 2) {
-    values.push(total) // 期末（totals で自動計算されるが整合用に保持）
-  }
-  writeJson(`waterfall-${size}.json`, {
-    meta: {
-      title: `メーカーA 流出入差（全国）`,
-      yUnit: '(%)',
-    },
-    size,
-    categories: labels,
-    values,
-  })
-}
+spawnSync(process.execPath, [path.join(__dirname, 'generate-waterfall-data.mjs')], {
+  stdio: 'inherit',
+})
 
 // --- brand-diverging（size = ブランド数 1〜7、末尾は必ずマイナス） ---
 const BRAND_DIVERGING_LABELS = ['B', 'D', 'H', 'C', 'F', 'E', 'G']

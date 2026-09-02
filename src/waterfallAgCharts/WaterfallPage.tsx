@@ -29,21 +29,24 @@ ModuleRegistry.registerModules([
   ContextMenuModule,
 ])
 
-function formatBarLabel(params: {
-  value: unknown
-  itemType?: string
-  totalValue?: unknown
-  datum?: { category?: string }
-}): string {
+function formatBarLabel(
+  startLabel: string,
+  params: {
+    value: unknown
+    itemType?: string
+    totalValue?: unknown
+    datum?: { category?: string }
+  },
+): string {
   const itemType = params.itemType
-  // 期末などの total は累計値（符号なし）
+  // To 期間など total は累計値（符号なし）
   if (itemType === 'total' || itemType === 'subtotal') {
     const n = Number(params.totalValue ?? params.value)
     if (!Number.isFinite(n)) return ''
     return n.toFixed(1)
   }
-  // 期首は 0 起点の絶対値棒（符号なし）
-  if (params.datum?.category === '期首') {
+  // From 期間は 0 起点の絶対値棒（符号なし）
+  if (params.datum?.category === startLabel) {
     const n = Number(params.value)
     if (!Number.isFinite(n)) return ''
     return n.toFixed(1)
@@ -54,25 +57,36 @@ function formatBarLabel(params: {
   return n.toFixed(1)
 }
 
-const barLabel = {
-  enabled: true,
-  placement: 'outside-end' as const,
-  fontSize: 11,
-  spacing: 4,
-  collision: { alwaysShow: true },
-  formatter: formatBarLabel,
-}
-
 function buildOptions(
   sample: WaterfallSample,
   getChart: () => AgChartInstance | null,
 ): AgCartesianChartOptions {
-  // size = 棒数。期末は totals で挿入し、カテゴリ数と表示棒数を一致させる。
+  const startLabel =
+    sample.meta.fromPeriod ?? sample.categories[0] ?? ''
+  const endLabel =
+    sample.meta.toPeriod ??
+    sample.categories[sample.categories.length - 1] ??
+    ''
+  const barLabel = {
+    enabled: true,
+    placement: 'outside-end' as const,
+    fontSize: 11,
+    spacing: 4,
+    collision: { alwaysShow: true },
+    formatter: (params: {
+      value: unknown
+      itemType?: string
+      totalValue?: unknown
+      datum?: { category?: string }
+    }) => formatBarLabel(startLabel, params),
+  }
+
+  // size = 棒数。To 期間は totals で挿入し、カテゴリ数と表示棒数を一致させる。
   const isSingle = sample.categories.length <= 1
   const data = isSingle
     ? [
         {
-          category: sample.categories[0] ?? '期首',
+          category: startLabel,
           amount: sample.values[0] ?? 0,
         },
       ]
@@ -80,14 +94,13 @@ function buildOptions(
         category,
         amount: sample.values[i] ?? 0,
       }))
-  const endLabel = sample.categories[sample.categories.length - 1] ?? '期末'
 
   return {
     animation: { enabled: false },
     background: { fill: '#ffffff' },
     contextMenu: createChartContextMenu(getChart),
     title: { text: sample.meta.title, fontSize: 16 },
-    legend: { enabled: true },
+    legend: { enabled: false },
     padding: { top: 28, right: 20, bottom: 12, left: 12 },
     data,
     series: [
@@ -111,10 +124,10 @@ function buildOptions(
             fill: '#5a9e4a',
             stroke: '#3d6e32',
             label: barLabel,
-            // 期首は参考図どおり総計色（グレー）
+            // From 期間は参考図どおり総計色（グレー）
             itemStyler: ({ datum }) => {
               const row = datum as { category?: string }
-              if (row.category === '期首') {
+              if (row.category === startLabel) {
                 return { fill: '#8a8a8a', stroke: '#555555' }
               }
             },
