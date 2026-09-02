@@ -39,7 +39,7 @@ for (let size = 1; size <= 8; size += 1) {
           title: '人数構成比',
           yTitle: '人数構成比 (%)',
           series: {
-            repeat: '継続リピート',
+            repeat: 'リピート',
             switchIn: 'トライアル(スイッチイン)',
             entry: 'トライアル(カテゴリエントリ)',
           },

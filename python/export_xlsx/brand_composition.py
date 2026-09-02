@@ -17,7 +17,7 @@ def build_brand_composition_xlsx(payload: dict[str, Any]) -> bytes:
     series_meta = meta.get("series") or {}
     title = str(meta.get("title") or "人数構成比")
     y_title = str(meta.get("yTitle") or "人数構成比 (%)")
-    name_repeat = str(series_meta.get("repeat") or "継続リピート")
+    name_repeat = str(series_meta.get("repeat") or "リピート")
     name_switch = str(series_meta.get("switchIn") or "トライアル(スイッチイン)")
     name_entry = str(series_meta.get("entry") or "トライアル(カテゴリエントリ)")
 
