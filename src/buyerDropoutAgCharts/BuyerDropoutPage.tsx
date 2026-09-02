@@ -76,7 +76,13 @@ function buildTopOptions(
         tick: { enabled: false },
         // 参考画像どおり期間ラベルは上段。件数多くても間引かない
         interval: { values: sample.stacked.map((row) => row.period) },
-        label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
+        label: {
+          fontSize: 11,
+          avoidCollisions: false,
+          minSpacing: 0,
+          autoRotate: false,
+          rotation: 270,
+        },
       },
       y: {
         type: 'number',
