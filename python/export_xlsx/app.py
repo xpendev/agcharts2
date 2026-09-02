@@ -14,6 +14,7 @@ from export_xlsx.purchase_in_out import (
     normalize_summary_style,
 )
 from export_xlsx.volume_matrix import build_volume_matrix_xlsx, normalize_cell_style
+from export_xlsx.waterfall import build_waterfall_xlsx
 from export_xlsx.data import SIZE_MIN, clamp_size, load_report_payload
 
 DEFAULT_PORT = 5001
@@ -63,6 +64,8 @@ def create_app(data_dir: Path | None = None) -> Flask:
                     cell_style=cell_style,
                 )
                 file_name = f"{report}-{size}-{cell_style}.xlsx"
+            elif report == "waterfall":
+                xlsx_bytes = build_waterfall_xlsx(payload)
             else:
                 return jsonify({"error": f"未対応の帳票: {report}"}), 404
         except Exception as error:  # noqa: BLE001 — API 境界で返却

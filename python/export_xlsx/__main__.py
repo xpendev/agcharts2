@@ -14,6 +14,7 @@ from export_xlsx.purchase_in_out import (
     normalize_summary_style,
 )
 from export_xlsx.volume_matrix import build_volume_matrix_xlsx, normalize_cell_style
+from export_xlsx.waterfall import build_waterfall_xlsx
 
 BUILDERS = {
     "brand-composition": build_brand_composition_xlsx,
@@ -22,6 +23,7 @@ BUILDERS = {
     "competitive-impact": build_competitive_impact_xlsx,
     "purchase-in-out": build_purchase_in_out_xlsx,
     "volume-matrix": build_volume_matrix_xlsx,
+    "waterfall": build_waterfall_xlsx,
 }
 
 

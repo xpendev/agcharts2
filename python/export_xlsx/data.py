@@ -11,6 +11,7 @@ REPORT_FILE_PREFIX: dict[str, str] = {
     "competitive-impact": "competitive-impact",
     "purchase-in-out": "purchase-in-out",
     "volume-matrix": "volume-matrix",
+    "waterfall": "waterfall",
 }
 
 SIZE_MIN = 1

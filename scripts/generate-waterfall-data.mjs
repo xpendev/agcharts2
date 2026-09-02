@@ -12,6 +12,18 @@ function wfMidCategory(index) {
   return `ブランド${index + 1}`
 }
 
+function round1(n) {
+  return Math.round(n * 10) / 10
+}
+
+const WF_MIN = 10
+
+/** 累計が WF_MIN 未満にならないよう delta を調整 */
+function wfClampedDelta(running, delta) {
+  if (delta >= 0 || running + delta >= WF_MIN) return delta
+  return round1(WF_MIN - running)
+}
+
 function buildPayload(size) {
   const meta = {
     title: 'サトウ食品 流出入差(金額)',
@@ -34,10 +46,10 @@ function buildPayload(size) {
   for (let i = 0; i < midCount; i += 1) {
     const positive = i % 2 === 0
     const mag = 6 + ((i * 3 + size) % 10)
-    const delta = positive ? mag : -mag
+    const delta = wfClampedDelta(running, positive ? mag : -mag)
     categories.push(wfMidCategory(i))
     values.push(delta)
-    running = Math.round((running + delta) * 10) / 10
+    running = round1(running + delta)
   }
   categories.push(WF_TO_PERIOD)
   values.push(running)
