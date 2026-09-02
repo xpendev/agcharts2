@@ -186,9 +186,6 @@ def build_volume_matrix_xlsx(
 
 
 def _build_volume_matrix_png_xlsx(payload: dict[str, Any]) -> bytes:
-    meta = payload.get("meta") or {}
-    note = str(meta.get("note") or "")
-
     png_bytes, _, _ = render_volume_matrix_png(payload)
 
     bio = BytesIO()
@@ -196,11 +193,8 @@ def _build_volume_matrix_png_xlsx(payload: dict[str, Any]) -> bytes:
     worksheet = workbook.add_worksheet("ブランドクロス")
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
-    note_format = workbook.add_format({"font_size": 10, "font_color": "#555555"})
 
     worksheet.write("A1", VOLUME_MATRIX_SHEET_TITLE, bold)
-    if note:
-        worksheet.write("A2", note, note_format)
 
     worksheet.insert_image(
         "A4",
