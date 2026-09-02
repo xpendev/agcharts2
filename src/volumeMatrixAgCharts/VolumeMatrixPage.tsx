@@ -40,7 +40,7 @@ ModuleRegistry.registerModules([
 
 const SIZE_DOMAIN_MAX = 55
 
-export type VolumeMatrixXlsxCellStyle = 'icon-set' | 'data-bar'
+export type VolumeMatrixXlsxCellStyle = 'icon-set' | 'data-bar' | 'png'
 
 const XLSX_CELL_STYLE_OPTIONS: {
   value: VolumeMatrixXlsxCellStyle
@@ -48,6 +48,7 @@ const XLSX_CELL_STYLE_OPTIONS: {
 }[] = [
   { value: 'icon-set', label: 'アイコンセット' },
   { value: 'data-bar', label: 'データバー' },
+  { value: 'png', label: 'PNG' },
 ]
 
 const TITLE_COLOR = '#222222'

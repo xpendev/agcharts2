@@ -47,9 +47,9 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--cell-style",
-        choices=("icon-set", "data-bar"),
+        choices=("icon-set", "data-bar", "png"),
         default="icon-set",
-        help="volume-matrix の条件付き書式（icon-set / data-bar）",
+        help="volume-matrix の出力形式（icon-set / data-bar / png）",
     )
     parser.add_argument(
         "--summary-style",

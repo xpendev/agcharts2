@@ -5,7 +5,9 @@ from typing import Any, Literal
 
 from xlsxwriter import Workbook
 
-VolumeMatrixCellStyle = Literal["icon-set", "data-bar"]
+from export_xlsx.volume_matrix_png import render_volume_matrix_png
+
+VolumeMatrixCellStyle = Literal["icon-set", "data-bar", "png"]
 
 # 添付 Excel「書式ルールの編集」相当: 5段階の円アイコン（5_quarters）
 _ICON_THRESHOLDS: tuple[tuple[str, str, float], ...] = (
@@ -22,10 +24,15 @@ _DATA_BAR_COLOR = "#4472C4"
 def normalize_cell_style(raw: str | None) -> VolumeMatrixCellStyle:
     if raw in ("data-bar", "data_bar", "databar"):
         return "data-bar"
+    if raw in ("png", "image"):
+        return "png"
     return "icon-set"
 
 
 CATEGORY_USER_ID = "category-user"
+
+
+VOLUME_MATRIX_TITLE = "⑦ブランドクロス"
 
 
 def build_volume_matrix_xlsx(
@@ -35,16 +42,15 @@ def build_volume_matrix_xlsx(
 ) -> bytes:
     """
     ⑦ブランドクロス。
-    Bubble チャート非対応のため、(N+1)×N 表＋条件付き書式で近似する。
-    cell_style: icon-set（5_quarters）または data-bar（0〜100）。
+    icon-set / data-bar: (N+1)×N 表＋条件付き書式。
+    png: チャート相当の PNG をシートに貼り付け。
     """
-    meta = payload.get("meta") or {}
+    if cell_style == "png":
+        return _build_volume_matrix_png_xlsx(payload)
+
     columns: list[dict[str, Any]] = list(payload.get("columns") or [])
     rows: list[dict[str, Any]] = list(payload.get("rows") or [])
     cells: list[dict[str, Any]] = list(payload.get("cells") or [])
-
-    title = str(meta.get("title") or "ボリューム付数表")
-    past_label = str(meta.get("pastPeriodLabel") or "過去購入")
 
     value_by_pair = {
         (str(cell.get("pastId") or ""), str(cell.get("currentId") or "")): float(
@@ -58,14 +64,6 @@ def build_volume_matrix_xlsx(
     worksheet = workbook.add_worksheet("ブランドクロス")
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
-    axis_title_center = workbook.add_format(
-        {
-            "bold": True,
-            "font_size": 11,
-            "align": "center",
-            "valign": "vcenter",
-        }
-    )
     col_header = workbook.add_format(
         {
             "bold": True,
@@ -107,28 +105,16 @@ def build_volume_matrix_xlsx(
         }
     )
 
-    worksheet.write("A1", f"・⑦ブランドクロス / {title}", bold)
+    worksheet.write("A1", VOLUME_MATRIX_TITLE, bold)
     worksheet.set_column("A:A", 16)
 
     col_count = len(columns)
     if col_count:
         worksheet.set_column(1, col_count, 11)
 
-    # 行3: 過去購入タイトル（データ領域の上）
-    # 行4: 列見出し / 行5〜: データ
-    past_title_row = 3
-    header_row = 4
-    data_start_row = 5
-
-    if col_count:
-        worksheet.merge_range(
-            past_title_row,
-            1,
-            past_title_row,
-            col_count,
-            past_label,
-            axis_title_center,
-        )
+    # 行3: 列見出し / 行4〜: データ
+    header_row = 3
+    data_start_row = 4
 
     for j, column in enumerate(columns):
         worksheet.write(
@@ -175,6 +161,33 @@ def build_volume_matrix_xlsx(
             data_end_col,
             cell_style,
         )
+
+    workbook.close()
+    return bio.getvalue()
+
+
+def _build_volume_matrix_png_xlsx(payload: dict[str, Any]) -> bytes:
+    meta = payload.get("meta") or {}
+    note = str(meta.get("note") or "")
+
+    png_bytes, _, _ = render_volume_matrix_png(payload)
+
+    bio = BytesIO()
+    workbook = Workbook(bio, {"in_memory": True})
+    worksheet = workbook.add_worksheet("ブランドクロス")
+
+    bold = workbook.add_format({"bold": True, "font_size": 14})
+    note_format = workbook.add_format({"font_size": 10, "font_color": "#555555"})
+
+    worksheet.write("A1", VOLUME_MATRIX_TITLE, bold)
+    if note:
+        worksheet.write("A2", note, note_format)
+
+    worksheet.insert_image(
+        "A4",
+        "volume-matrix.png",
+        {"image_data": BytesIO(png_bytes)},
+    )
 
     workbook.close()
     return bio.getvalue()
