@@ -34,8 +34,8 @@ ModuleRegistry.registerModules([
   ContextMenuModule,
 ])
 
-const PREV_PERIOD = '直近・1ヶ月'
-const CURR_PERIOD = '当月・11月'
+const PREV_RANGE = '2602-2604'
+const CURR_RANGE = '2606-2607'
 const FLOW_BAND_TITLE = '流出入（金額）'
 
 const barValueLabel: AgBarSeriesLabelOptions<
@@ -153,19 +153,24 @@ function SummaryHeader({ sample }: { sample: PurchaseInOutSample }) {
     <div className="pio-summary">
       <div className="pio-kpi">
         <span className="pio-kpi-brand">{meta.brandLabel}</span>
-        <div className="pio-kpi-pair">
-          <div className="pio-kpi-box">
-            <span className="pio-kpi-cap">{PREV_PERIOD}</span>
-            <span className="pio-kpi-value">
-              {summary.previousPercent.toFixed(1)}%
-            </span>
+        <div className="pio-kpi-pair-wrap">
+          <div className="pio-kpi-range-row">
+            <span className="pio-kpi-range">{PREV_RANGE}</span>
+            <span className="pio-kpi-range-arrow" aria-hidden></span>
+            <span className="pio-kpi-range">{CURR_RANGE}</span>
           </div>
-          <span className="pio-kpi-arrow" aria-hidden />
-          <div className="pio-kpi-box">
-            <span className="pio-kpi-cap">{CURR_PERIOD}</span>
-            <span className="pio-kpi-value">
-              {summary.currentPercent.toFixed(1)}%
-            </span>
+          <div className="pio-kpi-pair">
+            <div className="pio-kpi-box">
+              <span className="pio-kpi-value">
+                {summary.previousPercent.toFixed(1)}%
+              </span>
+            </div>
+            <span className="pio-kpi-arrow" aria-hidden />
+            <div className="pio-kpi-box">
+              <span className="pio-kpi-value">
+                {summary.currentPercent.toFixed(1)}%
+              </span>
+            </div>
           </div>
         </div>
       </div>

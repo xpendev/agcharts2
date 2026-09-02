@@ -14,8 +14,8 @@ PurchaseInOutSummaryStyle = Literal["png", "objects"]
 COLOR_OUTFLOW = "#C44B4B"
 COLOR_INFLOW = "#5A9E4A"
 COLOR_RETAIN = "#A8B4C0"
-PREV_PERIOD = "直近・1ヶ月"
-CURR_PERIOD = "当月・11月"
+PREV_RANGE = "2602-2604"
+CURR_RANGE = "2606-2607"
 MAIN_CHART_WIDTH = 720
 SUMMARY_IMAGE_ANCHOR = "E3"
 SUMMARY_CHART_GAP_PX = 6
@@ -49,7 +49,7 @@ def _series_labels(
     ]
 
 
-def _kpi_box_options(*, width: int = 110, height: int = 52) -> dict[str, Any]:
+def _kpi_box_options(*, width: int = 110, height: int = 40) -> dict[str, Any]:
     return {
         "width": width,
         "height": height,
@@ -144,15 +144,16 @@ def _insert_summary_objects(
     )
 
     worksheet.write("E3", brand_label, section)
-    worksheet.write("F3", PREV_PERIOD, caption)
-    worksheet.write("I3", CURR_PERIOD, caption)
-    worksheet.insert_textbox("F4", f"{prev_pct:.1f}%", _kpi_box_options())
+    worksheet.write("F2", PREV_RANGE, caption)
+    worksheet.write("H2", "→", caption)
+    worksheet.write("I2", CURR_RANGE, caption)
+    worksheet.insert_textbox("F3", f"{prev_pct:.1f}%", _kpi_box_options())
     worksheet.insert_textbox(
-        "H4",
+        "H3",
         "→",
         {
             "width": 36,
-            "height": 52,
+            "height": 40,
             "x_offset": 8,
             "font": {"size": 22, "bold": True, "color": "#888888"},
             "align": {"vertical": "middle", "horizontal": "center"},
@@ -160,7 +161,7 @@ def _insert_summary_objects(
             "fill": {"none": True},
         },
     )
-    worksheet.insert_textbox("I4", f"{curr_pct:.1f}%", _kpi_box_options())
+    worksheet.insert_textbox("I3", f"{curr_pct:.1f}%", _kpi_box_options())
 
     worksheet.merge_range("E7:K7", title, section_center)
     worksheet.merge_range("H8:I8", "維持", retain_caption)

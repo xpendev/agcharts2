@@ -5,8 +5,8 @@ from typing import Any
 
 from PIL import Image, ImageDraw, ImageFont
 
-PREV_PERIOD = "直近・1ヶ月"
-CURR_PERIOD = "当月・11月"
+PREV_RANGE = "2602-2604"
+CURR_RANGE = "2606-2607"
 
 COLOR_OUTFLOW = "#c44b4b"
 COLOR_INFLOW = "#5a9e4a"
@@ -35,6 +35,8 @@ FLOW_TITLE_MARGIN_BOTTOM = 6
 RETAIN_CAP_ROW = 14
 FLOW_ROW_HEIGHT = 34
 FLOW_BOTTOM_PADDING = 12
+RANGE_ROW_HEIGHT = 14
+RANGE_GAP = 4
 
 SUMMARY_IMAGE_WIDTH = 720
 
@@ -117,9 +119,7 @@ def _draw_kpi_box(
     y: float,
     width: float,
     height: float,
-    caption: str,
     value: str,
-    caption_font: ImageFont.FreeTypeFont | ImageFont.ImageFont,
     value_font: ImageFont.FreeTypeFont | ImageFont.ImageFont,
 ) -> None:
     draw.rounded_rectangle(
@@ -129,20 +129,11 @@ def _draw_kpi_box(
         outline=COLOR_BOX_BORDER,
         width=1,
     )
-    center_x = x + width / 2
-    _draw_centered_text(
-        draw,
-        caption,
-        center_x,
-        y + BOX_PAD_Y + 7,
-        caption_font,
-        COLOR_MUTED,
-    )
     _draw_centered_text(
         draw,
         value,
-        center_x,
-        y + height - BOX_PAD_Y - 11,
+        x + width / 2,
+        y + height / 2,
         value_font,
         COLOR_TEXT,
     )
@@ -178,17 +169,18 @@ def render_purchase_in_out_summary_png(
     brand_width = _text_width(measure_draw, brand_label, brand_font)
     box_width = max(
         BOX_MIN_WIDTH,
-        _text_width(measure_draw, PREV_PERIOD, caption_font) + BOX_PAD_X * 2,
-        _text_width(measure_draw, CURR_PERIOD, caption_font) + BOX_PAD_X * 2,
+        _text_width(measure_draw, PREV_RANGE, caption_font) + BOX_PAD_X * 2,
+        _text_width(measure_draw, CURR_RANGE, caption_font) + BOX_PAD_X * 2,
         _text_width(measure_draw, prev_value, value_font) + BOX_PAD_X * 2,
         _text_width(measure_draw, curr_value, value_font) + BOX_PAD_X * 2,
     )
-    box_height = BOX_PAD_Y * 2 + 14 + 22
+    box_height = BOX_PAD_Y * 2 + 22
     pair_width = box_width * 2 + PAIR_GAP * 2 + ARROW_WIDTH
     kpi_width = brand_width + KPI_GAP + pair_width
     kpi_start_x = (width - kpi_width) / 2
+    pair_block_height = RANGE_ROW_HEIGHT + RANGE_GAP + box_height
 
-    kpi_section_height = box_height + KPI_PADDING_BOTTOM + 1
+    kpi_section_height = pair_block_height + KPI_PADDING_BOTTOM + 1
     flow_title_y = kpi_section_height + SUMMARY_GAP + 10
     retain_cap_y = flow_title_y + 16
     flow_row_y = (
@@ -199,7 +191,7 @@ def render_purchase_in_out_summary_png(
     image = Image.new("RGB", (width, height), "#ffffff")
     draw = ImageDraw.Draw(image)
 
-    kpi_center_y = box_height / 2
+    kpi_center_y = RANGE_ROW_HEIGHT + RANGE_GAP + box_height / 2
     pair_start_x = kpi_start_x + brand_width + KPI_GAP
     _draw_centered_text(
         draw,
@@ -209,15 +201,44 @@ def render_purchase_in_out_summary_png(
         brand_font,
         COLOR_BRAND,
     )
+    range_center_y = RANGE_ROW_HEIGHT / 2
+    left_box_center_x = pair_start_x + box_width / 2
+    right_box_center_x = (
+        pair_start_x + box_width + PAIR_GAP + ARROW_WIDTH + PAIR_GAP + box_width / 2
+    )
+    arrow_center_x = pair_start_x + box_width + PAIR_GAP + ARROW_WIDTH / 2
+    _draw_centered_text(
+        draw,
+        PREV_RANGE,
+        left_box_center_x,
+        range_center_y,
+        caption_font,
+        COLOR_MUTED,
+    )
+    _draw_centered_text(
+        draw,
+        "→",
+        arrow_center_x,
+        range_center_y,
+        caption_font,
+        COLOR_MUTED,
+    )
+    _draw_centered_text(
+        draw,
+        CURR_RANGE,
+        right_box_center_x,
+        range_center_y,
+        caption_font,
+        COLOR_MUTED,
+    )
+    box_top = RANGE_ROW_HEIGHT + RANGE_GAP
     _draw_kpi_box(
         draw,
         pair_start_x,
-        0,
+        box_top,
         box_width,
         box_height,
-        PREV_PERIOD,
         prev_value,
-        caption_font,
         value_font,
     )
     _draw_arrow(
@@ -230,12 +251,10 @@ def render_purchase_in_out_summary_png(
     _draw_kpi_box(
         draw,
         pair_start_x + box_width + PAIR_GAP + ARROW_WIDTH + PAIR_GAP,
-        0,
+        box_top,
         box_width,
         box_height,
-        CURR_PERIOD,
         curr_value,
-        caption_font,
         value_font,
     )
 
