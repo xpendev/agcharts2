@@ -145,7 +145,6 @@ def _insert_summary_objects(
 
     worksheet.write("E3", brand_label, section)
     worksheet.write("F2", PREV_RANGE, caption)
-    worksheet.write("H2", "→", caption)
     worksheet.write("I2", CURR_RANGE, caption)
     worksheet.insert_textbox("F3", f"{prev_pct:.1f}%", _kpi_box_options())
     worksheet.insert_textbox(

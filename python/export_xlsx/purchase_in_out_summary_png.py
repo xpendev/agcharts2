@@ -206,19 +206,10 @@ def render_purchase_in_out_summary_png(
     right_box_center_x = (
         pair_start_x + box_width + PAIR_GAP + ARROW_WIDTH + PAIR_GAP + box_width / 2
     )
-    arrow_center_x = pair_start_x + box_width + PAIR_GAP + ARROW_WIDTH / 2
     _draw_centered_text(
         draw,
         PREV_RANGE,
         left_box_center_x,
-        range_center_y,
-        caption_font,
-        COLOR_MUTED,
-    )
-    _draw_centered_text(
-        draw,
-        "→",
-        arrow_center_x,
         range_center_y,
         caption_font,
         COLOR_MUTED,
