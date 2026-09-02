@@ -32,7 +32,11 @@ def normalize_cell_style(raw: str | None) -> VolumeMatrixCellStyle:
 CATEGORY_USER_ID = "category-user"
 
 
-VOLUME_MATRIX_TITLE = "⑦ブランドクロス"
+VOLUME_MATRIX_SHEET_TITLE = "⑦ブランドクロス"
+VOLUME_MATRIX_PERIOD_LABEL = "併売26/05-26/07"
+# D3 = 0-index (row 2, col 3)
+_PERIOD_LABEL_ROW = 2
+_PERIOD_LABEL_COL = 3
 
 
 def build_volume_matrix_xlsx(
@@ -64,6 +68,14 @@ def build_volume_matrix_xlsx(
     worksheet = workbook.add_worksheet("ブランドクロス")
 
     bold = workbook.add_format({"bold": True, "font_size": 14})
+    period_label = workbook.add_format(
+        {
+            "bold": True,
+            "font_size": 11,
+            "align": "center",
+            "valign": "vcenter",
+        }
+    )
     col_header = workbook.add_format(
         {
             "bold": True,
@@ -105,16 +117,23 @@ def build_volume_matrix_xlsx(
         }
     )
 
-    worksheet.write("A1", VOLUME_MATRIX_TITLE, bold)
+    worksheet.write("A1", VOLUME_MATRIX_SHEET_TITLE, bold)
     worksheet.set_column("A:A", 16)
 
     col_count = len(columns)
     if col_count:
         worksheet.set_column(1, col_count, 11)
 
-    # 行3: 列見出し / 行4〜: データ
-    header_row = 3
-    data_start_row = 4
+    # 行3: D3 のみ期間ラベル / 行4: 列見出し / 行5〜: データ
+    header_row = 4
+    data_start_row = 5
+
+    worksheet.write(
+        _PERIOD_LABEL_ROW,
+        _PERIOD_LABEL_COL,
+        VOLUME_MATRIX_PERIOD_LABEL,
+        period_label,
+    )
 
     for j, column in enumerate(columns):
         worksheet.write(
@@ -179,7 +198,7 @@ def _build_volume_matrix_png_xlsx(payload: dict[str, Any]) -> bytes:
     bold = workbook.add_format({"bold": True, "font_size": 14})
     note_format = workbook.add_format({"font_size": 10, "font_color": "#555555"})
 
-    worksheet.write("A1", VOLUME_MATRIX_TITLE, bold)
+    worksheet.write("A1", VOLUME_MATRIX_SHEET_TITLE, bold)
     if note:
         worksheet.write("A2", note, note_format)
 

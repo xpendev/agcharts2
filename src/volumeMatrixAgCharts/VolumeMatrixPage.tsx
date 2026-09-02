@@ -52,6 +52,7 @@ const XLSX_CELL_STYLE_OPTIONS: {
 ]
 
 const TITLE_COLOR = '#222222'
+const CHART_TITLE = '併買（26/05 - 26/07）'
 const AXIS_LABEL = '#333333'
 const GRID = '#b0b0b0'
 const BACKGROUND = '#ffffff'
@@ -181,7 +182,7 @@ function buildVolumeMatrixOptions(
     contextMenu: createChartContextMenu(getChart),
     padding: { top: 16, right: 16, bottom: 8, left: 8 },
     title: {
-      text: '・⑦ブランドクロス',
+      text: CHART_TITLE,
       color: TITLE_COLOR,
       fontSize: 16,
       fontWeight: 'bold',

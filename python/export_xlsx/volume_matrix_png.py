@@ -25,7 +25,7 @@ TITLE_COLOR = "#222222"
 AXIS_LABEL = "#333333"
 GRID = "#b0b0b0"
 BACKGROUND = "#ffffff"
-VOLUME_MATRIX_TITLE = "⑦ブランドクロス"
+VOLUME_MATRIX_CHART_TITLE = "併買（26/05 - 26/07）"
 
 _FONT_CANDIDATES: tuple[tuple[str, ...], ...] = (
     (
@@ -213,7 +213,7 @@ def render_volume_matrix_png(
     image = Image.new("RGB", (image_w, image_h), BACKGROUND)
     draw = ImageDraw.Draw(image)
 
-    draw.text((12, 12), VOLUME_MATRIX_TITLE, font=title_font, fill=TITLE_COLOR)
+    draw.text((12, 12), VOLUME_MATRIX_CHART_TITLE, font=title_font, fill=TITLE_COLOR)
     if note:
         draw.text((12, 36), note, font=subtitle_font, fill=AXIS_LABEL)
 
