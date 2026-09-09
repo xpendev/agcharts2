@@ -205,8 +205,7 @@ function buildVolumeMatrixOptions(
         maxSize,
         sizeDomain: [0, sizeDomainMax],
         fillOpacity: 0.78,
-        stroke: '#333333',
-        strokeWidth: 0.8,
+        strokeWidth: 0,
         itemStyler: ({ datum }: { datum: unknown }) => {
           const cell = datum as ChartCell
           if (cell.hideBubble) {
@@ -218,8 +217,7 @@ function buildVolumeMatrixOptions(
           return {
             fill: cell.fill,
             fillOpacity: cell.value <= 0 ? 0.15 : 0.78,
-            stroke: '#333333',
-            strokeWidth: 0.8,
+            strokeWidth: 0,
           }
         },
         label: {
