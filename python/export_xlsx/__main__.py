@@ -9,10 +9,7 @@ from export_xlsx.brand_diverging import build_brand_diverging_xlsx
 from export_xlsx.buyer_dropout import build_buyer_dropout_xlsx
 from export_xlsx.competitive_impact import build_competitive_impact_xlsx
 from export_xlsx.data import load_report_payload
-from export_xlsx.purchase_in_out import (
-    build_purchase_in_out_xlsx,
-    normalize_summary_style,
-)
+from export_xlsx.purchase_in_out import build_purchase_in_out_xlsx
 from export_xlsx.volume_matrix import build_volume_matrix_xlsx, normalize_cell_style
 from export_xlsx.waterfall import build_waterfall_xlsx
 
@@ -53,12 +50,6 @@ def main(argv: list[str] | None = None) -> int:
         default="icon-set",
         help="volume-matrix の出力形式（icon-set / data-bar / png）",
     )
-    parser.add_argument(
-        "--summary-style",
-        choices=("png", "objects"),
-        default="png",
-        help="purchase-in-out の上段（png / objects）",
-    )
     args = parser.parse_args(argv)
 
     payload = load_report_payload(args.data_dir, args.report, args.size)
@@ -66,11 +57,6 @@ def main(argv: list[str] | None = None) -> int:
         xlsx_bytes = build_volume_matrix_xlsx(
             payload,
             cell_style=normalize_cell_style(args.cell_style),
-        )
-    elif args.report == "purchase-in-out":
-        xlsx_bytes = build_purchase_in_out_xlsx(
-            payload,
-            summary_style=normalize_summary_style(args.summary_style),
         )
     else:
         builder = BUILDERS.get(args.report)

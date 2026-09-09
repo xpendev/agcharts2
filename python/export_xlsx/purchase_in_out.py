@@ -2,32 +2,13 @@ from __future__ import annotations
 
 from io import BytesIO
 from math import ceil
-from typing import Any, Literal
+from typing import Any
 
 from xlsxwriter import Workbook
-from xlsxwriter.worksheet import Worksheet
-
-from export_xlsx.purchase_in_out_summary_png import render_purchase_in_out_summary_png
-
-PurchaseInOutSummaryStyle = Literal["png", "objects"]
 
 COLOR_OUTFLOW = "#C44B4B"
 COLOR_INFLOW = "#5A9E4A"
-COLOR_RETAIN = "#A8B4C0"
-PREV_RANGE = "2602-2604"
-CURR_RANGE = "2606-2607"
 MAIN_CHART_WIDTH = 720
-SUMMARY_IMAGE_ANCHOR = "E3"
-SUMMARY_CHART_GAP_PX = 6
-SUMMARY_IMAGE_X_SCALE = 1.0
-SUMMARY_IMAGE_Y_SCALE = 1.0
-OBJECTS_MAIN_CHART_ANCHOR = "E15"
-
-
-def normalize_summary_style(raw: str | None) -> PurchaseInOutSummaryStyle:
-    if raw in ("objects", "object", "native", "excel"):
-        return "objects"
-    return "png"
 
 
 def _format_bar_label(value: float) -> str:
@@ -49,181 +30,10 @@ def _series_labels(
     ]
 
 
-def _kpi_box_options(*, width: int = 110, height: int = 40) -> dict[str, Any]:
-    return {
-        "width": width,
-        "height": height,
-        "font": {"name": "Yu Gothic", "size": 18, "bold": True, "color": "#222222"},
-        "align": {"vertical": "middle", "horizontal": "center"},
-        "border": {"color": "#333333", "width": 1.25},
-        "fill": {"color": "#FFFFFF"},
-    }
-
-
-def _insert_summary_png(worksheet: Worksheet, payload: dict[str, Any]) -> int:
-    summary_png_bytes, _, summary_height = render_purchase_in_out_summary_png(
-        payload,
-        width=MAIN_CHART_WIDTH,
-    )
-    summary_png = BytesIO(summary_png_bytes)
-    worksheet.insert_image(
-        SUMMARY_IMAGE_ANCHOR,
-        "purchase-in-out-summary.png",
-        {
-            "image_data": summary_png,
-            "x_scale": SUMMARY_IMAGE_X_SCALE,
-            "y_scale": SUMMARY_IMAGE_Y_SCALE,
-        },
-    )
-    return int(summary_height * SUMMARY_IMAGE_Y_SCALE)
-
-
-def _insert_summary_objects(
-    worksheet: Worksheet,
-    workbook: Workbook,
-    payload: dict[str, Any],
-    sheet_name: str,
-) -> None:
-    meta = payload.get("meta") or {}
-    summary = payload.get("summary") or {}
-    title = str(meta.get("title") or "流出入（金額）")
-    brand_label = str(meta.get("brandLabel") or "ブランド")
-
-    prev_pct = float(summary.get("previousPercent") or 0)
-    curr_pct = float(summary.get("currentPercent") or 0)
-    outflow_pct = abs(float(summary.get("outflowPercent") or 0))
-    retained_pct = abs(float(summary.get("retainedPercent") or 0))
-    inflow_pct = abs(float(summary.get("inflowPercent") or 0))
-
-    section = workbook.add_format({"bold": True, "font_size": 11})
-    section_center = workbook.add_format(
-        {"bold": True, "font_size": 11, "align": "center", "valign": "vcenter"}
-    )
-    caption = workbook.add_format({"font_size": 9, "font_color": "#555555"})
-    retain_caption = workbook.add_format(
-        {
-            "font_size": 9,
-            "font_color": "#555555",
-            "align": "center",
-            "valign": "vcenter",
-        }
-    )
-    side = workbook.add_format({"font_size": 10, "bold": True})
-    band_out = workbook.add_format(
-        {
-            "bg_color": COLOR_OUTFLOW,
-            "font_color": "#FFFFFF",
-            "bold": True,
-            "align": "center",
-            "valign": "vcenter",
-            "border": 1,
-            "border_color": "#333333",
-        }
-    )
-    band_mid = workbook.add_format(
-        {
-            "bg_color": COLOR_RETAIN,
-            "font_color": "#FFFFFF",
-            "bold": True,
-            "align": "center",
-            "valign": "vcenter",
-            "border": 1,
-            "border_color": "#333333",
-        }
-    )
-    band_in = workbook.add_format(
-        {
-            "bg_color": COLOR_INFLOW,
-            "font_color": "#FFFFFF",
-            "bold": True,
-            "align": "center",
-            "valign": "vcenter",
-            "border": 1,
-            "border_color": "#333333",
-        }
-    )
-
-    worksheet.write("E3", brand_label, section)
-    worksheet.write("F2", PREV_RANGE, caption)
-    worksheet.write("I2", CURR_RANGE, caption)
-    worksheet.insert_textbox("F3", f"{prev_pct:.1f}%", _kpi_box_options())
-    worksheet.insert_textbox(
-        "H3",
-        "→",
-        {
-            "width": 36,
-            "height": 40,
-            "x_offset": 8,
-            "font": {"size": 22, "bold": True, "color": "#888888"},
-            "align": {"vertical": "middle", "horizontal": "center"},
-            "line": {"none": True},
-            "fill": {"none": True},
-        },
-    )
-    worksheet.insert_textbox("I3", f"{curr_pct:.1f}%", _kpi_box_options())
-
-    worksheet.merge_range("E7:K7", title, section_center)
-    worksheet.merge_range("H8:I8", "維持", retain_caption)
-    worksheet.write("E10", "流出", side)
-    worksheet.write("L10", "流入", side)
-    worksheet.merge_range("F10:G10", f"-{outflow_pct:.1f}%", band_out)
-    worksheet.merge_range("H10:I10", f"{retained_pct:.1f}%", band_mid)
-    worksheet.merge_range("J10:K10", f"+{inflow_pct:.1f}%", band_in)
-
-    worksheet.write("AA1", "帯")
-    worksheet.write_number("AB1", outflow_pct)
-    worksheet.write_number("AC1", retained_pct)
-    worksheet.write_number("AD1", inflow_pct)
-    worksheet.write("AB2", "流出")
-    worksheet.write("AC2", "維持")
-    worksheet.write("AD2", "流入")
-    worksheet.set_column("AA:AD", None, None, {"hidden": True})
-
-    band_chart = workbook.add_chart({"type": "bar", "subtype": "percent_stacked"})
-    band_categories = [sheet_name, 0, 26, 0, 26]
-    for name, col, color in (
-        ("流出", 27, COLOR_OUTFLOW),
-        ("維持", 28, COLOR_RETAIN),
-        ("流入", 29, COLOR_INFLOW),
-    ):
-        band_chart.add_series(
-            {
-                "name": name,
-                "categories": band_categories,
-                "values": [sheet_name, 0, col, 0, col],
-                "fill": {"color": color},
-                "border": {"color": "#333333"},
-                "data_labels": {
-                    "value": True,
-                    "position": "center",
-                    "num_format": '0.0"%"',
-                    "font": {"size": 10, "color": "#FFFFFF", "bold": True},
-                },
-            }
-        )
-    band_chart.set_legend({"position": "none"})
-    band_chart.set_title({"none": True})
-    band_chart.set_y_axis({"visible": False})
-    band_chart.set_x_axis(
-        {
-            "visible": False,
-            "major_gridlines": {"visible": False},
-        }
-    )
-    band_chart.set_chartarea({"border": {"none": True}, "fill": {"none": True}})
-    band_chart.set_plotarea({"border": {"none": True}, "fill": {"none": True}})
-    band_chart.set_size({"width": 420, "height": 70})
-    worksheet.insert_chart("F12", band_chart)
-
-
-def build_purchase_in_out_xlsx(
-    payload: dict[str, Any],
-    *,
-    summary_style: PurchaseInOutSummaryStyle = "png",
-) -> bytes:
+def build_purchase_in_out_xlsx(payload: dict[str, Any]) -> bytes:
     """
     ④シェア流出・流入比較。
-    左: 数表 / 右: 上段（PNG または Excel オブジェクト）＋本グラフ。
+    左: 数表 / 右: 流出・流入の積上横棒（xlsxwriter ネイティブチャート）。
     """
     rows: list[dict[str, Any]] = list(payload.get("rows") or [])
 
@@ -239,15 +49,11 @@ def build_purchase_in_out_xlsx(
     worksheet.write("A1", "・④シェア流出・流入比較", bold)
     worksheet.set_column("A:A", 14)
     worksheet.set_column("B:C", 10)
-    worksheet.set_column("D:D", 3)
-    worksheet.set_column("E:K", 11)
-    worksheet.set_column("L:L", 8)
 
     table_header_row = 3
-    table_col = 0
     worksheet.write_row(
         table_header_row,
-        table_col,
+        0,
         ["ブランド", "流出", "流入"],
         header,
     )
@@ -264,22 +70,16 @@ def build_purchase_in_out_xlsx(
         outflow_values.append(outflow_neg)
         inflow_values.append(inflow)
         r = data_start + i
-        worksheet.write(r, table_col, label)
-        worksheet.write_number(r, table_col + 1, outflow_neg, number)
-        worksheet.write_number(r, table_col + 2, inflow, number)
-
-    summary_display_height: int | None = None
-    if summary_style == "objects":
-        _insert_summary_objects(worksheet, workbook, payload, sheet_name)
-    else:
-        summary_display_height = _insert_summary_png(worksheet, payload)
+        worksheet.write(r, 0, label)
+        worksheet.write_number(r, 1, outflow_neg, number)
+        worksheet.write_number(r, 2, inflow, number)
 
     if not chart_rows:
         workbook.close()
         return bio.getvalue()
 
     data_end = data_start + len(chart_rows) - 1
-    categories = [sheet_name, data_start, table_col, data_end, table_col]
+    categories = [sheet_name, data_start, 0, data_end, 0]
 
     max_abs = max(
         0.5,
@@ -293,7 +93,7 @@ def build_purchase_in_out_xlsx(
         {
             "name": "流出",
             "categories": categories,
-            "values": [sheet_name, data_start, table_col + 1, data_end, table_col + 1],
+            "values": [sheet_name, data_start, 1, data_end, 1],
             "fill": {"color": COLOR_OUTFLOW},
             "gap": 40,
             "data_labels": {
@@ -306,7 +106,7 @@ def build_purchase_in_out_xlsx(
         {
             "name": "流入",
             "categories": categories,
-            "values": [sheet_name, data_start, table_col + 2, data_end, table_col + 2],
+            "values": [sheet_name, data_start, 2, data_end, 2],
             "fill": {"color": COLOR_INFLOW},
             "data_labels": {
                 "position": "inside_end",
@@ -346,15 +146,7 @@ def build_purchase_in_out_xlsx(
         }
     )
     chart.set_size({"width": MAIN_CHART_WIDTH, "height": chart_height})
-
-    if summary_style == "objects":
-        worksheet.insert_chart(OBJECTS_MAIN_CHART_ANCHOR, chart)
-    else:
-        worksheet.insert_chart(
-            SUMMARY_IMAGE_ANCHOR,
-            chart,
-            {"y_offset": (summary_display_height or 0) + SUMMARY_CHART_GAP_PX},
-        )
+    worksheet.insert_chart("E4", chart)
 
     workbook.close()
     return bio.getvalue()

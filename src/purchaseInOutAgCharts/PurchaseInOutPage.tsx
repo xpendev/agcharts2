@@ -255,17 +255,6 @@ export function PurchaseInOutPage() {
             reportKey="purchase-in-out"
             size={size}
             disabled={!sample || isLoading}
-            label="XlsX出力（PNG）"
-            queryParams={{ summaryStyle: 'png' }}
-            fileSuffix="png"
-          />
-          <XlsxExportButton
-            reportKey="purchase-in-out"
-            size={size}
-            disabled={!sample || isLoading}
-            label="XlsX出力（オブジェクト）"
-            queryParams={{ summaryStyle: 'objects' }}
-            fileSuffix="objects"
           />
         </div>
       </header>

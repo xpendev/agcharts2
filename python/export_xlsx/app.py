@@ -9,10 +9,7 @@ from export_xlsx.brand_composition import build_brand_composition_xlsx
 from export_xlsx.brand_diverging import build_brand_diverging_xlsx
 from export_xlsx.buyer_dropout import build_buyer_dropout_xlsx
 from export_xlsx.competitive_impact import build_competitive_impact_xlsx
-from export_xlsx.purchase_in_out import (
-    build_purchase_in_out_xlsx,
-    normalize_summary_style,
-)
+from export_xlsx.purchase_in_out import build_purchase_in_out_xlsx
 from export_xlsx.volume_matrix import build_volume_matrix_xlsx, normalize_cell_style
 from export_xlsx.waterfall import build_waterfall_xlsx
 from export_xlsx.data import SIZE_MIN, clamp_size, load_report_payload
@@ -47,14 +44,7 @@ def create_app(data_dir: Path | None = None) -> Flask:
             elif report == "brand-diverging":
                 xlsx_bytes = build_brand_diverging_xlsx(payload)
             elif report == "purchase-in-out":
-                summary_style = normalize_summary_style(
-                    request.args.get("summaryStyle")
-                )
-                xlsx_bytes = build_purchase_in_out_xlsx(
-                    payload,
-                    summary_style=summary_style,
-                )
-                file_name = f"{report}-{size}-{summary_style}.xlsx"
+                xlsx_bytes = build_purchase_in_out_xlsx(payload)
             elif report == "competitive-impact":
                 xlsx_bytes = build_competitive_impact_xlsx(payload)
             elif report == "volume-matrix":
@@ -71,7 +61,7 @@ def create_app(data_dir: Path | None = None) -> Flask:
         except Exception as error:  # noqa: BLE001 — API 境界で返却
             return jsonify({"error": str(error)}), 500
 
-        if report not in ("volume-matrix", "purchase-in-out"):
+        if report != "volume-matrix":
             file_name = f"{report}-{size}.xlsx"
         return Response(
             xlsx_bytes,
