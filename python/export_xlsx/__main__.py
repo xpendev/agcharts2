@@ -10,7 +10,11 @@ from export_xlsx.buyer_dropout import build_buyer_dropout_xlsx
 from export_xlsx.competitive_impact import build_competitive_impact_xlsx
 from export_xlsx.data import load_report_payload
 from export_xlsx.purchase_in_out import build_purchase_in_out_xlsx
-from export_xlsx.volume_matrix import build_volume_matrix_xlsx, normalize_cell_style
+from export_xlsx.volume_matrix import (
+    build_volume_matrix_png_xlsx,
+    build_volume_matrix_xlsx,
+    normalize_cell_style,
+)
 from export_xlsx.waterfall import build_waterfall_xlsx
 
 BUILDERS = {
@@ -19,8 +23,6 @@ BUILDERS = {
     "buyer-dropout": build_buyer_dropout_xlsx,
     "competitive-impact": build_competitive_impact_xlsx,
     "purchase-in-out": build_purchase_in_out_xlsx,
-    "volume-matrix": build_volume_matrix_xlsx,
-    "waterfall": build_waterfall_xlsx,
 }
 
 
@@ -28,15 +30,25 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="帳票 xlsx を生成する（xlsxwriter）")
     parser.add_argument(
         "report",
-        choices=sorted(BUILDERS.keys()),
+        choices=sorted(
+            [
+                *BUILDERS.keys(),
+                "volume-matrix",
+                "waterfall",
+            ]
+        ),
         help="帳票キー",
     )
     parser.add_argument("--size", type=int, required=True, help="データ size パラメータ")
     parser.add_argument(
         "--data-dir",
         type=Path,
-        required=True,
-        help="api/data ディレクトリ",
+        help="api/data ディレクトリ（JSON 帳票用）",
+    )
+    parser.add_argument(
+        "--png",
+        type=Path,
+        help="貼り付ける PNG（waterfall / volume-matrix png 用）",
     )
     parser.add_argument(
         "-o",
@@ -52,16 +64,29 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
-    payload = load_report_payload(args.data_dir, args.report, args.size)
-    if args.report == "volume-matrix":
-        xlsx_bytes = build_volume_matrix_xlsx(
-            payload,
-            cell_style=normalize_cell_style(args.cell_style),
-        )
+    if args.report == "waterfall":
+        if args.png is None:
+            raise SystemExit("waterfall は --png が必要です。")
+        xlsx_bytes = build_waterfall_xlsx(args.png.read_bytes())
+    elif args.report == "volume-matrix":
+        cell_style = normalize_cell_style(args.cell_style)
+        if cell_style == "png":
+            if args.png is None:
+                raise SystemExit("volume-matrix の png は --png が必要です。")
+            xlsx_bytes = build_volume_matrix_png_xlsx(args.png.read_bytes())
+        else:
+            if args.data_dir is None:
+                raise SystemExit("--data-dir が必要です。")
+            payload = load_report_payload(args.data_dir, args.report, args.size)
+            xlsx_bytes = build_volume_matrix_xlsx(
+                payload,
+                cell_style=cell_style,
+            )
     else:
-        builder = BUILDERS.get(args.report)
-        if builder is None:
-            raise SystemExit(f"未対応の帳票: {args.report}")
+        if args.data_dir is None:
+            raise SystemExit("--data-dir が必要です。")
+        payload = load_report_payload(args.data_dir, args.report, args.size)
+        builder = BUILDERS[args.report]
         xlsx_bytes = builder(payload)
 
     if args.output is not None:

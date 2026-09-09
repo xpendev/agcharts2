@@ -11,7 +11,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { createChartContextMenu } from '../agChartsCommon'
+import { createChartContextMenu, getChartPngBlob } from '../agChartsCommon'
 import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchVolumeMatrix,
@@ -48,7 +48,7 @@ const XLSX_CELL_STYLE_OPTIONS: {
 }[] = [
   { value: 'icon-set', label: 'アイコンセット' },
   { value: 'data-bar', label: 'データバー' },
-  { value: 'png', label: 'PNG' },
+  { value: 'png', label: 'PNG（画面グラフ）' },
 ]
 
 const TITLE_COLOR = '#222222'
@@ -495,6 +495,11 @@ export function VolumeMatrixPage() {
             disabled={!sample || isLoading}
             queryParams={{ cellStyle: xlsxCellStyle }}
             fileSuffix={xlsxCellStyle}
+            getPng={
+              xlsxCellStyle === 'png'
+                ? () => getChartPngBlob(chartRef.current)
+                : undefined
+            }
           />
         </div>
       </header>

@@ -3,21 +3,26 @@ import type { AgContextMenuOptions } from 'ag-charts-enterprise'
 
 type ChartLike = Pick<AgChartInstance, 'getImageDataURL'> | null | undefined
 
-/** チャート PNG をクリップボードへコピーする */
-export async function copyChartPngToClipboard(chart: ChartLike): Promise<void> {
+/** チャートを PNG Blob として取得する */
+export async function getChartPngBlob(chart: ChartLike): Promise<Blob> {
   if (!chart) {
     throw new Error('グラフの準備ができていません。')
-  }
-  if (!navigator.clipboard?.write) {
-    throw new Error(
-      'このブラウザではクリップボードへの画像コピーに対応していません。',
-    )
   }
   const dataUrl = await chart.getImageDataURL()
   if (!dataUrl) {
     throw new Error('画像の生成に失敗しました。')
   }
-  const blob = await (await fetch(dataUrl)).blob()
+  return (await fetch(dataUrl)).blob()
+}
+
+/** チャート PNG をクリップボードへコピーする */
+export async function copyChartPngToClipboard(chart: ChartLike): Promise<void> {
+  if (!navigator.clipboard?.write) {
+    throw new Error(
+      'このブラウザではクリップボードへの画像コピーに対応していません。',
+    )
+  }
+  const blob = await getChartPngBlob(chart)
   await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
 }
 

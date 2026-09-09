@@ -5,7 +5,7 @@ from typing import Any, Literal
 
 from xlsxwriter import Workbook
 
-from export_xlsx.volume_matrix_png import render_volume_matrix_png
+from export_xlsx.png_xlsx import build_png_only_xlsx
 
 VolumeMatrixCellStyle = Literal["icon-set", "data-bar", "png"]
 
@@ -39,6 +39,15 @@ _PERIOD_LABEL_ROW = 2
 _PERIOD_LABEL_COL = 3
 
 
+def build_volume_matrix_png_xlsx(png_bytes: bytes) -> bytes:
+    """⑦ブランドクロス（PNG）。受け取った PNG を貼付するだけ。"""
+    return build_png_only_xlsx(
+        png_bytes,
+        sheet_name="ブランドクロス",
+        image_filename="volume-matrix.png",
+    )
+
+
 def build_volume_matrix_xlsx(
     payload: dict[str, Any],
     *,
@@ -47,10 +56,10 @@ def build_volume_matrix_xlsx(
     """
     ⑦ブランドクロス。
     icon-set / data-bar: (N+1)×N 表＋条件付き書式。
-    png: チャート相当の PNG をシートに貼り付け。
+    png は build_volume_matrix_png_xlsx を使用する。
     """
     if cell_style == "png":
-        return _build_volume_matrix_png_xlsx(payload)
+        raise ValueError("png モードは build_volume_matrix_png_xlsx を使ってください。")
 
     columns: list[dict[str, Any]] = list(payload.get("columns") or [])
     rows: list[dict[str, Any]] = list(payload.get("rows") or [])
@@ -180,27 +189,6 @@ def build_volume_matrix_xlsx(
             data_end_col,
             cell_style,
         )
-
-    workbook.close()
-    return bio.getvalue()
-
-
-def _build_volume_matrix_png_xlsx(payload: dict[str, Any]) -> bytes:
-    png_bytes, _, _ = render_volume_matrix_png(payload)
-
-    bio = BytesIO()
-    workbook = Workbook(bio, {"in_memory": True})
-    worksheet = workbook.add_worksheet("ブランドクロス")
-
-    bold = workbook.add_format({"bold": True, "font_size": 14})
-
-    worksheet.write("A1", VOLUME_MATRIX_SHEET_TITLE, bold)
-
-    worksheet.insert_image(
-        "A4",
-        "volume-matrix.png",
-        {"image_data": BytesIO(png_bytes)},
-    )
 
     workbook.close()
     return bio.getvalue()

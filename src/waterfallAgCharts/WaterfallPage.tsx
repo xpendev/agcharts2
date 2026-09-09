@@ -11,7 +11,7 @@ import {
 } from 'ag-charts-enterprise'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { createChartContextMenu } from '../agChartsCommon'
+import { createChartContextMenu, getChartPngBlob } from '../agChartsCommon'
 import { XlsxExportButton } from '../xlsxExport/XlsxExportButton'
 import {
   fetchWaterfall,
@@ -221,7 +221,12 @@ export function WaterfallPage() {
           <Link className="tn-page-link" to="/">
             トップ
           </Link>
-          <XlsxExportButton reportKey="waterfall" size={size} disabled={!sample} />
+          <XlsxExportButton
+            reportKey="waterfall"
+            size={size}
+            disabled={!sample}
+            getPng={() => getChartPngBlob(chartRef.current)}
+          />
         </div>
       </header>
 

@@ -11,11 +11,17 @@ type XlsxExportButtonProps = {
   fileSuffix?: string
   /** ボタン表示ラベル */
   label?: string
+  /**
+   * 指定時は AG Charts 等から得た PNG を POST し、サーバで Excel に貼付する。
+   * 未指定時は従来どおり GET /api/xlsx/{reportKey}?size=n
+   */
+  getPng?: () => Promise<Blob>
 }
 
 /**
  * 帳票共通: XlsX 出力ボタン。
  * GET /api/xlsx/{reportKey}?size=n → ダウンロード
+ * getPng あり: POST（body=PNG）→ ダウンロード
  */
 export function XlsxExportButton({
   reportKey,
@@ -24,6 +30,7 @@ export function XlsxExportButton({
   queryParams,
   fileSuffix,
   label = 'XlsX出力',
+  getPng,
 }: XlsxExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false)
 
@@ -36,7 +43,20 @@ export function XlsxExportButton({
           params.set(key, value)
         }
       }
-      const response = await fetch(`/api/xlsx/${reportKey}?${params.toString()}`)
+      const url = `/api/xlsx/${reportKey}?${params.toString()}`
+
+      let response: Response
+      if (getPng) {
+        const png = await getPng()
+        response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'image/png' },
+          body: png,
+        })
+      } else {
+        response = await fetch(url)
+      }
+
       if (!response.ok) {
         let detail = `HTTP ${response.status}`
         try {
@@ -48,14 +68,14 @@ export function XlsxExportButton({
         throw new Error(detail)
       }
       const blob = await response.blob()
-      const url = URL.createObjectURL(blob)
+      const objectUrl = URL.createObjectURL(blob)
       const anchor = document.createElement('a')
-      anchor.href = url
+      anchor.href = objectUrl
       anchor.download = fileSuffix
         ? `${reportKey}-${size}-${fileSuffix}.xlsx`
         : `${reportKey}-${size}.xlsx`
       anchor.click()
-      URL.revokeObjectURL(url)
+      URL.revokeObjectURL(objectUrl)
     } catch (error) {
       window.alert(
         error instanceof Error
