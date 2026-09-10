@@ -97,6 +97,7 @@ function cellSize(
  * マス数に応じたバブルの minSize / maxSize を返す。
  * maxSize＝min(1マスの幅, 1マスの高さ) × BUBBLE_MAX_FILL_RATIO
  * minSize＝maxSize × BUBBLE_MIN_SIZE_RATIO
+ * ※ズーム時は「見えている列・行数」を渡す
  */
 function bubbleSizesForMatrix(
   colCount: number,
@@ -118,10 +119,17 @@ function bubbleLabelFontSize(maxSize: number): number {
   return Math.round(maxSize * BUBBLE_LABEL_SIZE_RATIO)
 }
 
-function buildOptions(sample: BubbleCategorySample): AgCartesianChartOptions {
+/** ズーム後の可視割合（1=全体、小さいほど拡大） */
+type ZoomSpan = { x: number; y: number }
+
+function buildOptions(
+  sample: BubbleCategorySample,
+  zoomSpan: ZoomSpan,
+  onZoomSpan: (span: ZoomSpan) => void,
+): AgCartesianChartOptions {
   const { minSize, maxSize } = bubbleSizesForMatrix(
-    sample.columns.length,
-    sample.rows.length,
+    sample.columns.length * zoomSpan.x,
+    sample.rows.length * zoomSpan.y,
   )
   const labelFontSize = bubbleLabelFontSize(maxSize)
 
@@ -135,9 +143,21 @@ function buildOptions(sample: BubbleCategorySample): AgCartesianChartOptions {
     },
     legend: { enabled: false },
     // AG Charts 標準 Zoom（ホイール拡大・ドラッグパン・ダブルクリックでリセット）
+    // 軸上のドラッグ／スクロールズームは無効（プロット領域のみ）
     zoom: {
       enabled: true,
       axes: 'xy',
+      enableAxisDragging: false,
+      enableAxisScrolling: false,
+      // minSize/maxSize 更新時もズーム位置を維持
+      onDataChange: { strategy: 'preserveRatios' },
+    },
+    listeners: {
+      zoom: (event) => {
+        const x = event.ratioX.end - event.ratioX.start
+        const y = event.ratioY.end - event.ratioY.start
+        onZoomSpan({ x, y })
+      },
     },
     seriesArea: {
       border: {
@@ -239,11 +259,14 @@ export function VolumeMatrixBubbleCategoriesPage() {
   const [message, setMessage] = useState<string | null>(null)
   const [xlsxCellStyle, setXlsxCellStyle] =
     useState<VolumeMatrixXlsxCellStyle>('icon-set')
+  /** ズーム可視割合。拡大すると小さくなり、バブルを大きくする */
+  const [zoomSpan, setZoomSpan] = useState<ZoomSpan>({ x: 1, y: 1 })
 
   useEffect(() => {
     let cancelled = false
     setIsLoading(true)
     setMessage(null)
+    setZoomSpan({ x: 1, y: 1 })
 
     void fetchBubbleCategorySample(matrixSize)
       .then((next) => {
@@ -270,8 +293,8 @@ export function VolumeMatrixBubbleCategoriesPage() {
 
   const options = useMemo(() => {
     if (!sample) return null
-    return buildOptions(sample)
-  }, [sample])
+    return buildOptions(sample, zoomSpan, setZoomSpan)
+  }, [sample, zoomSpan])
 
   return (
     <main className="tn-page">
