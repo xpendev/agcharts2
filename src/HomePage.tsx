@@ -57,7 +57,12 @@ const agChartsLinks = [
   {
     to: '/volume-matrix',
     title: '⑦ブランドクロス',
-    note: '過去×現在の遷移マトリクス（Bubble・1〜50）',
+    note: '過去×現在の遷移マトリクス（数値軸 Bubble・1〜50）',
+  },
+  {
+    to: '/volume-matrix-bubble-categories',
+    title: '⑦ブランドクロス（category軸）',
+    note: 'bubble-with-categories 寄せ・縦横グリッド線',
   },
 ] as const
 

@@ -13,6 +13,7 @@ import { CytoscapePage } from './transitionNetworkCytoscape/CytoscapePage.tsx'
 import { GoJsPage } from './transitionNetworkGoJs/GoJsPage.tsx'
 import { AgChartsPage } from './transitionNetworkAgCharts/AgChartsPage.tsx'
 import { VolumeMatrixPage } from './volumeMatrixAgCharts/VolumeMatrixPage.tsx'
+import { VolumeMatrixBubbleCategoriesPage } from './volumeMatrixBubbleCategories/VolumeMatrixBubbleCategoriesPage.tsx'
 import { WaterfallPage } from './waterfallAgCharts/WaterfallPage.tsx'
 
 createRoot(document.getElementById('root')!).render(
@@ -31,6 +32,10 @@ createRoot(document.getElementById('root')!).render(
           element={<AgChartsPage />}
         />
         <Route path="/volume-matrix" element={<VolumeMatrixPage />} />
+        <Route
+          path="/volume-matrix-bubble-categories"
+          element={<VolumeMatrixBubbleCategoriesPage />}
+        />
         <Route path="/purchase-in-out" element={<PurchaseInOutPage />} />
         <Route path="/waterfall" element={<WaterfallPage />} />
         <Route path="/brand-diverging" element={<BrandDivergingPage />} />
