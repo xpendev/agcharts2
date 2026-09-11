@@ -139,9 +139,11 @@ function buildOptions(
     animation: { enabled: false },
     background: { fill: '#ffffff' },
     title: {
-      text: '併買（bubble-with-categories 実験）',
+      text: '併買（26/05 - 26/07）',
+      color: '#222222',
       fontSize: 16,
       fontWeight: 'bold',
+      spacing: 28,
     },
     legend: { enabled: false },
     // 右クリックは Download のみ（Zoom to here / Pan to here は出さない）
@@ -369,22 +371,20 @@ export function VolumeMatrixBubbleCategoriesPage() {
       </div>
 
       <div className="tn-page-stage tn-page-stage-vm-bubble-cat">
-        <div>
-          <div className="vm-bubble-cat-chart">
-            {options ? (
-              <AgCharts
-                ref={chartRef}
-                options={options}
-                style={{ width: 800, height: 600 }}
-              />
-            ) : (
-              <div className="tn-graph-placeholder" role="status">
-                {isLoading
-                  ? 'データを読み込み中…'
-                  : '表示できるデータがありません。'}
-              </div>
-            )}
-          </div>
+        <div className="vm-bubble-cat-chart">
+          {options ? (
+            <AgCharts
+              ref={chartRef}
+              options={options}
+              style={{ width: 800, height: 600 }}
+            />
+          ) : (
+            <div className="tn-graph-placeholder" role="status">
+              {isLoading
+                ? 'データを読み込み中…'
+                : '表示できるデータがありません。'}
+            </div>
+          )}
           <p className="vm-bubble-cat-note">
             {sample?.note ?? '*数値：％（行）（人数ベース）'}
           </p>
