@@ -143,7 +143,11 @@ function buildOptions(
       color: '#222222',
       fontSize: 16,
       fontWeight: 'bold',
-      spacing: 28,
+    },
+    subtitle: {
+      text: sample.note || '*数値：％（行）（人数ベース）',
+      color: '#333333',
+      fontSize: 11,
     },
     legend: { enabled: false },
     // 右クリックは Download のみ（Zoom to here / Pan to here は出さない）
@@ -235,6 +239,8 @@ function buildOptions(
           fontSize: 11,
           autoRotate: false,
           rotation: 270,
+          avoidCollisions: false,
+          minSpacing: 0,
         },
         line: { enabled: false },
         tick: { enabled: false },
@@ -248,7 +254,11 @@ function buildOptions(
         position: 'left',
         reverse: false,
         paddingInner: 0,
-        label: { fontSize: 11 },
+        label: {
+          fontSize: 11,
+          avoidCollisions: false,
+          minSpacing: 0,
+        },
         line: { enabled: false },
         tick: { enabled: false },
         gridLine: {
@@ -384,10 +394,7 @@ export function VolumeMatrixBubbleCategoriesPage() {
                 ? 'データを読み込み中…'
                 : '表示できるデータがありません。'}
             </div>
-          )}
-          <p className="vm-bubble-cat-note">
-            {sample?.note ?? '*数値：％（行）（人数ベース）'}
-          </p>
+            )}
         </div>
       </div>
     </main>
