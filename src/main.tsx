@@ -31,6 +31,7 @@ createRoot(document.getElementById('root')!).render(
           path="/transition-network/agcharts"
           element={<AgChartsPage />}
         />
+        {/* ⑦数値軸版。非採用のためメニュー非表示。削除せずルートのみ残す */}
         <Route path="/volume-matrix" element={<VolumeMatrixPage />} />
         <Route
           path="/volume-matrix-bubble-categories"

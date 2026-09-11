@@ -8,6 +8,7 @@ import {
   type AgCartesianChartOptions,
   BubbleSeriesModule,
   CategoryAxisModule,
+  ContextMenuModule,
   LegendModule,
   ModuleRegistry,
   ZoomModule,
@@ -28,6 +29,7 @@ import './volumeMatrixBubbleCategories.css'
 ModuleRegistry.registerModules([
   BubbleSeriesModule,
   CategoryAxisModule,
+  ContextMenuModule,
   LegendModule,
   ZoomModule,
 ])
@@ -142,6 +144,11 @@ function buildOptions(
       fontWeight: 'bold',
     },
     legend: { enabled: false },
+    // 右クリックは Download のみ（Zoom to here / Pan to here は出さない）
+    contextMenu: {
+      enabled: true,
+      items: ['download'],
+    },
     // AG Charts 標準 Zoom（ホイール拡大・ドラッグパン・ダブルクリックでリセット）
     // 軸上のドラッグ／スクロールズームは無効（プロット領域のみ）
     zoom: {
@@ -302,7 +309,7 @@ export function VolumeMatrixBubbleCategoriesPage() {
         <div>
           <p className="tn-page-eyebrow">AG Charts 検証</p>
           <h1 className="tn-page-title">
-            ⑦ブランドクロス（bubble-with-categories）
+            ⑦ブランドクロス
           </h1>
         </div>
         <div className="tn-page-actions tn-page-actions-vm-bubble-cat">
@@ -321,9 +328,6 @@ export function VolumeMatrixBubbleCategoriesPage() {
               </option>
             ))}
           </select>
-          <Link className="tn-page-link" to="/volume-matrix">
-            数値軸版へ
-          </Link>
           <Link className="tn-page-link" to="/">
             トップ
           </Link>

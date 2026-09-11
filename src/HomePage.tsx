@@ -54,15 +54,12 @@ const agChartsLinks = [
     title: '⑥流出入差ランキング',
     note: '単一系列・符号で色分け（1〜50）',
   },
-  {
-    to: '/volume-matrix',
-    title: '⑦ブランドクロス',
-    note: '過去×現在の遷移マトリクス（数値軸 Bubble・1〜50）',
-  },
+  // VolumeMatrixPage（/volume-matrix・数値軸版）は非採用。削除せずルートのみ残す。
+  // ⑦は VolumeMatrixBubbleCategoriesPage を採用。
   {
     to: '/volume-matrix-bubble-categories',
-    title: '⑦ブランドクロス（category軸）',
-    note: 'bubble-with-categories 寄せ・縦横グリッド線',
+    title: '⑦ブランドクロス',
+    note: '過去×現在の遷移マトリクス（category軸 Bubble・1〜50）',
   },
 ] as const
 
