@@ -136,10 +136,10 @@ function buildBottomOptions(
       y: {
         type: 'number',
         title: { text: sample.meta.yUnit, fontSize: 11 },
-        min: -9,
+        min: -10,
         max: 0,
         nice: false,
-        interval: { step: 3 },
+        interval: { step: 10 },
         gridLine: { enabled: true },
         label: { fontSize: 11, avoidCollisions: false, minSpacing: 0 },
       },
