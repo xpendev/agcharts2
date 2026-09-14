@@ -93,6 +93,7 @@ function buildBrandOptions(
         min: 0,
         max: 100,
         nice: false,
+        interval: { step: 10 },
         gridLine: { enabled: true },
         label: { fontSize: 10, avoidCollisions: false, minSpacing: 0 },
       },
