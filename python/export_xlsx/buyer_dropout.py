@@ -147,7 +147,7 @@ def build_buyer_dropout_xlsx(payload: dict[str, Any]) -> bytes:
             }
         )
         chart_bottom.set_y_axis(
-            {"name": y_unit, "min": -10, "max": 0, "major_unit": 10}
+            {"name": y_unit, "min": -100, "max": 0, "major_unit": 10}
         )
         chart_bottom.set_legend({"position": "none"})
         chart_bottom.set_size({"width": CHART_WIDTH, "height": BOTTOM_CHART_HEIGHT})

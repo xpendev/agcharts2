@@ -88,7 +88,7 @@ function buildTopOptions(
         type: 'number',
         title: { text: sample.meta.yUnit, fontSize: 11 },
         min: 0,
-        max: 50,
+        max: 100,
         nice: false,
         interval: { step: 10 },
         gridLine: { enabled: true },
@@ -136,7 +136,7 @@ function buildBottomOptions(
       y: {
         type: 'number',
         title: { text: sample.meta.yUnit, fontSize: 11 },
-        min: -10,
+        min: -100,
         max: 0,
         nice: false,
         interval: { step: 10 },
