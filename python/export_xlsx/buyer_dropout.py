@@ -116,7 +116,9 @@ def build_buyer_dropout_xlsx(payload: dict[str, Any]) -> bytes:
                 "num_font": TOP_X_AXIS_FONT,
             }
         )
-        chart_top.set_y_axis({"name": y_unit, "min": 0, "max": 50})
+        chart_top.set_y_axis(
+            {"name": y_unit, "min": 0, "max": 100, "major_unit": 10}
+        )
         chart_top.set_legend({"position": "bottom"})
         chart_top.set_size({"width": CHART_WIDTH, "height": TOP_CHART_HEIGHT})
         worksheet.insert_chart(TOP_CHART_ANCHOR, chart_top)
